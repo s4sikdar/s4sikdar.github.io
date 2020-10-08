@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<lang="en-US">
+		<meta charset = "UTF-8">
+		<style>
+		html, body {
+		height: 100%;
+		width: 100%;
+		}
+
+		body {
+		margin: 0px 0px 0px 0px;
+		font-family: "Lucida Console", Monospace, Calibri, Arial, Verdana;
+		}
+
+		#Navbar {
+		font-size: 20px;
+		margin-bottom: 0px;
+		font-weight: normal;
+		background-color: #353535;
+		}
+
+		#Navbar ul {
+		display: inline-block;
+		width: 100%;
+		padding: 5px 0px 5px 0px;
+		margin: 0px;
+		list-style-type: none;
+		/*text-align: center;*/
+		background-color: #353535;
+		}
+
+		#Navbar ul li {
+		vertical-align: middle;
+		position: relative;
+		float: right;
+		box-sizing: border-box;
+		/*
+		top: 50%;
+		-webkit-transform: translateY(-50%);
+		-ms-transform: translateY(-50%);
+		transform: translateY(-50%);
+		*/
+		}
+
+		#Navbar ul li a {
+		text-decoration: none;
+		color: #F1F0EA;
+		padding: 10px 10px 10px 10px;
+		}
+
+		#Navbar ul li a:hover {
+		font-weight: bold;
+		text-decoration: underline;
+		cursor: pointer;
+		}
+
+		#Header {
+		margin-top: 0px;
+		width: 100%;
+		overflow: hidden;
+		position: relative;
+		background-image: url("Mountain Top.jpg");
+		height: 60%;
+		margin-bottom: 0px;
+		}
+
+		#translucent_layer {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: rgba(255,255,255,0.0);
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		z-index: 1;
+		}
+
+		div #translucent_layer:hover {
+		background-color: rgba(255,255,255,0.5);
+		}
+
+		h1 {
+		font-size: 5vw;
+		/* position: absolute;
+		top: 15%;
+		left: 30%; */
+		z-index: 2;
+		}
+
+		#about_section {
+		margin-bottom: auto;
+		background-color: #F1F0EA;
+		font-family: "Lucida Console";
+		width: 100%;
+		height: 80%;
+		color: #353535;
+		padding-top: 1px;
+		position: relative;
+		padding-bottom: 2px;
+		}
+		h2 {
+		margin-top: 1.5%;
+		text-align: center;
+		font-size: 3vw;
+		margin-bottom: 1%;
+		}
+		#about_section p {
+		width: 400px;
+		padding: 2%;
+		/*margin: auto;*/
+		margin-top: 1%;
+		margin-left: 3%;
+		font-size: 1.4vw;
+		font-family: "Calibri";
+		float: left;
+		background-color: white;
+		}
+
+		#right {
+		background-color: white;
+		width: 20%;
+		height: 40%;
+		padding: 1%;
+		margin-top: 10%;
+		margin-right: 3%;
+		margin-bottom: 2%;
+		font-size: 1.4vw;
+		font-family: "Calibri";
+		position: absolute;
+		right: 5%;
+		bottom: 5%;
+		top: 20%;
+		}
+		#right h3 {
+		text-align: center;
+		font-size: 2vw;
+		padding: 0;
+		margin: 0;
+		}
+		#right ul {
+		/* display: block; */
+		font-size: 1.4vw;
+		padding: 2%;
+		padding-left: 8%;
+		margin-left: 4%;
+		}
+		</style>
+	</head>
+	<body>
+	<div id = "Navbar">
+		 <ul>
+			<li><a><!--href = "New    Style second.html"-->Second Page</a></li>
+			<li><a href = "#about_section"> <!--href = "Index.html"-->Main Page</a></li>
+		 </ul>
+	</div>
+	<div id = "Header">
+		<div id = "translucent_layer">
+			<h1>Sailesh Sikdar</h1>
+		</div>
+	</div>
+	<div id = "about_section">
+		<h2>
+			About Me
+		</h2>
+		<p>
+			My name is Sailesh, and I'm an Honours Math student studying Math and Business Administration. I have an interest in software development, along with
+			Stock investing, basketball, and a show very little people know about called "Murdoch Mysteries".
+		</p>
+
+		<div id = "right">
+			<h3>Skills</h3>
+			<ul>
+				<li> Python </li>
+				<li> HTML & CSS </li>
+				<li> JavaScript </li>
+				<li> jQuery </li>
+				<li> SQL </li>
+				<li> SQLite3 </li>
+			</ul>
+		</div>
+	</div>
+	</body>
+</html>
