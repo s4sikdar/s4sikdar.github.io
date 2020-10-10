@@ -1,10 +1,32 @@
+/*
+Width in the after element of the a tags in the navbar is 0% by default.
+Send the width to 102%. Except that this start it from left to right. So this
+looks like:
+hello
+-
+hello
+--
+hello
+---
+hello
+----
+hello
+-----
+
+Starting it from left of 50% and going to 0% while increasing the width gives us
+the effect of starting out from the middle. With the words above the lines, it
+now looks like:
+  -
+ ---
+-----
+*/
 @keyframes underline {
-  from{
-       left: 50%;}
+  from{left: 50%;}
   to{width: 102%;
      left: 0%;}
 }
 
+/* Opacity 0 to 1 allows for a fade in effect. */
 @keyframes fullname {
   from{
     /* display: block; */
@@ -15,48 +37,114 @@
     opacity: 1;
   }
 }
+
+/* Puts it out of site at first, then slides it to where it's in sight. */
+@keyframes header {
+  from {
+    top: -20%;
+    border-bottom: 1px solid #dbd7d2;
+  }
+  to {
+    top: 0%;
+    border-bottom: 1px solid #dbd7d2;
+  }
+}
+
+/* Our animation for the second header */
+@keyframes slide_left {
+  from {
+    transform: translateX(-150%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes slide_right {
+  from {
+    transform: translateX(150%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes slide_middle {
+  from {
+    transform: translateX(-225%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}
+/*
+This allows us to specify height of child elements in the body tag in
+terms of percentage.
+*/
+
 html, body {
 height: 100%;
 width: 100%;
 }
 
+/*
+Allows us to set width of chlidren of the body to the full width of the browser,
+also we set our fonts here for convenience.
+*/
 body {
 margin: 0px 0px 0px 0px;
 font-family: "Lucida Console", Monospace, Calibri, Arial, Verdana;
+overflow-x: hidden;
 }
 
 #navbar {
+  /* No extra margin or padding, all in our li and a elements */
   margin: 0;
   padding: 0;
-  overflow: hidden;
+  /* overflow: hidden; */
+  /* Remove bullets before */
   list-style-type: none;
   background-color: #F1F0EA;
+  /* Keep it fixed at the top as we scroll down */
   position: fixed;
-  top: 0;
+  /* Attached to the roof, and width is that of the browser */
+  top: 0%;
   width: 100%;
+  /* Takes precedence over the image elements that have positive z indexes */
   z-index: 2;
+  /*
+  Allows for the navbar to be distinguishable from parts of the page
+  with the same color.
+  */
   border-bottom: 1px solid #dbd7d2;
+  /* Our css animation that slides down the header when the page loads. */
+  animation: header 0.5s both linear;
 }
+
 #navbar li {
-  display: flex;
   background-color: #F1F0EA;
   color: #353535;
   float: right;
-  vertical-align: center;
+  /* Allows us to have centered li elements in the navbar*/
+  display: flex;
   align-items: center;
-  /*justify-content: center; */
+  /* Make up for the underline */
   padding: 3px 0px 4px 0px;
 }
-/* Code for animation can be found here
-https://speckyboy.com/underline-text-effects-css/ */
+
 #navbar li a {
   background-color: #F1F0EA;
   color: #353535;
   padding: 7px;
   font-size: 1.3vw;
   display: block;
+  /* Remove underline */
   text-decoration: none;
   border-radius: 0.25vw;
+  /*
+  Allows for a color change that fades from one to the other, when
+  hovering over and off the a tags.
+   */
   transition: background-color 0.5s 0.25s linear;
 }
 /* F1F0EA  F2F3F4 f5f5f5 text-decoration 1s, font-weight 1s*/
@@ -64,21 +152,23 @@ https://speckyboy.com/underline-text-effects-css/ */
 #navbar li a:hover {
   font-weight: bold;
   background-color: #dbd7d2;
+  /* Make up for the underline. */
   padding-bottom: 1px;
-  /* text-decoration: underline; */
 }
 
 #navbar li a::after {
   content: '';
+  /*
+  When displaying a block element, a new line is taken up, offsetting the
+  centering of the a tags.
+   */
   display: none;
-  /* position: absolute; */
   background-color: #353535;
   width: 0%;
   height: 0.2em;
   border-radius: 0.5vw;
   position: relative;
   top: 4px;
-  transition: width 1s linear;
 }
 
 #navbar li a:hover::after {
@@ -87,11 +177,11 @@ https://speckyboy.com/underline-text-effects-css/ */
   background-color: #353535;
   animation-name: underline;
   animation-duration: 1s;
-  animation-fill-mode: both;
-  /* animation-direction: alternate; */
-  /* left: 50%;
-  right: 50%; */
+  animation-fill-mode: reverse;
 }
+
+
+/* Code for our Image and the name hovering over it.*/
 #Header {
   margin-top: 0px;
   width: 100%;
@@ -101,7 +191,7 @@ https://speckyboy.com/underline-text-effects-css/ */
   background-image: url("Mountain Top.jpg");
   background-size: cover;
   margin-bottom: 0px;
-  animation: fullname 1.5s linear both;
+  animation: fullname 1.5s 0.5s linear both;
 }
 
 #translucent_layer {
@@ -131,47 +221,35 @@ font-size: 5vw;
   margin-bottom: 10%;
   /* transition: inherit; */
   /* display: none; */
-  animation-name: fullname;
-  animation-duration: 1.5s;
-  animation-fill-mode: both;
-  animation-delay: 1.5s;
+  animation-name: fullname 1.5s 1.5s both linear;
 }
 #about_section {
   margin-bottom: 0;
   background-color: #F1F0EA;
   font-family: "Lucida Console";
   width: 100%;
-  height: 35vw;
+  height: 50vw;
   color: #353535;
   padding-top: 1px;
   position: relative;
-  padding-bottom: 2px;
+  padding-bottom: 2%;
 }
-h2 {
+
+#about_section h2 {
   margin-top: 3%;
   text-align: center;
   font-size: 3vw;
   margin-bottom: 1%;
-}
-#about_section p {
-  width: 30vw;
-  padding: 2%;
-  /*margin: auto;*/
-  margin-top: 1%;
-  margin-left: 5%;
-  font-size: 1.5vw;
-  font-family: "Calibri";
-  float: left;
-  background-color: white;
-  box-shadow: 5px 5px 12px black;
+  transform-box: border box;
+  animation: slide_right 0.75s 0.5s both linear;
 }
 
 #right {
   background-color: white;
   width: 20%;
-  height: 15vw;
+  /* height: 15vw; */
   padding: 1%;
-  margin-top: 10%;
+  margin-top: 5%;
   margin-right: 3%;
   margin-bottom: 2%;
   font-size: 1.4vw;
@@ -181,17 +259,11 @@ h2 {
   /* bottom: 5%; */
   top: 15%;
   box-shadow: 5px 5px 12px black;
+  animation: slide_right 0.4s 1.65s both linear;
 }
-#right h3 {
-  text-align: center;
-  /* background-color: darkgray; */
-  font-size: 3vw;
-  padding: 0;
-  margin: 0;
-  margin-bottom: 0;
-}
+
 #right ul {
-  /* display: block; */
+  display: block;
   /* background-color: darkgray; */
   font-size: 1.5vw;
   padding-left: 8%;
@@ -201,20 +273,126 @@ h2 {
   margin-left: 4%;
   margin-bottom: 0%;
 }
+
+#about_section h3 {
+  text-align: center;
+  /* background-color: darkgray; */
+  font-size: 2vw;
+  padding: 0;
+  margin: 0;
+  /* margin-bottom: 0; */
+}
+
+#left {
+  width: 30vw;
+  padding: 1% 2% 1.5% 2%;
+  /* padding-top: 1%;
+  padding-bottom: 1.5%; */
+  /*margin: auto;*/
+  margin-top: 1%;
+  margin-left: 5%;
+  font-size: 1.5vw;
+  font-family: "Calibri";
+  float: left;
+  background-color: white;
+  box-shadow: 5px 5px 12px black;
+  animation: slide_left 0.4s 1.25s both linear;
+}
+
+#left h3 {
+  padding-bottom: 0;
+  padding-top: 0;
+  margin-bottom: 2%;
+  margin-top: 0;
+}
+
+#left p {
+  margin-top: 1%;
+  margin-bottom: 0;
+}
+
+#middle {
+  width: 30vw;
+  padding: 1% 2% 1.5% 2%;
+  /* padding-top: 1%;
+  padding-bottom: 1.5%; */
+  /* float: left; */
+  /*margin: auto;*/
+  margin-top: 27%;
+  /* margin-left: 20%; */
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.5vw;
+  font-family: "Calibri";
+  background-color: white;
+  box-shadow: 5px 5px 12px black;
+  animation: slide_middle 0.45s 2.05s both linear;
+}
+
+#middle h3 {
+  margin-bottom: 0%;
+  /* margin-top: 0; */
+}
+
+#middle p {
+  margin-top: 0%;
+  margin-bottom: 0;
+}
+
+#line_through {
+  text-decoration: line-through;
+}
+
 #projects {
   width: 100%;
   height: 40vw;
   background-color: #353535;
   color: #F1F0EA;
   font-family: "Lucida Console";
-  margin-top: 0;
+  margin-top: 0%;
   padding-top: 1px;
 }
 #projects h3 {
   text-align: center;
   font-size: 3vw;
   margin-top: 1vw;
+  /* animation: fullname 1s linear both; */
 }
+
 #projects p {
-  font-size: : 1.5vw;
+  font-size: 1.5vw;
+}
+
+.panel {
+  width: 25%;
+  margin-left: 4%;
+  margin-right: 4%;
+  float: left;
+  color: #353535;
+  background-color: white;
+  font-family: Calibri;
+  border-radius: 1%;
+  box-shadow: 5px 5px 12px black;
+  /* height: 10%; */
+}
+
+.panel h4 {
+  margin-top: 1%;
+  margin-bottom: 1%;
+  font-size: 2vw;
+  text-align: center;
+}
+
+.panel img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+}
+
+.panel p {
+  margin-top: 1%;
+  margin-bottom: 1%;
+  font-size: 1vw;
+  text-align: center;
 }
