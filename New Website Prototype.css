@@ -1,0 +1,220 @@
+@keyframes underline {
+  from{
+       left: 50%;}
+  to{width: 102%;
+     left: 0%;}
+}
+
+@keyframes fullname {
+  from{
+    /* display: block; */
+    opacity: 0;
+  }
+  to{
+    /* display: block; */
+    opacity: 1;
+  }
+}
+html, body {
+height: 100%;
+width: 100%;
+}
+
+body {
+margin: 0px 0px 0px 0px;
+font-family: "Lucida Console", Monospace, Calibri, Arial, Verdana;
+}
+
+#navbar {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  list-style-type: none;
+  background-color: #F1F0EA;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+  border-bottom: 1px solid #dbd7d2;
+}
+#navbar li {
+  display: flex;
+  background-color: #F1F0EA;
+  color: #353535;
+  float: right;
+  vertical-align: center;
+  align-items: center;
+  /*justify-content: center; */
+  padding: 3px 0px 4px 0px;
+}
+/* Code for animation can be found here
+https://speckyboy.com/underline-text-effects-css/ */
+#navbar li a {
+  background-color: #F1F0EA;
+  color: #353535;
+  padding: 7px;
+  font-size: 1.3vw;
+  display: block;
+  text-decoration: none;
+  border-radius: 0.25vw;
+  transition: background-color 0.5s 0.25s linear;
+}
+/* F1F0EA  F2F3F4 f5f5f5 text-decoration 1s, font-weight 1s*/
+
+#navbar li a:hover {
+  font-weight: bold;
+  background-color: #dbd7d2;
+  padding-bottom: 1px;
+  /* text-decoration: underline; */
+}
+
+#navbar li a::after {
+  content: '';
+  display: none;
+  /* position: absolute; */
+  background-color: #353535;
+  width: 0%;
+  height: 0.2em;
+  border-radius: 0.5vw;
+  position: relative;
+  top: 4px;
+  transition: width 1s linear;
+}
+
+#navbar li a:hover::after {
+  /* position: relative; */
+  display: block;
+  background-color: #353535;
+  animation-name: underline;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  /* animation-direction: alternate; */
+  /* left: 50%;
+  right: 50%; */
+}
+#Header {
+  margin-top: 0px;
+  width: 100%;
+  height: 70%;
+  overflow: hidden;
+  position: relative;
+  background-image: url("Mountain Top.jpg");
+  background-size: cover;
+  margin-bottom: 0px;
+  animation: fullname 1.5s linear both;
+}
+
+#translucent_layer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255,255,255,0.2);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  transition: 0.75s;
+}
+
+div #translucent_layer:hover {
+  background-color: rgba(255,255,255,0.6);
+  color: #353535;
+}
+
+h1 {
+font-size: 5vw;
+  /* position: absolute;
+  top: 15%;
+  left: 30%; */
+  color: #353535;
+  z-index: 2;
+  margin-bottom: 10%;
+  /* transition: inherit; */
+  /* display: none; */
+  animation-name: fullname;
+  animation-duration: 1.5s;
+  animation-fill-mode: both;
+  animation-delay: 1.5s;
+}
+#about_section {
+  margin-bottom: 0;
+  background-color: #F1F0EA;
+  font-family: "Lucida Console";
+  width: 100%;
+  height: 35vw;
+  color: #353535;
+  padding-top: 1px;
+  position: relative;
+  padding-bottom: 2px;
+}
+h2 {
+  margin-top: 3%;
+  text-align: center;
+  font-size: 3vw;
+  margin-bottom: 1%;
+}
+#about_section p {
+  width: 30vw;
+  padding: 2%;
+  /*margin: auto;*/
+  margin-top: 1%;
+  margin-left: 5%;
+  font-size: 1.5vw;
+  font-family: "Calibri";
+  float: left;
+  background-color: white;
+  box-shadow: 5px 5px 12px black;
+}
+
+#right {
+  background-color: white;
+  width: 20%;
+  height: 15vw;
+  padding: 1%;
+  margin-top: 10%;
+  margin-right: 3%;
+  margin-bottom: 2%;
+  font-size: 1.4vw;
+  font-family: "Calibri";
+  position: absolute;
+  right: 5%;
+  /* bottom: 5%; */
+  top: 15%;
+  box-shadow: 5px 5px 12px black;
+}
+#right h3 {
+  text-align: center;
+  /* background-color: darkgray; */
+  font-size: 3vw;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 0;
+}
+#right ul {
+  /* display: block; */
+  /* background-color: darkgray; */
+  font-size: 1.5vw;
+  padding-left: 8%;
+  padding-top: 0%;
+  padding-bottom:  0%;
+  margin-top: 1%;
+  margin-left: 4%;
+  margin-bottom: 0%;
+}
+#projects {
+  width: 100%;
+  height: 40vw;
+  background-color: #353535;
+  color: #F1F0EA;
+  font-family: "Lucida Console";
+  margin-top: 0;
+  padding-top: 1px;
+}
+#projects h3 {
+  text-align: center;
+  font-size: 3vw;
+  margin-top: 1vw;
+}
+#projects p {
+  font-size: : 1.5vw;
+}
