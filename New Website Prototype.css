@@ -77,6 +77,15 @@ now looks like:
     transform: translateX(0%);
   }
 }
+
+@keyframes flip {
+  from {
+    transform: rotateY(90deg);
+  }
+  to {
+    transform: rotateY(0deg);
+  }
+}
 /*
 This allows us to specify height of child elements in the body tag in
 terms of percentage.
@@ -177,7 +186,7 @@ overflow-x: hidden;
   background-color: #353535;
   animation-name: underline;
   animation-duration: 1s;
-  animation-fill-mode: reverse;
+  animation-fill-mode: forwards;
 }
 
 
@@ -240,7 +249,8 @@ font-size: 5vw;
   text-align: center;
   font-size: 3vw;
   margin-bottom: 1%;
-  transform-box: border box;
+  text-decoration: none;
+  /* transform-box: border box; */
   animation: slide_right 0.75s 0.5s both linear;
 }
 
@@ -352,11 +362,12 @@ font-size: 5vw;
   margin-top: 0%;
   padding-top: 1px;
 }
+
 #projects h3 {
   text-align: center;
   font-size: 3vw;
   margin-top: 1vw;
-  /* animation: fullname 1s linear both; */
+  animation: slide_right 0.75s both linear;
 }
 
 #projects p {
@@ -395,4 +406,16 @@ font-size: 5vw;
   margin-bottom: 1%;
   font-size: 1vw;
   text-align: center;
+}
+
+#panel_1 {
+  animation: flip 0.3s 0.8s linear both;
+}
+
+#panel_2 {
+  animation: flip 0.3s 1.1s linear both;
+}
+
+#panel_3 {
+  animation: flip 0.3s 1.4s linear both;
 }
