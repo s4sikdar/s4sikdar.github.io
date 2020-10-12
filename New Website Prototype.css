@@ -113,10 +113,18 @@ now looks like:
   }
 }
 
+@keyframes {
+  0% {
+    display: none;
+  }
+  1% {
+  }
+}
 /*
 This allows us to specify height of child elements in the body tag in
 terms of percentage.
 */
+
 
 html, body {
   scroll-behavior: smooth;
@@ -516,6 +524,9 @@ font-size: 5vw;
   position: fixed;
   /* display: none; */
   visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: rgba(0,0,0,0.5);
   animation: modal 0.5s 0.2s linear both;
   animation-play-state: paused;
@@ -552,4 +563,20 @@ font-size: 5vw;
   background-color: #353535;
   color: white;
   border: 1px solid white;
+}
+
+#info_panel_wrapper {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
+#panel_2_pop_up {
+  position: fixed;
+  /* margin-top: auto;
+  margin-bottom: auto; */
+  /* display: flex;
+  align-items: center;
+  justify-content: center; */
+  z-index: 5;
 }
