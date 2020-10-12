@@ -6,77 +6,81 @@
 		<link rel="stylesheet" type="text/css" href="New Website Prototype.css">
 	</head>
 	<body>
-	<ul id = "navbar">
-		<li><a href = "#projects" id = "projects_header"><!--href = "New    Style second.html"-->
-			Projects</a></li>
-		<li><a href = "#about_section" id = "about_header"> <!--href = "Index.html"-->About</a></li>
-		<li><a href = "#Header" id = "home_header"> Home </a></li>
-	</ul>
-	<div id = "Header">
-		<div id = "translucent_layer">
-			<h1>Sailesh Sikdar</h1>
+		<div id = "Modal"></div>
+		<ul id = "navbar">
+			<li><a href = "#projects" id = "projects_header"><!--href = "New    Style second.html"-->
+				Projects</a></li>
+			<li><a href = "#about_section" id = "about_header"> <!--href = "Index.html"-->About</a></li>
+			<li><a href = "#Header" id = "home_header"> Home </a></li>
+		</ul>
+		<div id = "Header">
+			<div id = "translucent_layer">
+				<h1>Sailesh Sikdar</h1>
+			</div>
 		</div>
-	</div>
-	<div id = "about_section">
-		<h2>
-			Background
-		</h2>
-		<div id = "left">
-			<h3>
-				About Me
-			</h3>
+		<div id = "about_section">
+			<h2>
+				Background
+			</h2>
+			<div id = "left">
+				<h3>
+					About Me
+				</h3>
+				<p>
+					My name is Sailesh, and I'm an Honours Math student studying Math and Business Administration at the University of Waterloo.
+					I'm currently in my 3B term, with an interest in software development. I am open to working in Front-end or Back-end development
+					at the moment.
+				</p>
+			</div>
+
+			<div id = "right">
+				<h3>My Skills</h3>
+				<ul>
+					<li> Python </li>
+					<li> HTML5 & CSS3 </li>
+					<li> JavaScript </li>
+					<li> jQuery </li>
+					<li> SQL </li>
+					<li> SQLite3 </li>
+				</ul>
+			</div>
+
+			<div id = "middle">
+				<h3>My Interests</h3>
+				<p>
+					Outside of Software Development, my interests are in finance. I like to read books on investing, specifically the
+					<i>The Intelligent Investor</i>, and <i>Security Analysis</i> by Benjamin Graham. I also like to play basketball on
+					my spare time - I'm <span id = "line_through">sadly</span> a Washington Wizards fan.
+				</p>
+			</div>
+		</div>
+
+		<!-- <div>
 			<p>
-				My name is Sailesh, and I'm an Honours Math student studying Math and Business Administration at the University of Waterloo.
-				I'm currently in my 3B term, with an interest in software development. I am open to working in Front-end or Back-end development
-				at the moment.
+
 			</p>
-		</div>
+		</div> -->
+		<div id = "projects">
+			<h3>My Projects</h3>
+			<div class = "panel" id = "panel_1">
+				<!-- width="" height="50%" -->
+				<img width = "60%" height="60%" alt = "Image not available" src = "Tic_tac_toe.svg">
+				<h4>Tic Tac Toe</h4>
+				<button>More info</button>
+			</div>
+			<div class = "panel" id = "panel_2">
 
-		<div id = "right">
-			<h3>My Skills</h3>
-			<ul>
-				<li> Python </li>
-				<li> HTML5 & CSS3 </li>
-				<li> JavaScript </li>
-				<li> jQuery </li>
-				<li> SQL </li>
-				<li> SQLite3 </li>
-			</ul>
+				<img width="98%" height="85%" alt = "Image not available" src = "Old_Website.png">
+				<h4>My Old Website</h4>
+				<button>More info</button>
+			</div>
+			<div class = "panel" id = "panel_3">
+				<img width="85%" height="72%" alt = "Image not available" src = "T_Rex_Run.png">
+				<h4>T-Rex Run</h4>
+				<button>More info</button>
+			</div>
+			<button id = "modal_button">Click to show modal</button>
 		</div>
-
-		<div id = "middle">
-			<h3>My Interests</h3>
-			<p>
-				Outside of Software Development, my interests are in finance. I like to read books on investing, specifically the
-				<i>The Intelligent Investor</i>, and <i>Security Analysis</i> by Benjamin Graham. I also like to play basketball on
-				my spare time - I'm <span id = "line_through">sadly</span> a Washington Wizards fan.
-			</p>
-		</div>
-	</div>
-
-	<!-- <div>
-		<p>
-
-		</p>
-	</div> -->
-	<div id = "projects">
-		<h3>My Projects</h3>
-		<div class = "panel" id = "panel_1">
-			<h4>Tic Tac Toe</h4>
-			<img width="80%" height="100%" alt = "Image not available" href = "Image.jpg">
-			<button>More info</button>
-		</div>
-		<div class = "panel" id = "panel_2">
-			<h4>My Old Website</h4>
-			<img width="80%" height="100%" alt = "Image not available" href = "Image.jpg">
-			<button>More info</button>
-		</div>
-		<div class = "panel" id = "panel_3">
-			<h4>T-Rex Run</h4>
-			<img width="80%" height="100%" alt = "Image not available" href = "Image.jpg">
-			<button>More info</button>
-		</div>
-	</div>
 	</body>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/iamdustan-smoothscroll/0.4.0/smoothscroll.min.js">
 	</script>
