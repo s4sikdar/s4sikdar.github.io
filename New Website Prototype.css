@@ -100,6 +100,7 @@ now looks like:
 
 @keyframes modal {
   0% {
+    display: block;
     visibility: hidden;
     opacity: 0;
   }
@@ -113,11 +114,22 @@ now looks like:
   }
 }
 
-@keyframes {
+@keyframes middle_pop_up{
   0% {
-    display: none;
+    /* transform: translateY(-200%); */
+    display: block;
+    visibility: visible;
+    /* right: -25%; */
+    width: 0%;
+    transform: scale(0) translateY(-50%);
   }
-  1% {
+  100% {
+    display: block;
+    visibility: visible;
+    /* transform: translateY(-50%); */
+    /* right: 18%; */
+    width: 60%;
+    transform: scale(1) translateY(-50%);
   }
 }
 /*
@@ -146,10 +158,10 @@ overflow-x: hidden;
   /* No extra margin or padding, all in our li and a elements */
   margin: 0;
   padding: 0;
-  /* overflow: hidden; */
   /* Remove bullets before */
   list-style-type: none;
   background-color: #F1F0EA;
+  color: #353535;
   /* Keep it fixed at the top as we scroll down */
   position: fixed;
   /* Attached to the roof, and width is that of the browser */
@@ -167,8 +179,6 @@ overflow-x: hidden;
 }
 
 #navbar li {
-  background-color: #F1F0EA;
-  color: #353535;
   float: right;
   /* Allows us to have centered li elements in the navbar*/
   display: flex;
@@ -178,19 +188,19 @@ overflow-x: hidden;
 }
 
 #navbar li a {
-  background-color: #F1F0EA;
+  /* background-color: #F1F0EA; */
   color: #353535;
   padding: 7px;
-  font-size: 1.3vw;
+  font-size: 1.3em;
   display: block;
   /* Remove underline */
   text-decoration: none;
-  border-radius: 0.25vw;
+  border-radius: 0.25em;
   /*
   Allows for a color change that fades from one to the other, when
   hovering over and off the a tags.
    */
-  transition: background-color 0.5s 0.25s linear;
+  transition: background-color 0.3s 0.15s linear;
 }
 /* F1F0EA  F2F3F4 f5f5f5 text-decoration 1s, font-weight 1s*/
 
@@ -211,10 +221,9 @@ overflow-x: hidden;
   background-color: #353535;
   width: 0%;
   height: 0.2em;
-  border-radius: 0.5vw;
+  border-radius: 1em;
   position: relative;
   top: 4px;
-             /* underline 1s reverse; */
 }
 
 #navbar li a:hover::after {
@@ -222,21 +231,21 @@ overflow-x: hidden;
   display: block;
   background-color: #353535;
   /* animation: underline 1s forwards; */
-  animation: underline 1s normal forwards;
+  animation: underline 0.5s normal forwards;
   /* animation-play-state: paused; */
 }
 
 
 /* Code for our Image and the name hovering over it.*/
 #Header {
-  margin-top: 0px;
+  margin-top: 0;
   width: 100%;
   height: 70%;
   overflow: hidden;
   position: relative;
   background-image: url("Mountain Top.jpg");
   background-size: cover;
-  margin-bottom: 0px;
+  margin-bottom: 0;
   animation: fullname 1.5s 0.5s linear both;
 }
 
@@ -254,11 +263,11 @@ overflow-x: hidden;
 
 div #translucent_layer:hover {
   background-color: rgba(255,255,255,0.6);
-  color: #353535;
+  /* color: #353535; */
 }
 
 h1 {
-font-size: 5vw;
+  font-size: 5vw;
   /* position: absolute;
   top: 15%;
   left: 30%; */
@@ -275,7 +284,7 @@ font-size: 5vw;
   background-color: #F1F0EA;
   font-family: "Lucida Console";
   width: 100%;
-  height: 50vw;
+  height: 50em;
   color: #353535;
   padding-top: 1px;
   position: relative;
@@ -285,7 +294,7 @@ font-size: 5vw;
 #about_section h2 {
   margin-top: 3%;
   text-align: center;
-  font-size: 3vw;
+  font-size: 3em;
   margin-bottom: 1%;
   text-decoration: none;
   /* transform-box: border box; */
@@ -302,7 +311,7 @@ font-size: 5vw;
   margin-top: 5%;
   margin-right: 3%;
   margin-bottom: 2%;
-  font-size: 1.4vw;
+  font-size: 1.5em;
   font-family: "Calibri";
   position: absolute;
   right: 5%;
@@ -317,7 +326,7 @@ font-size: 5vw;
 #right ul {
   display: block;
   /* background-color: darkgray; */
-  font-size: 1.5vw;
+  font-size: 1em;
   padding-left: 8%;
   padding-top: 0%;
   padding-bottom:  0%;
@@ -329,21 +338,20 @@ font-size: 5vw;
 #about_section h3 {
   text-align: center;
   /* background-color: darkgray; */
-  font-size: 2vw;
+  font-size: 1.5em;
   padding: 0;
   margin: 0;
   /* margin-bottom: 0; */
 }
 
 #left {
-  width: 30vw;
+  width: 30%;
   padding: 1% 2% 1.5% 2%;
   /* padding-top: 1%;
   padding-bottom: 1.5%; */
   /*margin: auto;*/
   margin-top: 1%;
   margin-left: 5%;
-  font-size: 1.5vw;
   font-family: "Calibri";
   float: left;
   background-color: white;
@@ -356,17 +364,19 @@ font-size: 5vw;
 #left h3 {
   padding-bottom: 0;
   padding-top: 0;
-  margin-bottom: 2%;
+  margin-bottom: 1%;
   margin-top: 0;
+  font-size: 2em;
 }
 
 #left p {
   margin-top: 1%;
   margin-bottom: 0;
+  font-size: 1.5em;
 }
 
 #middle {
-  width: 30vw;
+  width: 30%;
   padding: 1% 2% 1.5% 2%;
   /* padding-top: 1%;
   padding-bottom: 1.5%; */
@@ -376,7 +386,6 @@ font-size: 5vw;
   /* margin-left: 20%; */
   margin-left: auto;
   margin-right: auto;
-  font-size: 1.5vw;
   font-family: "Calibri";
   background-color: white;
   box-shadow: 5px 5px 12px black;
@@ -386,13 +395,15 @@ font-size: 5vw;
 }
 
 #middle h3 {
-  margin-bottom: 0%;
+  margin-bottom: 1%;
+  font-size: 2em;
   /* margin-top: 0; */
 }
 
 #middle p {
   margin-top: 0%;
   margin-bottom: 0;
+  font-size: 1.5em;
 }
 
 #line_through {
@@ -401,7 +412,7 @@ font-size: 5vw;
 
 #projects {
   width: 100%;
-  height: 30vw;
+  height: 65%;
   background-color: #353535;
   color: #F1F0EA;
   font-family: "Lucida Console";
@@ -411,15 +422,16 @@ font-size: 5vw;
 
 #projects h3 {
   text-align: center;
-  font-size: 3vw;
-  margin-top: 1vw;
+  font-size: 3em;
+  margin-top: 1.5%;
+  margin-bottom: 2%;
   /* visibility: hidden; */
   /* animation: slide_right 0.75s both linear; */
   /* animation-play-state: paused; */
 }
 
 #projects p {
-  font-size: 1.5vw;
+  font-size: 1.5em;
 }
 
 .panel {
@@ -440,7 +452,7 @@ font-size: 5vw;
 .panel h4 {
   margin-top: 1%;
   margin-bottom: 1%;
-  font-size: 2vw;
+  font-size: 2em;
   text-align: center;
 }
 
@@ -498,7 +510,7 @@ font-size: 5vw;
   color: #353535;
   border: 2px solid #353535;
   border-radius: 7%;
-  font-size: 1vw;
+  font-size: 1em;
   padding-top: 2%;
   padding-bottom: 2%;
   background-color: white;
@@ -523,12 +535,12 @@ font-size: 5vw;
   z-index: 4;
   position: fixed;
   /* display: none; */
-  visibility: hidden;
+  /* visibility: hidden; */
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: rgba(0,0,0,0.5);
-  animation: modal 0.5s 0.2s linear both;
+  animation: modal 0.3s 0.2s linear both;
   animation-play-state: paused;
 }
 
@@ -569,6 +581,7 @@ font-size: 5vw;
   display: flex;
   text-align: center;
   justify-content: center;
+  animation: none;
 }
 
 #panel_2_pop_up {
@@ -578,5 +591,97 @@ font-size: 5vw;
   /* display: flex;
   align-items: center;
   justify-content: center; */
+  /* display: none; */
+
+  display: none;
+  visibility: hidden;
   z-index: 5;
+  width: 60%;
+  /* height: 85%; */
+  padding-top: 0.3%;
+  padding-left: 1%;
+  padding-right: 1%;
+  animation: middle_pop_up 0.3s 0.6s both linear;
+  animation-play-state: paused;
+  overflow-y: auto;
+  /* transform: translateX(125%); */
+}
+
+#panel_2_pop_up h2 {
+  margin-top: 0;
+  padding-top: 0;
+  margin-bottom: 0.1%;
+  font-size: 3em;
+}
+
+#para_wrapper {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+#button_wrapper {
+  padding: 0;
+  margin: 0;
+}
+#panel_2_pop_up p {
+  float: left;
+  margin-left: 1%;
+  margin-right: 1%;
+  padding: 0;
+}
+
+#panel_2_pop_up button {
+  display: inline-block;
+  /* margin-left: auto;
+  margin-right: auto; */
+  margin-bottom: 2%;
+  margin-top: 0%;
+  width: 60%;
+  max-width: 120px;
+  color: #353535;
+  border: 2px solid #353535;
+  border-radius: 7%;
+  font-size: 1vw;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  background-color: white;
+  transition: background-color 0.2s 0.2s linear,
+              color 0.2s 0.2s linear,
+              border 0.2s 0.2s linear;
+}
+
+#panel_2_pop_up button:first-of-type {
+  margin-right: 2%;
+}
+
+/* #panel_2_pop_up button {
+  margin-left: 5%;
+} */
+
+#panel_2_pop_up button:hover {
+  cursor: pointer;
+  background-color: #353535;
+  color: white;
+  border: 1px solid #353535;
+  font-size: 1vw;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  margin-bottom: 1%;
+}
+
+#panel_2_pop_up a {
+  text-decoration: none;
+  /* color: white; */
+  /* transition: color 0.2s 0.2s linear; */
+}
+
+#panel_2_pop_up a:hover {
+  text-decoration: none;
+  /* color: yellow; */
+}
+
+#panel_2_pop_up a:visited {
+  text-decoration: none;
+  /* color: #353535; */
 }

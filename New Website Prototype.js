@@ -149,7 +149,11 @@ do this only in the event of the browser not being so
 
 var modal_button = document.querySelector("#modal_button");
 var modal = document.querySelector("#Modal");
+var modal_pop_up = document.querySelector("#panel_2_pop_up");
 
 modal_button.addEventListener("click", function(event) {
   modal.style.animationPlayState = "running";
+  modal_pop_up.style.display = "block";
+  // modal_pop_up.style.visibility = "hidden";
+  modal_pop_up.style.animationPlayState = "running";
 });
