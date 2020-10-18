@@ -138,18 +138,21 @@ now looks like:
 @keyframes middle_pop_up{
   0% {
     /* transform: translateY(-200%); */
-    display: block;
+    display: flex;
     visibility: visible;
     /* right: -25%; */
     width: 0%;
     transform: scale(0) translateY(-50%);
   }
   100% {
-    display: block;
+    display: flex;
     visibility: visible;
+    /* align-items: center;
+    justify-content: center; */
     /* transform: translateY(-50%); */
     /* right: 18%; */
-    width: 60%;
+    width: auto;
+    overflow: initial;
     transform: scale(1) translateY(-50%);
   }
 }
@@ -591,39 +594,6 @@ h1 {
   animation-play-state: paused; */
 }
 
-/* #modal_button {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 1%;
-  width: 60%;
-  max-width: 95px;
-  color: #353535;
-  border: 2px solid #353535;
-  border-radius: 7%;
-  font-size: 1vw;
-  padding-top: 2%;
-  padding-bottom: 2%;
-  background-color: white;
-  transition: background-color 0.2s 0.2s linear,
-              color 0.2s 0.2s linear,
-              border 0.2s 0.2s linear;
-}
-
-#modal_button:hover {
-  cursor: pointer;
-  background-color: #353535;
-  color: white;
-  border: 1px solid white;
-}
-
-#modal_button:active {
-  cursor: pointer;
-  background-color: #353535;
-  color: white;
-  border: 1px solid white;
-} */
-
 #info_panel_wrapper {
   display: flex;
   text-align: center;
@@ -632,36 +602,29 @@ h1 {
 }
 
 .panel_pop_up {
-  position: fixed;
+  position: absolute;
   /* margin-top: auto;
   margin-bottom: auto; */
   /* display: flex;
   align-items: center;
   justify-content: center; */
   /* display: none; */
-
-  display: none;
-  visibility: hidden;
+  /* visibility: hidden; */
   z-index: 5;
-  width: auto;
+  /* width: auto; */
   background-color: white;
   font-family: Calibri;
   /* height: 85%; */
+  /* max-height: 95%; */
   padding-top: 0.3%;
   padding-left: 1%;
   padding-right: 1%;
   animation: middle_pop_up 0.3s 0.6s both linear;
   animation-play-state: paused;
   overflow-y: auto;
+  overflow-x: auto;
   border-radius: 1%;
   /* transform: translateX(125%); */
-}
-
-.panel_pop_up h2 {
-  margin-top: 0;
-  padding-top: 0;
-  margin-bottom: 0.1%;
-  font-size: 3em;
 }
 
 .panel_pop_up h2 {
@@ -670,21 +633,27 @@ h1 {
   text-align: center;
   position: relative;
   left: 3.5%;
-  /* margin-top: 0px;
-  padding-top: 0px; */
+  /* margin-top: 0;
+  padding-top: 0; */
+
+  margin-top: 1%;
+  margin-bottom: 1%;
+  font-size: 3em;
 }
 
 .panel_pop_up h4 {
   display: block;
   font-weight: normal;
   margin-top: 0;
-  margin-right: 0.5%;
+  margin-right: 1%;
   margin-bottom: 0px;
   float: right;
-  padding: 0px;
+  /* padding: 0%; */
+  padding: 0.5% 0 0 0.5%;
   height: 0.5%;
   font-size: 2.5em;
   width: 2%;
+  box-sizing: border-box;
   transform: rotate(315deg);
 }
 
@@ -835,6 +804,9 @@ h1 {
   border: 1px solid #353535;
 }
 
+#panel_2_pop_up {
+  max-width: 900px;
+}
 #panel_1_pop_up, #panel_3_pop_up {
   max-width: 724px;
   padding-left: 1%;
