@@ -438,7 +438,7 @@ h1 {
   margin-top: 1.5%;
   margin-bottom: 2%;
   visibility: hidden;
-  animation: slide_right 0.2s both linear;
+  animation: slide_right 0.2s 0.1s both linear;
   animation-play-state: paused;
 }
 
@@ -488,7 +488,7 @@ h1 {
   padding-left: 0.01%;
   padding-right: 0.01%;
   visibility: hidden;
-  animation: flip 0.25s 0.4s linear both;
+  animation: flip 0.25s 0.5s linear both;
   animation-play-state: paused;
 }
 
@@ -499,7 +499,7 @@ h1 {
   /* padding-left: 2%;
   padding-right: 2%; */
   visibility: hidden;
-  animation: flip 0.25s 0.65s linear both;
+  animation: flip 0.25s 0.75s linear both;
   animation-play-state: paused;
 }
 
@@ -507,7 +507,7 @@ h1 {
   margin-left: 5%;
   margin-right: auto;
   visibility: hidden;
-  animation: flip 0.25s 0.9s linear both;
+  animation: flip 0.25s 1s linear both;
   animation-play-state: paused;
 }
 
