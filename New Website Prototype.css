@@ -487,7 +487,7 @@ h1 {
   margin-right: 5%;
   padding-left: 0.01%;
   padding-right: 0.01%;
-  visibility: hidden;
+  /* visibility: hidden; */
   animation: flip 0.25s 0.5s linear both;
   animation-play-state: paused;
 }
@@ -498,7 +498,7 @@ h1 {
   width: 24%;
   /* padding-left: 2%;
   padding-right: 2%; */
-  visibility: hidden;
+  /* visibility: hidden; */
   animation: flip 0.25s 0.75s linear both;
   animation-play-state: paused;
 }
@@ -506,7 +506,7 @@ h1 {
 #panel_3 {
   margin-left: 5%;
   margin-right: auto;
-  visibility: hidden;
+  /* visibility: hidden; */
   animation: flip 0.25s 1s linear both;
   animation-play-state: paused;
 }
