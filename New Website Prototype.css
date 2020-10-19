@@ -66,11 +66,14 @@ now looks like:
 }
 
 @keyframes slide_right {
-  from {
-    visibility: visible;
-    transform: translateX(150%);
+  0% {
+    visibility: hidden;
+    transform: translateX(50%);
   }
-  to {
+  1% {
+    visibility: visible;
+  }
+  100% {
     visibility: visible;
     transform: translateX(0%);
   }
@@ -88,13 +91,21 @@ now looks like:
 }
 
 @keyframes flip {
-  from {
+  0% {
     visibility: visible;
-    transform: rotateY(90deg);
+    opacity: 0;
+    transform: translateY(-30%);
   }
-  to {
+  30% {
+    transform: translateY(-25%);
+  }
+  70% {
+    opacity: 1;
+    /* transform: translateY(-25%); */
+  }
+  100% {
     visibility: visible;
-    transform: rotateY(0deg);
+    transform: translateY(0%);
   }
 }
 
@@ -151,7 +162,7 @@ now looks like:
     justify-content: center; */
     /* transform: translateY(-50%); */
     /* right: 18%; */
-    width: auto;
+    width: 60%;
     overflow: initial;
     transform: scale(1) translateY(-50%);
   }
@@ -161,6 +172,7 @@ now looks like:
   0% {
     display: block;
     visibility: visible;
+    overflow: initial;
     /* transform: translateY(-50%); */
     /* right: 18%; */
     width: 60%;
@@ -476,7 +488,7 @@ h1 {
   margin-top: 1.5%;
   margin-bottom: 2%;
   visibility: hidden;
-  animation: slide_right 0.75s both linear;
+  animation: slide_right 0.2s both linear;
   animation-play-state: paused;
 }
 
@@ -526,7 +538,7 @@ h1 {
   padding-left: 0.01%;
   padding-right: 0.01%;
   visibility: hidden;
-  animation: flip 0.3s 0.8s linear both;
+  animation: flip 0.25s 0.4s linear both;
   animation-play-state: paused;
 }
 
@@ -537,7 +549,7 @@ h1 {
   /* padding-left: 2%;
   padding-right: 2%; */
   visibility: hidden;
-  animation: flip 0.3s 1.1s linear both;
+  animation: flip 0.25s 0.65s linear both;
   animation-play-state: paused;
 }
 
@@ -545,7 +557,7 @@ h1 {
   margin-left: 5%;
   margin-right: auto;
   visibility: hidden;
-  animation: flip 0.3s 1.4s linear both;
+  animation: flip 0.25s 0.9s linear both;
   animation-play-state: paused;
 }
 
@@ -628,11 +640,11 @@ h1 {
 }
 
 .panel_pop_up h2 {
-  width: 95%;
+  width: 90%;
   display: block;
   text-align: center;
   position: relative;
-  left: 3.5%;
+  left: 6.5%;
   /* margin-top: 0;
   padding-top: 0; */
 
@@ -645,7 +657,7 @@ h1 {
   display: block;
   font-weight: normal;
   margin-top: 0;
-  margin-right: 1%;
+  margin-right: 1.5%;
   margin-bottom: 0px;
   float: right;
   /* padding: 0%; */
@@ -673,8 +685,8 @@ h1 {
 .panel_pop_up p {
   display: block;
   float: left;
-  margin-left: 1%;
-  margin-right: 1%;
+  margin-left: 2%;
+  margin-right: 2%;
   padding: 0;
 }
 
@@ -818,38 +830,51 @@ h1 {
 #panel_1_pop_up img {
   margin-left: auto;
   margin-right: auto;
+  width: 70%;
+  height: 70%;
 }
 
-#panel_1_pop_up p {
+#panel_2_pop_up img {
+  width: 95%;
+  height: 82%;
+}
+
+#panel_3_pop_up img {
+  width: 90%;
+  height: 78%;
+}
+
+/* #panel_1_pop_up p { */
   /* width: 65%; */
   /* width: 80%; */
   /* max-width: 800px; */
-  padding-left: 2%;
+  /* padding-left: 2%;
   padding-right: 2%;
   margin-left: 0;
-  margin-right: 0;
-}
-#panel_1_pop_up button {
+  margin-right: 0; */
+/* } */
+
+/* #panel_1_pop_up button {
   width: 52%;
   display: block;
   margin-left: auto;
   margin-right: auto;
   margin-top: 0.5%;
   padding: 0;
-}
+} */
 
-#panel_1_pop_up button:hover {
+/* #panel_1_pop_up button:hover { */
   /* padding: 0; */
-  margin-bottom: 2%;
-}
+  /* margin-bottom: 2%; */
+/* } */
 
-#panel_1_pop_up h2 {
-  width: 85%;
+/* #panel_1_pop_up h2 { */
+  /* width: 85%; */
   /* left: 5%; */
   /* display: inline; */
 
-  margin-left: auto;
-  margin-right: auto;
+  /* margin-left: auto;
+  margin-right: auto; */
   /* margin-top: 0px; */
   /* padding-top: 0px; */
-}
+/* } */
