@@ -80,7 +80,7 @@ function scroll_function(scroll_event) {
   update_animations();
 
   if (Visible_elements.all_visible()) {
-    console.log("all visible")
+    console.log("all visible");
     window.removeEventListener("scroll", scroll_function);
   }
 }
@@ -100,8 +100,19 @@ function update_animations() {
           // console.log((Dimensions.scroll_Y + Dimensions.window_height), '\n',
           //              Elements_to_hide[animation_element].getAttribute("id"), '\n',
           //              Elements_to_hide[animation_element].getBoundingClientRect());
-          Elements_to_hide[animation_element].style.animationPlayState = "running";
-          Visible_elements[animation_element] = true;
+          // Our special case, with our middle panel in the about section. It's
+          // height is shorter, and as the user scrolls down, it will show first otherwise
+          if (Elements_to_hide[animation_element].getAttribute("id") == "right") {
+            if (document.querySelector("#left").style.animationPlayState == "running") {
+              console.log("left element running");
+              Elements_to_hide[animation_element].style.animationPlayState = "running";
+              Visible_elements[animation_element] = true;
+            }
+          }
+          else {
+            Elements_to_hide[animation_element].style.animationPlayState = "running";
+            Visible_elements[animation_element] = true;
+          }
     }
   }
 }
@@ -112,9 +123,12 @@ do this only in the event of the browser not being so
 */
 if (!(sBrowser == "Microsoft Internet Explorer")) {
   window.addEventListener("load", function(event) {
-    update_animations();
     //console.log("Hi")
-    window.addEventListener("scroll", scroll_function);
+    Header = document.querySelector("#Header");
+    Header.addEventListener("animationend", function() {
+      update_animations();
+      window.addEventListener("scroll", scroll_function);
+    });
   });
 }
 

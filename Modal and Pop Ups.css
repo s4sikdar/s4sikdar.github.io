@@ -1,14 +1,20 @@
 @keyframes middle_pop_up{
   0% {
+    /* transform: translateY(-200%); */
     display: flex;
     visibility: visible;
+    /* right: -25%; */
     width: 0%;
     transform: scale(0) translateY(-50%);
   }
   100% {
     display: flex;
     visibility: visible;
-    width: 60%;
+    /* align-items: center;
+    justify-content: center; */
+    /* transform: translateY(-50%); */
+    /* right: 18%; */
+    width: min(70vw,70vh);
     overflow: initial;
     transform: scale(1) translateY(-50%);
   }
@@ -19,7 +25,7 @@
     display: block;
     visibility: visible;
     overflow: initial;
-    width: 60%;
+    width: min(70vw,70vh);
     transform: scale(1) translateY(-50%);
   }
   99% {
@@ -273,8 +279,8 @@
 #panel_1_pop_up img {
   margin-left: auto;
   margin-right: auto;
-  width: 70%;
-  height: 70%;
+  width: min(60vw,60vh);
+  height: min(60vw,60vh);
 }
 
 #panel_2_pop_up img {

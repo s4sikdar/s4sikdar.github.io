@@ -94,10 +94,10 @@ now looks like:
   0% {
     visibility: visible;
     opacity: 0;
-    transform: translateY(-30%);
+    transform: translateY(15%);
   }
   30% {
-    transform: translateY(-25%);
+    transform: translateY(10%);
   }
   70% {
     opacity: 1;
@@ -252,20 +252,20 @@ overflow-x: hidden;
 #Header {
   margin-top: 0;
   width: 100%;
-  height: 70%;
+  height: 75%;
   overflow: hidden;
   position: relative;
-  background-image: url("Mountain Top.jpg");
+  background-image: url("Background Charcoal.jpg");
   background-size: cover;
   margin-bottom: 0;
-  animation: fullname 1.5s 0.5s linear both;
+  animation: fullname 1s 0.5s linear both;
 }
 
 #translucent_layer {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(255,255,255,0.2);
+  background-color: rgba(0,0,0,0.05);
   width: 100%;
   height: 100%;
   position: absolute;
@@ -274,29 +274,31 @@ overflow-x: hidden;
 }
 
 div #translucent_layer:hover {
-  background-color: rgba(255,255,255,0.6);
+  background-color: rgba(0,0,0,0.6);
   /* color: #353535; */
 }
 
 h1 {
-  font-size: 5vw;
+  font-size: 6vw;
   /* position: absolute;
   top: 15%;
   left: 30%; */
-  color: #353535;
+  /* color: #353535; */
+  color: #F1F0EA;
   z-index: 2;
-  margin-bottom: 10%;
+  /* margin-bottom: 10%; */
   /* transition: inherit; */
   /* display: none; */
   /* visibility: hidden; */
-  animation-name: fullname 1.5s 2s forwards linear;
+  /* animation: fullname 0.5s 2s forwards linear; */
 }
+
 #about_section {
   margin-bottom: 0;
   background-color: #F1F0EA;
   font-family: "Lucida Console";
   width: 100%;
-  height: 48em;
+  /* height: 48em; */
   color: #353535;
   padding-top: 1px;
   position: relative;
@@ -304,46 +306,59 @@ h1 {
 }
 
 #about_section h2 {
+  display: block;
   margin-top: 3%;
   text-align: center;
   font-size: 3em;
-  margin-bottom: 1%;
+  margin-bottom: 2%;
   text-decoration: none;
   /* transform-box: border box; */
   visibility: hidden;
-  animation: slide_right 0.5s both linear;
+  animation: slide_right 0.3s both linear;
   animation-play-state: paused;
+}
+
+#flex_container {
+  width: 90%;
+  margin: 0.5% auto 2%;
+  display: flex;
+  justify-content: space-between;
 }
 
 #right {
   background-color: white;
   width: 20%;
+  height: 20%;
   /* height: 15vw; */
   padding: 1%;
-  margin-top: 5%;
-  margin-right: 3%;
-  margin-bottom: 2%;
+  /* padding-bottom: 2%; */
+  /* margin-top: 5%; */
+  /* margin-right: 3%; */
+  /* margin-bottom: 2%; */
   font-size: 1.5em;
   font-family: "Calibri";
-  position: absolute;
-  right: 5%;
+  /* position: absolute; */
+  /* right: 5%; */
   /* bottom: 5%; */
-  top: 15%;
+  /* top: 15%; */
   box-shadow: 5px 5px 12px black;
-  visibility: hidden;
-  animation: slide_right 0.4s 0.1s both linear;
+  visibility: visible;
+  animation: flip 0.2s 0.5s both linear;
   animation-play-state: paused;
 }
 
 #right ul {
-  display: block;
+  display: flex;
+  display: flexbox;
+  flex-direction: column;
+  justify-content: space-around;
   /* background-color: darkgray; */
   font-size: 1em;
-  padding-left: 8%;
-  padding-top: 0%;
-  padding-bottom:  0%;
+  /* padding-left: 8%; */
+  /* padding-top: 0%; */
+  /* padding-bottom:  0%; */
   margin-top: 1%;
-  margin-left: 4%;
+  /* margin-left: 4%; */
   margin-bottom: 0%;
 }
 
@@ -357,19 +372,19 @@ h1 {
 }
 
 #left {
-  width: 30%;
+  width: 25%;
   padding: 1% 2% 1.5% 2%;
   /* padding-top: 1%;
   padding-bottom: 1.5%; */
   /*margin: auto;*/
-  margin-top: 1%;
-  margin-left: 5%;
+  /* margin-top: 1%; */
+  /* margin-left: 5%; */
   font-family: "Calibri";
-  float: left;
+  /* float: left; */
   background-color: white;
   box-shadow: 5px 5px 12px black;
-  visibility: hidden;
-  animation: slide_left 0.4s both linear;
+  /* visibility: hidden; */
+  animation: flip 0.2s 0.3s both linear;
   animation-play-state: paused;
 }
 
@@ -388,22 +403,22 @@ h1 {
 }
 
 #middle {
-  width: 30%;
+  width: 25%;
   padding: 1% 2% 1.5% 2%;
   /* padding-top: 1%;
   padding-bottom: 1.5%; */
   /* float: left; */
   /*margin: auto;*/
-  margin-top: 24%;
+  /* margin-top: 24%; */
   /* margin-left: 20%; */
-  margin-left: auto;
-  margin-right: auto;
+  /* margin-left: auto; */
+  /* margin-right: auto; */
   font-family: "Calibri";
   background-color: white;
   box-shadow: 5px 5px 12px black;
-  animation: slide_middle 0.4s 0.2s both linear;
+  animation: flip 0.2s 0.7s both linear;
   animation-play-state: paused;
-  visibility: hidden;
+  /* visibility: hidden; */
 }
 
 #middle h3 {
@@ -488,7 +503,7 @@ h1 {
   padding-left: 0.01%;
   padding-right: 0.01%;
   /* visibility: hidden; */
-  animation: flip 0.25s 0.5s linear both;
+  animation: flip 0.2s 0.5s linear both;
   animation-play-state: paused;
 }
 
@@ -499,7 +514,7 @@ h1 {
   /* padding-left: 2%;
   padding-right: 2%; */
   /* visibility: hidden; */
-  animation: flip 0.25s 0.75s linear both;
+  animation: flip 0.2s 0.7s linear both;
   animation-play-state: paused;
 }
 
@@ -507,7 +522,7 @@ h1 {
   margin-left: 5%;
   margin-right: auto;
   /* visibility: hidden; */
-  animation: flip 0.25s 1s linear both;
+  animation: flip 0.2s 0.9s linear both;
   animation-play-state: paused;
 }
 
