@@ -4,6 +4,8 @@ Explorer. So we use this to dect what browser is used. The code can
 be found here:
 https://developer.mozilla.org/en-US/docs/Web/API/Window/navigator
 */
+var navbar_id = "navbar";
+
 var sBrowser, sUsrAg = navigator.userAgent;
 
 if (sUsrAg.indexOf("Firefox") > -1) {
@@ -117,17 +119,32 @@ function update_animations() {
   }
 }
 
+function toggle_class() {
+  var navbar = document.querySelector(".navigator");
+  if (window.scrollY == 0) {
+      navbar.removeAttribute("id");
+      navbar.setAttribute("class", "navbar navigator");
+  } else {
+      navbar.setAttribute("class", "navigator");
+      navbar.id = "navbar";
+  }
+}
+
 /*
 The animations here don't work in Internet Explorer, which is why we
 do this only in the event of the browser not being so
 */
 if (!(sBrowser == "Microsoft Internet Explorer")) {
   window.addEventListener("load", function(event) {
+    toggle_class();
     //console.log("Hi")
     Header = document.querySelector("#Header");
     Header.addEventListener("animationend", function() {
       update_animations();
       window.addEventListener("scroll", scroll_function);
+      window.addEventListener("scroll", toggle_class);
+      console.log(document.querySelector("#navbar").id);
+      // navbar.classList.toggle(".navbar");
     });
   });
 }
@@ -139,7 +156,7 @@ function Turn_modal_off() {
     modal.style.visibility = "hidden";
     window.cancelAnimationFrame(animation_id);
   } else {
-    animation_id = requestAnimationFrame(Turn_modal_off)
+    animation_id = requestAnimationFrame(Turn_modal_off);
   }
 }
 

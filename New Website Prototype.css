@@ -247,15 +247,91 @@ overflow-x: hidden;
   /* animation-play-state: paused; */
 }
 
+.navbar {
+  display: block;
+  background: transparent;
+  color: #F1F0EA;
+  border-bottom: none;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  /* background-color: #F1F0EA; */
+  /* color: #353535; */
+  position: fixed;
+  top: 0%;
+  width: 100%;
+  z-index: 2;
+  /* border-bottom: 1px solid #dbd7d2; */
+  /* animation: header 0.5s both linear; */
+  /* border-bottom:  */
+}
 
+.navbar li {
+  float: right;
+  /* Allows us to have centered li elements in the navbar*/
+  display: flex;
+  align-items: center;
+  /* Make up for the underline */
+  padding: 3px 0px 4px 0px;
+}
+
+.navbar::after {
+  content: '';
+  display: block;
+  margin: auto;
+  width: 96%;
+  height: 0.2em;
+  border-radius: 0.2em;
+  background-color: #F1F0EA;
+  position: relative;
+  top: 2.5em;
+}
+
+.navbar li a {
+  color: inherit;
+  padding: 7px 10px;
+  font-size: 1.3em;
+  display: block;
+  /* Remove underline */
+  text-decoration: none;
+  border-radius: 0.25em;
+  /*
+  Allows for a color change that fades from one to the other, when
+  hovering over and off the a tags.
+   */
+  transition: background-color 0.3s 0.15s linear;
+}
+
+.navbar li a:hover {
+  font-weight: bold;
+  /* background-color: #dbd7d2; */
+  /* Make up for the underline. */
+  padding-bottom: 1px;
+}
+
+.navbar li a::after {
+  content: '';
+  background-color: #F1F0EA;
+  display: none;
+  width: 0%;
+  height: 0.1em;
+  border-radius: 1em;
+  position: relative;
+  top: 4px;
+}
+
+.navbar li a:hover::after {
+  display: block;
+  animation: underline 0.5s normal forwards;
+}
 /* Code for our Image and the name hovering over it.*/
 #Header {
   margin-top: 0;
   width: 100%;
-  height: 75%;
+  height: 100%;
   overflow: hidden;
   position: relative;
-  background-image: url("Background Charcoal.jpg");
+  background-image: url("Background Charcoal.png");
   background-size: cover;
   margin-bottom: 0;
   animation: fullname 1s 0.5s linear both;
@@ -318,7 +394,7 @@ h1 {
   animation-play-state: paused;
 }
 
-#flex_container {
+.flex_container {
   width: 90%;
   margin: 0.5% auto 2%;
   display: flex;
