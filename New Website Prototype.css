@@ -68,18 +68,23 @@ now looks like:
 @keyframes slide_right {
   0% {
     visibility: hidden;
-    transform: translateX(50%);
+    transform: translateX(25%) skew(-30deg);
   }
   1% {
+    transform: translateX(25%) skew(-30deg);
     visibility: visible;
+  }
+  90% {
+    visibility: visible;
+    transform: translateX(0%) skew(-30deg);
   }
   100% {
     visibility: visible;
-    transform: translateX(0%);
+    transform: translateX(0%) skew(0deg);
   }
 }
 
-@keyframes slide_middle {
+/* @keyframes slide_middle {
   from {
     visibility: visible;
     transform: translateX(-225%);
@@ -88,9 +93,9 @@ now looks like:
     visibility: visible;
     transform: translateX(0%);
   }
-}
+} */
 
-@keyframes flip {
+@keyframes slide_up {
   0% {
     visibility: visible;
     opacity: 0;
@@ -172,7 +177,7 @@ overflow-x: hidden;
   padding: 0;
   /* Remove bullets before */
   list-style-type: none;
-  background-color: #F1F0EA;
+  background-color: #FFFFF5;
   color: #353535;
   /* Keep it fixed at the top as we scroll down */
   position: fixed;
@@ -187,7 +192,7 @@ overflow-x: hidden;
   */
   border-bottom: 1px solid #dbd7d2;
   /* Our css animation that slides down the header when the page loads. */
-  animation: header 0.5s both linear;
+  animation: header 0.4s both linear;
 }
 
 #navbar li {
@@ -250,7 +255,7 @@ overflow-x: hidden;
 .navbar {
   display: block;
   background: transparent;
-  color: #F1F0EA;
+  color: #FFFFF5;
   border-bottom: none;
   margin: 0;
   padding: 0;
@@ -262,7 +267,7 @@ overflow-x: hidden;
   width: 100%;
   z-index: 2;
   /* border-bottom: 1px solid #dbd7d2; */
-  /* animation: header 0.5s both linear; */
+  animation: fullname 1s both linear;
   /* border-bottom:  */
 }
 
@@ -275,6 +280,10 @@ overflow-x: hidden;
   padding: 3px 0px 4px 0px;
 }
 
+.navbar li:first-child {
+  margin-right: 2%;
+}
+
 .navbar::after {
   content: '';
   display: block;
@@ -282,7 +291,7 @@ overflow-x: hidden;
   width: 96%;
   height: 0.2em;
   border-radius: 0.2em;
-  background-color: #F1F0EA;
+  background-color: #FFFFF5;
   position: relative;
   top: 2.5em;
 }
@@ -311,7 +320,7 @@ overflow-x: hidden;
 
 .navbar li a::after {
   content: '';
-  background-color: #F1F0EA;
+  background-color: #FFFFF5;
   display: none;
   width: 0%;
   height: 0.1em;
@@ -360,7 +369,7 @@ h1 {
   top: 15%;
   left: 30%; */
   /* color: #353535; */
-  color: #F1F0EA;
+  color: #FFFFF5;
   z-index: 2;
   /* margin-bottom: 10%; */
   /* transition: inherit; */
@@ -369,9 +378,21 @@ h1 {
   /* animation: fullname 0.5s 2s forwards linear; */
 }
 
+.icon {
+  z-index: 2;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.icon i {
+  color: #FFFFF5;
+  font-size: 3em;
+}
+
 #about_section {
   margin-bottom: 0;
-  background-color: #F1F0EA;
+  background-color: #FFFFF5;
   font-family: "Lucida Console";
   width: 100%;
   /* height: 48em; */
@@ -419,7 +440,7 @@ h1 {
   /* top: 15%; */
   box-shadow: 5px 5px 12px black;
   visibility: visible;
-  animation: flip 0.2s 0.5s both linear;
+  animation: slide_up 0.2s 0.5s both linear;
   animation-play-state: paused;
 }
 
@@ -460,7 +481,7 @@ h1 {
   background-color: white;
   box-shadow: 5px 5px 12px black;
   /* visibility: hidden; */
-  animation: flip 0.2s 0.3s both linear;
+  animation: slide_up 0.2s 0.3s both linear;
   animation-play-state: paused;
 }
 
@@ -492,7 +513,7 @@ h1 {
   font-family: "Calibri";
   background-color: white;
   box-shadow: 5px 5px 12px black;
-  animation: flip 0.2s 0.7s both linear;
+  animation: slide_up 0.2s 0.7s both linear;
   animation-play-state: paused;
   /* visibility: hidden; */
 }
@@ -517,7 +538,7 @@ h1 {
   width: 100%;
   height: 65%;
   background-color: #353535;
-  color: #F1F0EA;
+  color: #FFFFF5;
   font-family: "Lucida Console";
   margin-top: 0%;
   padding-top: 1px;
@@ -579,7 +600,7 @@ h1 {
   padding-left: 0.01%;
   padding-right: 0.01%;
   /* visibility: hidden; */
-  animation: flip 0.2s 0.5s linear both;
+  animation: slide_up 0.2s 0.5s linear both;
   animation-play-state: paused;
 }
 
@@ -590,7 +611,7 @@ h1 {
   /* padding-left: 2%;
   padding-right: 2%; */
   /* visibility: hidden; */
-  animation: flip 0.2s 0.7s linear both;
+  animation: slide_up 0.2s 0.7s linear both;
   animation-play-state: paused;
 }
 
@@ -598,7 +619,7 @@ h1 {
   margin-left: 5%;
   margin-right: auto;
   /* visibility: hidden; */
-  animation: flip 0.2s 0.9s linear both;
+  animation: slide_up 0.2s 0.9s linear both;
   animation-play-state: paused;
 }
 

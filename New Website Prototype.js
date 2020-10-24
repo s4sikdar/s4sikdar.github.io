@@ -138,14 +138,14 @@ if (!(sBrowser == "Microsoft Internet Explorer")) {
   window.addEventListener("load", function(event) {
     toggle_class();
     //console.log("Hi")
-    Header = document.querySelector("#Header");
-    Header.addEventListener("animationend", function() {
-      update_animations();
-      window.addEventListener("scroll", scroll_function);
-      window.addEventListener("scroll", toggle_class);
-      console.log(document.querySelector("#navbar").id);
-      // navbar.classList.toggle(".navbar");
-    });
+    update_animations();
+    window.addEventListener("scroll", scroll_function);
+    window.addEventListener("scroll", toggle_class);
+    // Header = document.querySelector("#Header");
+    // Header.addEventListener("animationend", function() {
+    //   // console.log(document.querySelector("#navbar").id);
+    //   // navbar.classList.toggle(".navbar");
+    // });
   });
 }
 
