@@ -102,19 +102,24 @@ function update_animations() {
           // console.log((Dimensions.scroll_Y + Dimensions.window_height), '\n',
           //              Elements_to_hide[animation_element].getAttribute("id"), '\n',
           //              Elements_to_hide[animation_element].getBoundingClientRect());
-          // Our special case, with our middle panel in the about section. It's
+          // Our first special case, with our middle panel in the about section. It's
           // height is shorter, and as the user scrolls down, it will show first otherwise
           if (Elements_to_hide[animation_element].getAttribute("id") == "right") {
             if (document.querySelector("#left").style.animationPlayState == "running") {
-              console.log("left element running");
+              // console.log("left element running");
               Elements_to_hide[animation_element].style.animationPlayState = "running";
-              Visible_elements[animation_element] = true;
+            }
+            // Second special case here, with the last section header. I want it to run
+            // after the content panels in the previous section have started animating
+          } else if (Elements_to_hide[animation_element].getAttribute("id") == "projects_header") {
+            if (document.querySelector("#middle").style.animationPlayState == "running") {
+              Elements_to_hide[animation_element].style.animationPlayState = "running";
             }
           }
           else {
             Elements_to_hide[animation_element].style.animationPlayState = "running";
-            Visible_elements[animation_element] = true;
           }
+          Visible_elements[animation_element] = true;
     }
   }
 }
@@ -175,6 +180,9 @@ var Panel_buttons = document.querySelectorAll(".panel button");
 var Elements_in_modal = document.querySelectorAll(".panel_pop_up");
 var X_buttons = document.querySelectorAll(".panel_pop_up h4");
 
+
+// if the nodelist does not have a forEach method, then assign it  to
+// the array's forEach method
 if (window.NodeList && !NodeList.prototype.forEach) {
    NodeList.prototype.forEach = Array.prototype.forEach;
 }
