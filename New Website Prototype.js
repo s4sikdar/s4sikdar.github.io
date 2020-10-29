@@ -32,6 +32,8 @@ if (sUsrAg.indexOf("Firefox") > -1) {
 } else {
   sBrowser = "unknown";
 }
+
+// console.log(sBrowser);
 // // The order matters here, and this may report false positives for unlisted browsers.
 //
 var Elements_to_hide = {
@@ -140,6 +142,18 @@ The animations here don't work in Internet Explorer, which is why we
 do this only in the event of the browser not being so
 */
 if (!(sBrowser == "Microsoft Internet Explorer")) {
+  if (sBrowser == "Mozilla Firefox") {
+    // document.CSSStyleSheets
+    // console.log(sBrowser)
+    // document.styleSheets[0].insertRule(".navbar li a {padding-bottom: 6px;}",
+    //                                    100)
+    Navbar_class_elems = document.querySelectorAll(".navbar li a")
+
+    for (let Elem of Navbar_class_elems) {
+      Elem.style.paddingBottom = "6px";
+    }
+  }
+  // console.log(document.styleSheets);
   window.addEventListener("load", function(event) {
     toggle_class();
     //console.log("Hi")

@@ -189,8 +189,9 @@ overflow-x: hidden;
   /*
   Allows for the navbar to be distinguishable from parts of the page
   with the same color.
+  dbd7d2
   */
-  border-bottom: 1px solid #dbd7d2;
+  border-bottom: 1px solid #D2B48C;
   /* Our css animation that slides down the header when the page loads. */
   animation: header 0.4s both linear;
 }
@@ -201,13 +202,13 @@ overflow-x: hidden;
   display: flex;
   align-items: center;
   /* Make up for the underline */
-  padding: 3px 0px 4px 0px;
+  padding: 2px 0px 2px 0px;
 }
 
 #navbar li a {
   /* background-color: #F1F0EA; */
   color: #353535;
-  padding: 7px;
+  padding: 6px 4px;
   font-size: 1.3em;
   display: block;
   /* Remove underline */
@@ -217,6 +218,7 @@ overflow-x: hidden;
   Allows for a color change that fades from one to the other, when
   hovering over and off the a tags.
    */
+  position: relative;
   transition: background-color 0.3s 0.15s linear;
 }
 /* F1F0EA  F2F3F4 f5f5f5 text-decoration 1s, font-weight 1s*/
@@ -224,31 +226,39 @@ overflow-x: hidden;
 #navbar li a:hover {
   font-weight: bold;
   background-color: #dbd7d2;
+  border-radius: 0.25em;
   /* Make up for the underline. */
-  padding-bottom: 1px;
+  padding-bottom: 6px;
 }
 
-#navbar li a::after {
+#navbar li a:after {
   content: '';
   /*
   When displaying a block element, a new line is taken up, offsetting the
   centering of the a tags.
    */
-  display: none;
-  background-color: #353535;
+  /* display: none; */
+  display: block;
+  background: #353535 0 0;
   width: 0%;
-  height: 0.2em;
-  border-radius: 1em;
-  position: relative;
-  top: 4px;
+  left: 50%;
+  height: 0.18em;
+  border-radius: 2em;
+  position: absolute;
+  bottom: 0px;
+  transition: 0.3s linear;
 }
 
-#navbar li a:hover::after {
+#navbar li a:hover:after {
   /* position: relative; */
-  display: block;
+
   background-color: #353535;
+  width: 100%;
+  left: 0;
+  /* bottom: 0px; */
+  /* bottom: */
   /* animation: underline 1s forwards; */
-  animation: underline 0.5s normal forwards;
+  /* animation: underline 0.5s normal forwards; */
   /* animation-play-state: paused; */
 }
 
@@ -258,7 +268,7 @@ overflow-x: hidden;
   color: #F1F0EA;
   border-bottom: none;
   margin: 0;
-  padding: 0;
+  padding: 0 0 1px 0;
   list-style-type: none;
   /* background-color: #F1F0EA; */
   /* color: #353535; */
@@ -277,7 +287,7 @@ overflow-x: hidden;
   display: flex;
   align-items: center;
   /* Make up for the underline */
-  padding: 3px 0px 4px 0px;
+  padding: 3px 0px 3px 0px;
 }
 
 .navbar li:first-child {
@@ -302,6 +312,7 @@ overflow-x: hidden;
   font-size: 1.3em;
   display: block;
   /* Remove underline */
+  position: relative;
   text-decoration: none;
   border-radius: 0.25em;
   /*
@@ -313,25 +324,31 @@ overflow-x: hidden;
 
 .navbar li a:hover {
   font-weight: bold;
+  /* padding-bottom: 6px; */
   /* background-color: #dbd7d2; */
   /* Make up for the underline. */
-  padding-bottom: 1px;
+  /* padding-bottom: 1px; */
 }
 
-.navbar li a::after {
+.navbar li a:after {
   content: '';
-  background-color: #F1F0EA;
-  display: none;
+  background: #F1F0EA 0 0;
+  display: block;
   width: 0%;
+  left: 50%;
   height: 0.1em;
-  border-radius: 1em;
-  position: relative;
-  top: 4px;
+  border-radius: 2em;
+  position: absolute;
+  bottom: 2px;
+  transition: 0.3s linear;
 }
 
 .navbar li a:hover::after {
-  display: block;
-  animation: underline 0.5s normal forwards;
+  /* display: block; */
+  /* animation: underline 0.5s normal forwards; */
+  width: 90%;
+  left: 5%;
+  /* bottom: px; */
 }
 /* Code for our Image and the name hovering over it.*/
 #Header {
@@ -496,6 +513,12 @@ h1 {
   height: 2.8em;
   top: 90%;
 }
+
+#Old_Website::after {
+  content: 'My old website';
+  width: 7em;
+  height: 1.2em;
+}
 /* .fab i::before {
   content: '';
   color: rgb(223,208,164);
@@ -535,7 +558,7 @@ FFFFF5
   width: 100%;
   margin: 0.5% auto 2%;
   display: flex;
-  /* align-items: center; */
+  align-items: flex-start;
   justify-content: space-evenly;
 }
 
@@ -647,7 +670,7 @@ FFFFF5
 
 #middle p {
   margin-top: 0%;
-  margin-bottom: 0;
+  margin-bottom: 5%;
   font-size: 1.5vw;
 }
 
@@ -657,12 +680,13 @@ FFFFF5
 
 #projects {
   width: 100%;
-  height: 65%;
+  /* height: 65%; */
   background-color: #353535;
   color: #F1F0EA;
   font-family: "Lucida Console";
   margin-top: 0%;
   padding-top: 1px;
+  padding-bottom: 2%;
 }
 
 #projects h3 {
@@ -683,7 +707,7 @@ FFFFF5
   /* width: 100%; */
   /* display: flex; */
   /* flex-direction: row; */
-  align-items: center;
+  align-items: flex-start;
   /* justify-content: space-evenly; */
 }
 
