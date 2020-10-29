@@ -1,7 +1,7 @@
 /*
 We need to allow for the website to support older versions of browsers, like Internet
-Explorer. So we use this to dect what browser is used. The code can
-be found here:
+Explorer. So we use this to dect what browser is used. A version that supports
+Internet Explorer is in the works, however, this code can be found here:
 https://developer.mozilla.org/en-US/docs/Web/API/Window/navigator
 */
 var navbar_id = "navbar";
@@ -33,9 +33,7 @@ if (sUsrAg.indexOf("Firefox") > -1) {
   sBrowser = "unknown";
 }
 
-// console.log(sBrowser);
-// // The order matters here, and this may report false positives for unlisted browsers.
-//
+// Put all our elements to hide in an object to make it much cleaner.
 var Elements_to_hide = {
   about_section_header: document.querySelector("#about_section h2"),
   about_section_left: document.querySelector("#left"),
@@ -47,6 +45,8 @@ var Elements_to_hide = {
   panel_3: document.querySelector("#panel_3")
 };
 
+// This object keeps track of visible elements on the page, as these will
+// be true. We assigned a method to this object to check that they are visible.
 var Visible_elements = {
   about_section_header: false,
   about_section_left: false,
@@ -64,30 +64,19 @@ var Visible_elements = {
   }
 }
 
-// console.log(Visible_elements.all_visible());
-//
+//  Keep track of our dimensions.
 var Dimensions = {
   window_height: window.innerHeight,
   scroll_Y: window.scrollY
 };
 
+// Update the dimensions on the resizing of the browser.
 function update_window_dimensions(event) {
   Dimensions.window_height = window.innerHeight;
   Dimensions.scroll_Y = window.scrollY;
 }
 
 window.addEventListener("resize", update_window_dimensions);
-
-
-function scroll_function(scroll_event) {
-  Dimensions.scroll_Y = window.scrollY;
-  update_animations();
-
-  if (Visible_elements.all_visible()) {
-    console.log("all visible");
-    window.removeEventListener("scroll", scroll_function);
-  }
-}
 
 //https://stackoverflow.com/questions/442404/retrieve-the-position-x-y-of-an-html-element-relative-to-the-browser-window
 
@@ -97,13 +86,11 @@ function update_animations() {
     // from what part of the page is visible at the top of the screen. So
     // as you scroll down an element's bottom property of getBoundingClientRect
     // goes down, eventually becoming 0 as it gets to the top. Offset this
-    // by adding the scroll_Y property in the Dimensions object
+    // by adding the scroll_Y property in the Dimensions object. I found out
+    // about getBoundingClientRect from the link above.
     if ((Dimensions.scroll_Y + Dimensions.window_height) >
         ((Elements_to_hide[animation_element].getBoundingClientRect().bottom) +
          (Dimensions.scroll_Y))) {
-          // console.log((Dimensions.scroll_Y + Dimensions.window_height), '\n',
-          //              Elements_to_hide[animation_element].getAttribute("id"), '\n',
-          //              Elements_to_hide[animation_element].getBoundingClientRect());
           // Our first special case, with our middle panel in the about section. It's
           // height is shorter, and as the user scrolls down, it will show first otherwise
           if (Elements_to_hide[animation_element].getAttribute("id") == "right") {
@@ -117,6 +104,10 @@ function update_animations() {
             if (document.querySelector("#middle").style.animationPlayState == "running") {
               Elements_to_hide[animation_element].style.animationPlayState = "running";
             }
+          } else if (Elements_to_hide[animation_element].getAttribute("id") == "panel_3") {
+            if (document.querySelector("#panel_2").style.animationPlayState == "running") {
+              Elements_to_hide[animation_element].style.animationPlayState = "running";
+            }
           }
           else {
             Elements_to_hide[animation_element].style.animationPlayState = "running";
@@ -126,6 +117,19 @@ function update_animations() {
   }
 }
 
+// This is the scroll event handler function that brings elements to the screen.
+function scroll_function(scroll_event) {
+  Dimensions.scroll_Y = window.scrollY;
+  update_animations();
+
+  if (Visible_elements.all_visible()) {
+    console.log("all visible");
+    window.removeEventListener("scroll", scroll_function);
+  }
+}
+
+// This function toggles the class of the navbar on and off, giving us
+//  different looking navigation bars if the scrollY property is 0.
 function toggle_class() {
   var navbar = document.querySelector(".navigator");
   if (window.scrollY == 0) {
@@ -143,31 +147,25 @@ do this only in the event of the browser not being so
 */
 if (!(sBrowser == "Microsoft Internet Explorer")) {
   if (sBrowser == "Mozilla Firefox") {
-    // document.CSSStyleSheets
-    // console.log(sBrowser)
-    // document.styleSheets[0].insertRule(".navbar li a {padding-bottom: 6px;}",
-    //                                    100)
+    // Firefox renders differently than Edge, so I fixed the
+    // navbar to have appropriate padding in Firefox.
     Navbar_class_elems = document.querySelectorAll(".navbar li a")
-
     for (let Elem of Navbar_class_elems) {
       Elem.style.paddingBottom = "6px";
     }
   }
-  // console.log(document.styleSheets);
   window.addEventListener("load", function(event) {
+    // Bring the right class onto the navbar depending on the location on the
+    // page.
     toggle_class();
-    //console.log("Hi")
+    // Bring the right elements to the screen depending on where we are.
     update_animations();
     window.addEventListener("scroll", scroll_function);
     window.addEventListener("scroll", toggle_class);
-    // Header = document.querySelector("#Header");
-    // Header.addEventListener("animationend", function() {
-    //   // console.log(document.querySelector("#navbar").id);
-    //   // navbar.classList.toggle(".navbar");
-    // });
   });
 }
 
+// This function turns the modal off once the pop up has gone.
 var timestart = null;
 var animation_id = null;
 function Turn_modal_off() {
@@ -179,17 +177,8 @@ function Turn_modal_off() {
   }
 }
 
-var counter = 0;
-
-var modal_button = document.querySelector("#panel_2 button");
-var modal = document.querySelector("#Modal");
-var middle_pop_up = document.querySelector("#panel_3_pop_up");
-var x_button = document.querySelector("#panel_3_pop_up h4");
-
-var panel_1_button = document.querySelector("#panel_1 button");
-var left_pop_up = document.querySelector("#panel_1_pop_up");
-var x_button_1 = document.querySelector("#panel_1_pop_up h4");
-
+// This is how we access the the appropriate buttons to add event listeners
+// onto. querySelectorAll and querySelector are very convenient.
 var Panel_buttons = document.querySelectorAll(".panel button");
 var Elements_in_modal = document.querySelectorAll(".panel_pop_up");
 var X_buttons = document.querySelectorAll(".panel_pop_up h4");
@@ -203,6 +192,9 @@ if (window.NodeList && !NodeList.prototype.forEach) {
 
 Panel_buttons.forEach(
   function(currentValue, currentIndex) {
+    // Add appropriate event listeners to the appropriate
+    // buttons asking for more info in the panels, as well as adding the
+    // appropriate event listeners to the x buttons on the pop ups.
     currentValue.addEventListener("click", function() {
       modal.style.visibility = "visible";
       Elements_in_modal[currentIndex].style.display = "block";
