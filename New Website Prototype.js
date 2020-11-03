@@ -157,7 +157,6 @@ if (!(sBrowser == "Microsoft Internet Explorer")) {
   window.addEventListener("load", function(event) {
     // Bring the right class onto the navbar depending on the location on the
     // page.
-    toggle_class();
     // Bring the right elements to the screen depending on where we are.
     update_animations();
     window.addEventListener("scroll", scroll_function);
@@ -170,7 +169,7 @@ var timestart = null;
 var animation_id = null;
 function Turn_modal_off() {
   if (((Date.now()) - this.timestart) >= 320) {
-    modal.style.visibility = "hidden";
+    document.querySelector("#Modal").style.visibility = "hidden";
     window.cancelAnimationFrame(animation_id);
   } else {
     animation_id = requestAnimationFrame(Turn_modal_off);
@@ -196,7 +195,7 @@ Panel_buttons.forEach(
     // buttons asking for more info in the panels, as well as adding the
     // appropriate event listeners to the x buttons on the pop ups.
     currentValue.addEventListener("click", function() {
-      modal.style.visibility = "visible";
+      document.querySelector("#Modal").style.visibility = "visible";
       Elements_in_modal[currentIndex].style.display = "block";
       Elements_in_modal[currentIndex].style.animationName = "middle_pop_up";
       Elements_in_modal[currentIndex].style.animationDelay = "0.1s";
@@ -223,3 +222,4 @@ Panel_buttons.forEach(
       Turn_modal_off();
     });
   });
+  toggle_class();

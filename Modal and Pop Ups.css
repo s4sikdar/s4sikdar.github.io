@@ -169,7 +169,7 @@
 
 /* #panel_2_pop_up button {
   margin-left: 5%;
-  #panel_2_pop_up button:first-of-type, 
+  #panel_2_pop_up button:first-of-type,
 } */
 
 .panel_pop_up button:hover {
@@ -274,6 +274,10 @@
 
 #panel_2_pop_up {
   max-width: 900px;
+}
+
+#panel_2_pop_up h2{
+  font-size: 2.5em;
 }
 #panel_1_pop_up, #panel_3_pop_up {
   max-width: 724px;
