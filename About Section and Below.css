@@ -67,12 +67,21 @@ and then straightened at the end.
   animation-play-state: paused;
 }
 
+/* Need to add all prefixes: tools for this can be found here:
+https://autoprefixer.github.io/
+ */
 .flex_container {
   width: 100%;
   margin: 0.5% auto 2%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: flex-start;
-  justify-content: space-evenly;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 #right {
@@ -170,6 +179,9 @@ and then straightened at the end.
 
 #projects h3 {
   text-align: center;
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
   font-size: 3.5vw;
   margin-top: 1.5%;
   margin-bottom: 2%;
@@ -183,57 +195,65 @@ and then straightened at the end.
 }
 
 .grid_container {
+  display: -ms-grid;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  -ms-grid-columns: 1fr 1fr 1fr;
   padding: 0;
   margin: 0 0 2% 0;
-  border: 1px solid white;
+  /* border: 1px solid white; */
+  justify-items: center;
+  align-items: start;
 }
 
 .grid {
-  /* align-self: start; */
-  /* justify-self: center; */
+  -ms-grid-row-align: start;
+  -ms-grid-column-align: center;
+  align-self: start;
+  justify-self: center;
 }
 
 .child_1 {
-  justify-self: center;
-  align-self: start;
-  grid-column: 1 / 2;
-  border: 1px solid white;
+  /* justify-self: center; */
+  /* align-self: start; */
+  /* grid-column: 1 / 2; */
+  /* border: 1px solid white; */
 }
 
 .child_2 {
-  justify-self: center;
-  align-self: start;
-  grid-column: 2 / 3;
-  border: 1px solid white;
+  /* justify-self: center; */
+  /* align-self: start; */
+  /* grid-column: 2 / 3; */
+  /* border: 1px solid white; */
 }
 
 .child_3 {
-  justify-self: center;
-  align-self: start;
-  grid-column: 3 / 4;
-  border: 1px solid white;
+  /* justify-self: center; */
+  /* align-self: start; */
+  /* grid-column: 3 / 4; */
+  /* border: 1px solid white; */
 }
 
 .panel {
-  width: 61%;
+  width: 20%;
   color: #353535;
   background-color: white;
   font-family: "Calibri", Arial, Verdana, Helvetica;
-  border-radius: 1%;
+  border-radius: 2%;
   box-shadow: 5px 5px 12px black;
-  padding-left: 1.5%;
+  /* padding-left: 1.5%;
   padding-right: 1.5%;
-  padding-top: 1.5%;
+  padding-top: 1.5%; */
+  margin: auto;
   animation: slide_up 0.2s 0s linear both;
   animation-play-state: paused;
 }
 
 .panel h4 {
-  margin-top: 1%;
-  margin-bottom: 1%;
-  font-size: 2em;
+  margin-top: 0.5%;
+  margin-bottom: 0.5%;
+  padding: 0;
+  font-size: 2.5vw;
   text-align: center;
 }
 
@@ -248,20 +268,25 @@ and then straightened at the end.
   /* padding-left: 0.01%;
   padding-right: 0.01%;
   padding-bottom: 0.01%; */
-  width: 70%;
-  padding: 5%;
+  width: 20%;
+  padding: 5% 7% 1%;
   animation-delay: 0.5s;
 }
 
 #panel_2 {
-  width: 80%;
-  padding: 5% 5% 0.5%;
+  /* margin-left: 2%; */
+  /* margin-right: auto; */
+  width: 24%;
+  /* padding: 5% 5% 0.1%; */
   animation-delay: 0.7s
 }
 
 #panel_3 {
-  width: 70%;
-  padding: 5% 1% 0.5%;
+  width: 20%;
+  /* margin: auto; */
+  /* margin-left: 10%; */
+  /* margin-right: auto; */
+  /* padding: 5% 1% 0.1%; */
   animation-delay: 0.9s;
 }
 
@@ -269,7 +294,7 @@ and then straightened at the end.
   display: block;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 2%;
+  margin-top: 1%;
   margin-bottom: 4%;
   width: 60%;
   max-width: 95px;
@@ -290,7 +315,15 @@ and then straightened at the end.
   cursor: pointer;
 }
 
+#panel_1 button {
+  padding-top: 3%;
+  padding-bottom: 3%;
+}
 .panel img {
   border: 1px solid #353535;
   border-radius: 1%;
+}
+
+#panel_1 img {
+  margin-top: 3%;
 }
