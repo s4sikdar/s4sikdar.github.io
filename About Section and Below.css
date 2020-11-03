@@ -245,19 +245,23 @@ and then straightened at the end.
 }
 
 #panel_1 {
-  padding-left: 0.01%;
+  /* padding-left: 0.01%;
   padding-right: 0.01%;
-  padding-bottom: 0.01%;
-  width: 60%;
+  padding-bottom: 0.01%; */
+  width: 70%;
+  padding: 5%;
   animation-delay: 0.5s;
 }
 
 #panel_2 {
-  width: 70%;
+  width: 80%;
+  padding: 5% 5% 0.5%;
   animation-delay: 0.7s
 }
 
 #panel_3 {
+  width: 70%;
+  padding: 5% 1% 0.5%;
   animation-delay: 0.9s;
 }
 
