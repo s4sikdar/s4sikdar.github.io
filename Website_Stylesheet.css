@@ -1,0 +1,222 @@
+body {
+	background-color: white;
+	color: black;
+	font-family: Helvetica, Verdana;
+}
+h1.Inside {
+	background-color: black;
+	padding:  5px 5px 5px 5px;
+	border: 10px double white;
+	color: white;
+	width: 12%;
+	font-size: 200%;
+	position: relative;
+	display: block;
+	left: 44%;
+	right: 44%;
+	text-align: center;
+}
+h1.Second {
+	background-color: black;
+	padding:  5px 5px 5px 5px;
+	border: 10px double white;
+	color: white;
+	width: 26%;
+	font-size: 200%;
+	position: relative;
+	left: 37%;
+	right: 37%;
+	text-align: center;
+}
+p.Inside {
+	background-color: black;
+	padding: 15px 15px 15px 15px;
+	border: 7px double white;
+	color: white;
+	margin-left: 100px;
+	margin-right: 100px;
+	font-size: 1.1em;
+}
+.Highlight {
+	background-color: white;
+	color: black;
+}
+a:link {
+	text-decoration: none;
+	color: white;
+}
+a:visited {
+	color: white;
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+	color: white;
+	font-weight: bold;
+}
+
+#Navbar {
+	font-size: 20px;
+}
+
+#Navbar ul {
+	padding: 5px;
+	margin: 0px;
+	list-style-type: none;
+	text-align: right;
+	background-color: black;
+} 
+
+#Navbar ul li {
+	display: inline;
+	vertical-align:middle;
+	position: relative;
+	/* I saw a YouTube tutorial that said that these 4 lines below will lead to having centered text in your headers and footers */
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+#Navbar ul li a {
+	text-decoration: none;
+	color: white;
+	padding: 10px 10px 10px 10px;
+}
+
+#Navbar ul li a:hover {
+	font-weight: bold;
+}
+
+body {
+	margin: 0px 0px 0px 0px;
+}
+#Another_wrapper {
+	min-height: 100%;
+	/*margin-bottom: -50px;*/
+}
+
+/* The push div is only here because we need to make sure there's no overlap between the footer.
+ 50px seems like a healthy margin.*/
+#Push {
+	height: 50px;
+	border: 0.001px solid transparent;
+	border-left: 0px;
+	border-right: 0px;
+}
+#Footer {
+	height: 70px;
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+	margin-bottom: 0px;
+	background-color: black;
+	color: white;
+	clear: both;
+	border: 0.001px solid black;
+	border-left: 0px;
+	border-right: 0px;
+}
+
+#Footer ul {
+	margin:30px;
+	margin-bottom: 0px;
+	padding: 5px;
+	list-style-type: none;
+	text-align: center;
+	background-color: black;
+	/* I saw a YouTube tutorial that said that these 4 lines below will lead to having centered text in your headers and footers */
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+	vertical-align: middle;
+} 
+
+#Footer ul li {
+	display: inline;
+	vertical-align: middle;
+	position: relative;
+}
+
+button.Button{
+	color: white;
+	background-color: black;
+	border: none;
+}
+
+#Form {
+	background-color: black;
+	color: white;
+	border: 7px double white;
+	display: table;
+	font-family: Verdana, Helvetica;
+	padding-right: 10px;
+	padding-left: 10px;
+	padding-top: 0px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.row {
+	display: table-row;
+}
+
+#Label_1 {
+
+	text-align: left;
+	padding: 4px;
+	padding-left: 5px;
+	margin-top: 0px;
+}
+
+#Label_2 {
+	text-align: left;
+	padding: 4px;
+	padding-left: 5px;
+	margin-top: 0px;
+	padding-bottom: 0px;
+}
+
+#Color_1 {
+	margin-top: 10px;
+	padding: 4px;
+
+}
+
+#Color_2 {
+	margin-top: 10px;
+	padding: 4px;
+	padding-bottom: 0px;
+}
+
+#Cancel {
+	color: white;
+	background-color: black;
+	display: inline;
+	float: left;
+	border: none;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left: 0px;
+	font-size: 16px;
+}
+
+#Submit {
+	color: white;
+	background-color: black;
+	display: inline;
+	float: right;
+	border: none;
+	font-size: 16px;
+	margin-top: 10px;
+	margin-right: 0px;
+	margin-bottom: 10px;
+}
+
+#the_form {
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+	padding-left: 5px;
+	padding-right: 5px;
+}

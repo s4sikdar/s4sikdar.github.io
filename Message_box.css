@@ -1,0 +1,78 @@
+/* styling found here: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_modal_bottom */
+.modal {
+	/*display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	top: 0;
+	right:0;
+	left: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	/*overflow: auto; /* Enable scroll if needed */
+	background-color: rgb(0,0,0); /* Fallback color */
+	background-color: rgba(0,0,0,0.7); /* Black w/ opacity */
+	display: none;
+	justify-content: center;
+	align-items: center;
+}
+
+
+#modal_content {
+	/*top: 10px;*/
+	min-width: 300px;
+	min-height: 150px;
+	max-width: 450px;
+	max-height: 250px;
+	background-color: white;
+	border-radius: 5px;
+	padding: 20px;
+	padding-top: 0px;
+	padding-bottom: 0px;
+	position: relative;
+	color: black;
+	font-family: Verdana, Helvetica, Arial;
+	border: 5px solid black;
+	box-shadow: 0 0 0 4px white;
+	/*hsl(0, 0%, 10%)*/
+}
+
+#X_button {
+	position: absolute;
+	top: 0px;
+	right: 5px;
+	cursor: pointer;
+	transform: rotate(45deg);
+	color: black;
+	font-size: 40px;
+	font-family: Verdana, Helvetica, Arial;
+	padding: 0px;
+}
+
+.Background {
+	background-color: black;
+	padding: 10px;
+	padding-bottom: 5px;
+	padding-top: 5px;
+	border: 10px double white;
+}
+
+#Heading_Tag {
+	text-align: center;
+	font-size: 30px;
+	padding: 10px;
+	padding-top: 0px;
+	color: white;
+	font-family: Verdana, Helvetica, Arial;
+	padding-bottom: 0px;
+	margin-bottom: 30px;
+}
+#Error_msg {
+	font-size: 16px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	border-width: 7px;
+	color: white;
+}
+
+
+
+

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+      <head>
+            <meta charset="utf-8">
+            <title>
+                   Portfolio Website
+            </title>
+            <link rel = "stylesheet" type = "text/css" href = "Website_Stylesheet.css">
+			      <link rel = "stylesheet" type = "text/css" href = "Message_box.css">
+      </head>
+      <body>
+            <div id = "Navbar">
+                 <ul>
+                     <li><a href = "https://s4sikdar.github.io/Main_Page.html">Main Page</a></li>
+                     <li><a href = "https://s4sikdar.github.io/Second_Page.html">Second Page</a></li>
+                 </ul>
+            </div>
+            <h1 class = "Second">
+                My Portfolio Website
+            </h1>
+            <p class = "Inside">
+				My name is Sailesh Sikdar. I'm in my 3B term at the University of Waterloo. I am in the Math/Business Administration program, open to working in front-end development,
+        back-end development, or automation testing. The website was created by HTML and CSS, and the interactive buttons below were created in Javascript using the
+				Document Object Model, as well as the jQuery library. I am also adept with Python, and created Tic Tac Toe using the minimax algorithm and OOP design.
+				I have briefly dabbled in some Python libraries in the past (Openpyxl, Xlsxwriter, Pandas and Matplotlib). I have also taken a course in relational databases
+        - search CS 338 UWaterloo - and used SQL/SQLite3. I am currently trying to learn Bootstrap and Material design, as well as REACT in the future.
+				<span class = "Highlight">To show off some of my new skills in web development, here is highlighted text.</span>  Here is a link with the exact same style to represent
+        copying stylesheets from one page to the next: <a href = "https://s4sikdar.github.io/Second_Page.html">The second page</a>. The menu above gives the same links.
+        <a href = "https://github.com/s4sikdar" target = "_blank" class = "GitHub_Sentence"> Click this sentence for a link to my
+				GitHub</a>, and <a href = "New Sailesh Sikdar Resume.pdf" target = "_blank" class = "GitHub_Sentence"> click here for a link to my resume.</a> Outside of Software Development,
+        I am very interested in Investments and Finance, watching videos by Aswath Damodaran about corporate finance and valuation in my spare time on Youtube.
+        I also like to read books on this subject, and am currently reading through the Intelligent Investor by Benjamin Graham.
+        Some of my other hobbies are being an avid basketball fan, and losing money on Tesla puts thanks to r/wallstreetbets (lol just kidding).
+			</p>
+
+			<div id = "Another_wrapper">
+				<div id = "wrapper_div" hidden>
+					<form id = "Form" action = "https://s4sikdar.github.io/Main_Page.html" method = "get" onSubmit = "return Valid_inputs(document.getElementById('Color_1').value,document.getElementById('Color_2').value)">
+							<p id = "the_form">
+								Enter 2 distinct colors. Enter them both as either words (i.e. black, white) or using rgb or hex color codes.<br>
+								Explicitly click the submit button if that's what you want, as pressing the enter key goes to the cancel <br>
+								option by default. Note that changing the color scheme only changes the color scheme of <strong>this</strong> page. Also, <br>
+								pressing the links at the top of the page returns the color scheme back to its default scheme.
+							</p>
+							<div class = "row">
+								<label for = "Color_1" id = "Label_1">Color 1: </label>
+								<input type = "text" id = "Color_1" name = "Color_1" value = ""> <br>
+							</div>
+
+							<div class = "row">
+								<label for = "Color_2" id = "Label_2">Color 2: </label>
+								<input type = "text" id = "Color_2" name = "Color_2" value = ""> <br>
+							</div>
+						<button id = "Cancel" type = "reset">Cancel</button>
+						<button id = "Submit" type = "submit">Submit</button>
+					</form>
+				</div>
+				<div id = "Push"></div>
+			</div>
+            <footer id = "Footer">
+				<ul id = "Footer_ul">
+					<li>
+						<button class = "Button" onmouseover = "First_button_bold_text('on')" onmouseout = "First_button_bold_text('off')" id = "Create_form">Click to change the color scheme</button>
+						<button onmouseover = "Bold_text('on')" onmouseout = "Bold_text('off')" onclick="Reverse_colors('white','black')" class = "Button" id = "Reverse_colors">Click to reverse the color scheme</button>
+					</li>
+				</ul>
+            </footer>
+			<div class = "modal" id = "Our_modal">
+				<div id = "modal_content">
+					<p id = "Heading_Tag"><span class = "Background">Invalid Input</span></p>
+					<p id = "Error_msg" class = "Background">This is invalid input. You inserted the wrong combinations of colors. Enter either combinations of RGB or Hex colors as your input,
+or enter words for inputs like "lightgray" and "black" for example.<p>
+					<div id = "X_button" onclick = "Close_modal()">+</div>
+				</div>
+			</div>
+		<!-- jQuery doesn't install on my computer, and I'm not sure if it's installed on other people's machines, so I installed it through a CDN-->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	    <script src="Website code.js"> </script>
+        </body>
+</html>
