@@ -1,3 +1,4 @@
+// Babel compiler to compile to ES5
 "use strict";
 
 function _createForOfIteratorHelper(o, allowArrayLike) {

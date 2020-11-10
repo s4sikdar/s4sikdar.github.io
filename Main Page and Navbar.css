@@ -21,12 +21,12 @@ now looks like:
  ---
 -----
 */
-@-webkit-keyframes underline {
-  from{left: 50%;
-      width: 0;}
-  to{width: 102%;
-     left: 0%;}
-}
+
+/*
+This animation is no longer in use, but I decided to keep it anyway.
+For animations to support various browsers, you need vendor prefixes, hence
+the "copies" for the rest of the animations in use.
+*/
 @keyframes underline {
   from{left: 50%;
       width: 0;}

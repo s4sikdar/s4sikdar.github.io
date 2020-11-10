@@ -1,7 +1,7 @@
 /* Autoprefixer: https://autoprefixer.github.io/ */
 /*
 Animation used to fade in the panels and slide them up. It's commonly used
-on websites.
+on websites. "Copies" are made of each animation due to vendor prefixes.
  */
 @-webkit-keyframes slide_up {
   0% {
@@ -111,7 +111,6 @@ and then straightened at the end.
   font-size: 3.5vw;
   margin-bottom: 2%;
   text-decoration: none;
-  /* transform-box: border box; */
   visibility: hidden;
   -webkit-animation: slide_right 0.3s both linear;
           animation: slide_right 0.3s both linear;

@@ -1,11 +1,13 @@
 /* Autoprefixer to add vendor prefixes: https://autoprefixer.github.io/ */
+/*
+For animations to support various browsers, you need vendor prefixes, hence
+the "copies" for the animations.
+*/
 @-webkit-keyframes middle_pop_up{
   0% {
-    /* transform: translateY(-200%); */
     display: -webkit-box;
     display: flex;
     visibility: visible;
-    /* right: -25%; */
     width: 0%;
     -webkit-transform: scale(0) translateY(-50%);
             transform: scale(0) translateY(-50%);
@@ -14,10 +16,6 @@
     display: -webkit-box;
     display: flex;
     visibility: visible;
-    /* align-items: center;
-    justify-content: center; */
-    /* transform: translateY(-50%); */
-    /* right: 18%; */
     width: min(70vw,70vh);
     overflow: initial;
     -webkit-transform: scale(1) translateY(-50%);
@@ -26,12 +24,10 @@
 }
 @keyframes middle_pop_up{
   0% {
-    /* transform: translateY(-200%); */
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     visibility: visible;
-    /* right: -25%; */
     width: 0%;
     -webkit-transform: scale(0) translateY(-50%);
             transform: scale(0) translateY(-50%);
@@ -41,10 +37,6 @@
     display: -ms-flexbox;
     display: flex;
     visibility: visible;
-    /* align-items: center;
-    justify-content: center; */
-    /* transform: translateY(-50%); */
-    /* right: 18%; */
     width: min(70vw,70vh);
     overflow: initial;
     -webkit-transform: scale(1) translateY(-50%);
@@ -103,7 +95,6 @@
   height: 100%;
   z-index: 4;
   position: fixed;
-  /* display: none; */
   visibility: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -115,8 +106,6 @@
       -ms-flex-pack: center;
           justify-content: center;
   background-color: rgba(0,0,0,0.5);
-  /* animation: modal 0.3s 0.2s linear both;
-  animation-play-state: paused; */
 }
 
 #info_panel_wrapper {
@@ -133,19 +122,9 @@
 
 .panel_pop_up {
   position: absolute;
-  /* margin-top: auto;
-  margin-bottom: auto; */
-  /* display: flex;
-  align-items: center;
-  justify-content: center; */
-  /* display: none; */
-  /* visibility: hidden; */
   z-index: 5;
-  /* width: auto; */
   background-color: white;
   font-family: Calibri;
-  /* height: 85%; */
-  /* max-height: 95%; */
   padding-top: 0.3%;
   padding-left: 1%;
   padding-right: 1%;
@@ -156,7 +135,6 @@
   overflow-y: auto;
   overflow-x: auto;
   border-radius: 1%;
-  /* transform: translateX(125%); */
 }
 
 .panel_pop_up h2 {
@@ -165,9 +143,6 @@
   text-align: center;
   position: relative;
   left: 6.5%;
-  /* margin-top: 0;
-  padding-top: 0; */
-
   margin-top: 1%;
   margin-bottom: 1%;
   font-size: 3em;
@@ -180,7 +155,6 @@
   margin-right: 1.5%;
   margin-bottom: 0px;
   float: right;
-  /* padding: 0%; */
   padding: 0.5% 0 0 0.5%;
   height: 0.5%;
   font-size: 2.5em;
@@ -215,19 +189,14 @@
 
 .panel_pop_up button {
   display: inline-block;
-  /* margin-left: auto;
-  margin-right: auto; */
   margin-bottom: 2%;
   margin-top: 0%;
   width: 30%;
   max-width: 120px;
-  /* min-width: 70px; */
   color: #353535;
   border: 2px solid #353535;
   border-radius: 7%;
   font-size: 1em;
-  /* padding-top: 1%; */
-  /* padding-bottom: 1%; */
   padding-left: 0%;
   padding-right: 0%;
   background-color: white;
@@ -247,61 +216,12 @@
   margin-right: 2%;
 }
 
-/* #panel_2_pop_up button {
-  margin-left: 5%;
-  #panel_2_pop_up button:first-of-type,
-} */
-
 .panel_pop_up button:hover {
   cursor: pointer;
   background-color: #353535;
   color: white;
-  /* border: 1px solid #353535; */
   font-size: 1em;
-  /* padding-top: 1%; */
-  /* padding-bottom: 1%; */
-  /* margin-bottom: 1%; */
 }
-
-/* .panel_pop_up a {
-  text-decoration: none; */
-  /* color: white; */
-  /* transition: color 0.2s 0.2s linear; */
-/* } */
-
-/* .panel_pop_up a:hover {
-  text-decoration: none; */
-  /* color: yellow; */
-/* } */
-
-/* .panel_pop_up a:visited {
-  text-decoration: none; */
-  /* color: #353535; */
-/* } */
-
-/* #panel_1_pop_up h4 { */
-  /* float: right; */
-  /* display: inline; */
-  /* margin-right: 2%; */
-  /* width: 2%; */
-  /* margin-top: 1%; */
-  /* padding-right: %; */
-  /* padding-left: 0%; */
-  /* padding-top: 0%; */
-  /* padding-bottom: 0%; */
-  /* padding-right: 0%; */
-  /* margin-top: 0; */
-  /* margin-bottom: 0; */
-  /* transform: rotate(315deg); */
-  /* transform: rotate(225deg); */
-  /* left: 0.5%; */
-  /* z-index: 6; */
-/* } */
-
-/* #panel_1_pop_up h4:hover {
-  font-weight: bold;
-  z-index: 6;
-} */
 
 .panel_pop_up a {
   text-decoration: none;
@@ -322,17 +242,13 @@
 .panel_pop_up a:hover {
   display: inline-block;
   margin: 0;
-  /* padding: 6%; */
   text-decoration: none;
   color: white;
-  /* border: 1px solid #353535; */
-  /* margin-bottom: 4%; */
 }
 
 .panel_pop_up a:visited {
   display: inline-block;
   margin: 0;
-  /* padding: 6%; */
   text-decoration: none;
   color: #353535;
 }
@@ -340,11 +256,8 @@
 .panel_pop_up a:visited:hover {
   display: inline-block;
   margin: 0;
-  /* padding: 6%; */
   text-decoration: none;
   color: white;
-  /* border: 1px solid #353535; */
-  /* margin-bottom: 4%; */
 }
 
 .panel_pop_up img {
