@@ -1,22 +1,46 @@
+/* Autoprefixer: https://autoprefixer.github.io/ */
 /*
 Animation used to fade in the panels and slide them up. It's commonly used
 on websites.
  */
-@keyframes slide_up {
+@-webkit-keyframes slide_up {
   0% {
     visibility: visible;
     opacity: 0;
-    transform: translateY(15%);
+    -webkit-transform: translateY(15%);
+            transform: translateY(15%);
   }
   30% {
-    transform: translateY(10%);
+    -webkit-transform: translateY(10%);
+            transform: translateY(10%);
   }
   70% {
     opacity: 1;
   }
   100% {
     visibility: visible;
-    transform: translateY(0%);
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+@keyframes slide_up {
+  0% {
+    visibility: visible;
+    opacity: 0;
+    -webkit-transform: translateY(15%);
+            transform: translateY(15%);
+  }
+  30% {
+    -webkit-transform: translateY(10%);
+            transform: translateY(10%);
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    visibility: visible;
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
   }
 }
 
@@ -24,22 +48,48 @@ on websites.
 Animation brings the headers into the center. The text is slightly slanted
 and then straightened at the end.
  */
-@keyframes slide_right {
+@-webkit-keyframes slide_right {
   0% {
     visibility: hidden;
-    transform: translateX(25%) skew(-30deg);
+    -webkit-transform: translateX(25%) skew(-30deg);
+            transform: translateX(25%) skew(-30deg);
   }
   1% {
-    transform: translateX(25%) skew(-30deg);
+    -webkit-transform: translateX(25%) skew(-30deg);
+            transform: translateX(25%) skew(-30deg);
     visibility: visible;
   }
   90% {
     visibility: visible;
-    transform: translateX(0%) skew(-30deg);
+    -webkit-transform: translateX(0%) skew(-30deg);
+            transform: translateX(0%) skew(-30deg);
   }
   100% {
     visibility: visible;
-    transform: translateX(0%) skew(0deg);
+    -webkit-transform: translateX(0%) skew(0deg);
+            transform: translateX(0%) skew(0deg);
+  }
+}
+@keyframes slide_right {
+  0% {
+    visibility: hidden;
+    -webkit-transform: translateX(25%) skew(-30deg);
+            transform: translateX(25%) skew(-30deg);
+  }
+  1% {
+    -webkit-transform: translateX(25%) skew(-30deg);
+            transform: translateX(25%) skew(-30deg);
+    visibility: visible;
+  }
+  90% {
+    visibility: visible;
+    -webkit-transform: translateX(0%) skew(-30deg);
+            transform: translateX(0%) skew(-30deg);
+  }
+  100% {
+    visibility: visible;
+    -webkit-transform: translateX(0%) skew(0deg);
+            transform: translateX(0%) skew(0deg);
   }
 }
 
@@ -63,13 +113,12 @@ and then straightened at the end.
   text-decoration: none;
   /* transform-box: border box; */
   visibility: hidden;
-  animation: slide_right 0.3s both linear;
-  animation-play-state: paused;
+  -webkit-animation: slide_right 0.3s both linear;
+          animation: slide_right 0.3s both linear;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
 }
 
-/* Need to add all prefixes: tools for this can be found here:
-https://autoprefixer.github.io/
- */
 .flex_container {
   width: 100%;
   margin: 0.5% auto 2%;
@@ -92,17 +141,26 @@ https://autoprefixer.github.io/
   font-size: 1.5vw;
   font-family: "Calibri", Arial, Verdana, Helvetica;
   border-radius: 2%;
-  box-shadow: 2px 2px 4px black;
+  -webkit-box-shadow: 2px 2px 4px black;
+          box-shadow: 2px 2px 4px black;
   visibility: visible;
-  animation: slide_up 0.2s 0.5s both linear;
-  animation-play-state: paused;
+  -webkit-animation: slide_up 0.2s 0.5s both linear;
+          animation: slide_up 0.2s 0.5s both linear;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
 }
 
 #right ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   display: flexbox;
-  flex-direction: column;
-  justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   font-size: 1.5vw;
   margin-top: 1%;
   margin-bottom: 0%;
@@ -121,9 +179,12 @@ https://autoprefixer.github.io/
   font-family: "Calibri", Arial, Verdana, Helvetica;
   border-radius: 2%;
   background-color: white;
-  box-shadow: 2px 2px 4px black;
-  animation: slide_up 0.2s 0.3s both linear;
-  animation-play-state: paused;
+  -webkit-box-shadow: 2px 2px 4px black;
+          box-shadow: 2px 2px 4px black;
+  -webkit-animation: slide_up 0.2s 0.3s both linear;
+          animation: slide_up 0.2s 0.3s both linear;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
 }
 
 #left h3 {
@@ -147,9 +208,12 @@ https://autoprefixer.github.io/
   border: 2% solid black;
   border-radius: 2%;
   background-color: white;
-  box-shadow: 2px 2px 4px black;
-  animation: slide_up 0.2s 0.7s both linear;
-  animation-play-state: paused;
+  -webkit-box-shadow: 2px 2px 4px black;
+          box-shadow: 2px 2px 4px black;
+  -webkit-animation: slide_up 0.2s 0.7s both linear;
+          animation: slide_up 0.2s 0.7s both linear;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
 }
 
 #middle h3 {
@@ -179,59 +243,24 @@ https://autoprefixer.github.io/
 
 #projects h3 {
   text-align: center;
-  width: 85%;
-  margin-left: auto;
-  margin-right: auto;
   font-size: 3.5vw;
   margin-top: 1.5%;
   margin-bottom: 2%;
   visibility: hidden;
-  animation: slide_right 0.2s 0.1s both linear;
-  animation-play-state: paused;
+  -webkit-animation: slide_right 0.2s 0.1s both linear;
+          animation: slide_right 0.2s 0.1s both linear;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
 }
 
 #projects p {
   font-size: 1.5em;
 }
 
-.grid_container {
-  display: -ms-grid;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  -ms-grid-columns: 1fr 1fr 1fr;
-  padding: 0;
-  margin: 0 0 2% 0;
-  /* border: 1px solid white; */
-  justify-items: center;
-  align-items: start;
-}
-
-.grid {
-  -ms-grid-row-align: start;
-  -ms-grid-column-align: center;
-  align-self: start;
-  justify-self: center;
-}
-
-.child_1 {
-  /* justify-self: center; */
-  /* align-self: start; */
-  /* grid-column: 1 / 2; */
-  /* border: 1px solid white; */
-}
-
-.child_2 {
-  /* justify-self: center; */
-  /* align-self: start; */
-  /* grid-column: 2 / 3; */
-  /* border: 1px solid white; */
-}
-
-.child_3 {
-  /* justify-self: center; */
-  /* align-self: start; */
-  /* grid-column: 3 / 4; */
-  /* border: 1px solid white; */
+#projects .flex_container {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 .panel {
@@ -239,21 +268,22 @@ https://autoprefixer.github.io/
   color: #353535;
   background-color: white;
   font-family: "Calibri", Arial, Verdana, Helvetica;
-  border-radius: 2%;
-  box-shadow: 5px 5px 12px black;
-  /* padding-left: 1.5%;
+  border-radius: 1%;
+  -webkit-box-shadow: 5px 5px 12px black;
+          box-shadow: 5px 5px 12px black;
+  padding-left: 1.5%;
   padding-right: 1.5%;
-  padding-top: 1.5%; */
-  margin: auto;
-  animation: slide_up 0.2s 0s linear both;
-  animation-play-state: paused;
+  padding-top: 1.5%;
+  -webkit-animation: slide_up 0.2s 0s linear both;
+          animation: slide_up 0.2s 0s linear both;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
 }
 
 .panel h4 {
-  margin-top: 0.5%;
-  margin-bottom: 0.5%;
-  padding: 0;
-  font-size: 2.5vw;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  font-size: 2em;
   text-align: center;
 }
 
@@ -265,36 +295,30 @@ https://autoprefixer.github.io/
 }
 
 #panel_1 {
-  /* padding-left: 0.01%;
+  padding-left: 0.01%;
   padding-right: 0.01%;
-  padding-bottom: 0.01%; */
+  padding-bottom: 0.01%;
   width: 20%;
-  padding: 5% 7% 1%;
-  animation-delay: 0.5s;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
 }
 
 #panel_2 {
-  /* margin-left: 2%; */
-  /* margin-right: auto; */
   width: 24%;
-  /* padding: 5% 5% 0.1%; */
-  animation-delay: 0.7s
+  -webkit-animation-delay: 0.7s;
+          animation-delay: 0.7s
 }
 
 #panel_3 {
-  width: 20%;
-  /* margin: auto; */
-  /* margin-left: 10%; */
-  /* margin-right: auto; */
-  /* padding: 5% 1% 0.1%; */
-  animation-delay: 0.9s;
+  -webkit-animation-delay: 0.9s;
+          animation-delay: 0.9s;
 }
 
 .panel button {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 1%;
+  margin-top: 2%;
   margin-bottom: 4%;
   width: 60%;
   max-width: 95px;
@@ -305,6 +329,10 @@ https://autoprefixer.github.io/
   padding-top: 2%;
   padding-bottom: 2%;
   background-color: white;
+  -webkit-transition: background-color 0.2s 0.2s linear,
+              color 0.2s 0.2s linear;
+  -o-transition: background-color 0.2s 0.2s linear,
+              color 0.2s 0.2s linear;
   transition: background-color 0.2s 0.2s linear,
               color 0.2s 0.2s linear;
 }
@@ -315,15 +343,7 @@ https://autoprefixer.github.io/
   cursor: pointer;
 }
 
-#panel_1 button {
-  padding-top: 3%;
-  padding-bottom: 3%;
-}
 .panel img {
   border: 1px solid #353535;
   border-radius: 1%;
-}
-
-#panel_1 img {
-  margin-top: 3%;
 }

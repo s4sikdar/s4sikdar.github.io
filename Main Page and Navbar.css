@@ -1,3 +1,4 @@
+/* Autoprefixer to add vendor prefixes: https://autoprefixer.github.io/ */
 /*
 Width in the after element of the a tags in the navbar is 0% by default.
 Send the width to 102%. Except that this start it from left to right. So this
@@ -20,6 +21,12 @@ now looks like:
  ---
 -----
 */
+@-webkit-keyframes underline {
+  from{left: 50%;
+      width: 0;}
+  to{width: 102%;
+     left: 0%;}
+}
 @keyframes underline {
   from{left: 50%;
       width: 0;}
@@ -28,6 +35,14 @@ now looks like:
 }
 
 /* Opacity 0 to 1 allows for a fade in effect. */
+@-webkit-keyframes fullname {
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
 @keyframes fullname {
   from{
     opacity: 0;
@@ -41,6 +56,16 @@ now looks like:
 Puts it out of site at first, then slides it to where it's in sight.
 The border-bottom makes it distinguishable where the navbar ends.
 */
+@-webkit-keyframes header {
+  from {
+    top: -20%;
+    border-bottom: 2px solid #dbd7d2;
+  }
+  to {
+    top: 0%;
+    border-bottom: 2px solid #dbd7d2;
+  }
+}
 @keyframes header {
   from {
     top: -20%;
@@ -88,14 +113,19 @@ body {
   /* Takes precedence over the image elements that have positive z indexes */
   z-index: 2;
   /* Our css animation that slides down the header when the page loads. */
-  animation: header 0.4s both linear;
+  -webkit-animation: header 0.4s both linear;
+          animation: header 0.4s both linear;
 }
 
 #navbar li {
   float: right;
   /* Allows us to have centered li elements in the navbar*/
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   /* Make up for the underline */
   padding: 2px 0px 2px 0px;
 }
@@ -113,6 +143,8 @@ body {
   hovering over and off the a tags.
    */
   position: relative;
+  -webkit-transition: background-color 0.3s 0.15s linear;
+  -o-transition: background-color 0.3s 0.15s linear;
   transition: background-color 0.3s 0.15s linear;
 }
 
@@ -134,6 +166,8 @@ body {
   border-radius: 2em;
   position: absolute;
   bottom: 0px;
+  -webkit-transition: 0.3s linear;
+  -o-transition: 0.3s linear;
   transition: 0.3s linear;
 }
 
@@ -165,14 +199,19 @@ things happen to the navbar.
   top: 0%;
   width: 100%;
   z-index: 2;
-  animation: fullname 1s both linear;
+  -webkit-animation: fullname 1s both linear;
+          animation: fullname 1s both linear;
 }
 
 .navbar li {
   float: right;
   /* Allows us to have vertically centered li elements in the navbar*/
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   /* Make up for the underline */
   padding: 3px 0px 3px 0px;
 }
@@ -213,6 +252,8 @@ things happen to the navbar.
   Allows for a color change that fades from one to the other, when
   hovering over and off the a tags.
    */
+  -webkit-transition: background-color 0.3s 0.15s linear;
+  -o-transition: background-color 0.3s 0.15s linear;
   transition: background-color 0.3s 0.15s linear;
 }
 
@@ -233,6 +274,8 @@ The underline on the hover is styled here.
   border-radius: 2em;
   position: absolute;
   bottom: 2px;
+  -webkit-transition: 0.3s linear;
+  -o-transition: 0.3s linear;
   transition: 0.3s linear;
 }
 
@@ -252,10 +295,17 @@ The underline on the hover is styled here.
   background-image: url("Background Charcoal.png");
   background-size: cover;
   margin-bottom: 0;
-  animation: fullname 1s 0.5s linear both;
+  -webkit-animation: fullname 1s 0.5s linear both;
+          animation: fullname 1s 0.5s linear both;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 /*
@@ -263,15 +313,26 @@ This layer provides for a darkening of the home page when the user hovers over
 it.
  */
 #translucent_layer {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   background-color: rgba(0,0,0,0.025);
   width: 100%;
   height: 100%;
   position: absolute;
   z-index: 1;
+  -webkit-transition: 0.75s;
+  -o-transition: 0.75s;
   transition: 0.75s;
 }
 
@@ -295,15 +356,23 @@ The container responsible for holding our icons.
 .icon {
   z-index: 2;
   width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 /*
 The customized styling of our icons.
  */
 .icon > i {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   position: relative;
   color: #F1F0EA;
@@ -318,6 +387,8 @@ change upon visit.
 .icon a, .icon a:visited {
   color: #F1F0EA;
   text-decoration: none;
+  -webkit-transition: color 0.5s linear;
+  -o-transition: color 0.5s linear;
   transition: color 0.5s linear;
   display: block;
 }
@@ -343,8 +414,13 @@ Each icon's text-content and ensuing size is customized below this rule.
   position: absolute;
   left: 0;
   top: 0;
-  box-sizing: border-box;
-  transform: scale(0) translateY(10%);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transform: scale(0) translateY(10%);
+      -ms-transform: scale(0) translateY(10%);
+          transform: scale(0) translateY(10%);
+  -webkit-transition: 0.5s linear;
+  -o-transition: 0.5s linear;
   transition: 0.5s linear;
 }
 
@@ -358,9 +434,12 @@ icon.
   height: 1.2em;
   font-size: 0.4em;
   top: 95%;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   display: block;
-  transform: scale(1) translateX(-50%) translateY(10%);
+  -webkit-transform: scale(1) translateX(-50%) translateY(10%);
+      -ms-transform: scale(1) translateX(-50%) translateY(10%);
+          transform: scale(1) translateX(-50%) translateY(10%);
 }
 
 /*
