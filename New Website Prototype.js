@@ -1,5 +1,4 @@
-// Babel compiler to compile to ES5
-"use strict";
+// Babel compiler to compile to ES5 was used: https://babeljs.io/
 
 function _createForOfIteratorHelper(o, allowArrayLike) {
   var it;
