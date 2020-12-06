@@ -6,14 +6,14 @@
             <title>
                    Portfolio Website Second Page
             </title>
-            <link rel = "stylesheet" type = "text/css" href = "Website_Stylesheet.css">
-            <link rel = "stylesheet" type = "text/css" href = "Message_box.css">
+            <link rel = "stylesheet" type = "text/css" href = "website_stylesheet.css">
+            <link rel = "stylesheet" type = "text/css" href = "message_box.css">
         </head>
         <body>
             <div id = "Navbar">
                  <ul>
-                     <li><a href = "https://s4sikdar.github.io/Main_Page.html">Main Page</a></li>
-                     <li><a href = "https://s4sikdar.github.io/Second_Page.html">Second Page</a></li>
+                     <li><a href = "https://s4sikdar.github.io/old_website/main_page.html">Main Page</a></li>
+                     <li><a href = "https://s4sikdar.github.io/old_website/second_page.html">Second Page</a></li>
                  </ul>
             </div>
             <h1 class = "Second">
@@ -21,12 +21,12 @@
             </h1>
             <p class = "Inside">
                 This is the second page. I wanted to show off my web development skills by having 2 pages that connect to each other. I imagined that
-				a header with multiple links would look nice. This is an extra sentence to help do that. <a href="https://s4sikdar.github.io/Main_Page.html">This sentence is a link to the first page with this style.</a>
+				a header with multiple links would look nice. This is an extra sentence to help do that. <a href="https://s4sikdar.github.io/old_website/main_page.html">This sentence is a link to the first page with this style.</a>
             </p>
 
 			<div id = "Another_wrapper">
 				<div id = "wrapper_div" hidden>
-					<form id = "Form" action = "https://s4sikdar.github.io/Second_Page.html" method = "get" onSubmit = "return Valid_inputs(document.getElementById('Color_1').value,document.getElementById('Color_2').value)">
+					<form id = "Form" action = "https://s4sikdar.github.io/old_website/second_page.html" method = "get" onSubmit = "return Valid_inputs(document.getElementById('Color_1').value,document.getElementById('Color_2').value)">
 							<p id = "the_form">
 								Enter 2 distinct colors. Enter them both as either words (i.e. black, white) or using rgb or hex color codes.<br>
 								Explicitly click the submit button if that's what you want, as pressing the enter key goes to the cancel <br>
@@ -63,11 +63,10 @@
 					<p id = "Error_msg" class = "Background">This is invalid input. You inserted the wrong combinations of colors. Enter either combinations of RGB or Hex colors as your input,
 or enter words for inputs like "lightgray" and "black" for example.<p>
 					<div id = "X_button" onclick = "Close_modal()">+</div>
-					<!--<button id = "Shadow" onclick = "Change_shadow()">Click to change shadow</button>-->
 				</div>
 			</div>
 		<!-- jQuery doesn't install on my computer, and I'm not sure if it's installed on other people's machines, so I installed it through a CDN-->
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-	    <script src="Website code.js"> </script>
+	    <script src="website code.js"> </script>
         </body>
 </html>
