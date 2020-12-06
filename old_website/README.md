@@ -1,0 +1,2 @@
+This is my old website. This is the first one I made starting out. I have since upgraded it, however, there are old copies of my resume in circulation 
+in some employers' database systems. To avoid confusion, I still have this up.
