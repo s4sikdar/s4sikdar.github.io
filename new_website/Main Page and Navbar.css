@@ -1,0 +1,490 @@
+/* Autoprefixer to add vendor prefixes: https://autoprefixer.github.io/ */
+/*
+Width in the after element of the a tags in the navbar is 0% by default.
+Send the width to 102%. Except that this start it from left to right. So this
+looks like:
+hello
+-
+hello
+--
+hello
+---
+hello
+----
+hello
+-----
+
+Starting it from left of 50% and going to 0% while increasing the width gives us
+the effect of starting out from the middle. With the words above the lines, it
+now looks like:
+  -
+ ---
+-----
+*/
+
+/*
+This animation is no longer in use, but I decided to keep it anyway.
+For animations to support various browsers, you need vendor prefixes, hence
+the "copies" for the rest of the animations in use.
+*/
+@keyframes underline {
+  from{left: 50%;
+      width: 0;}
+  to{width: 102%;
+     left: 0%;}
+}
+
+/* Opacity 0 to 1 allows for a fade in effect. */
+@-webkit-keyframes fullname {
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+@keyframes fullname {
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+
+/*
+Puts it out of site at first, then slides it to where it's in sight.
+The border-bottom makes it distinguishable where the navbar ends.
+*/
+@-webkit-keyframes header {
+  from {
+    top: -20%;
+    border-bottom: 2px solid #dbd7d2;
+  }
+  to {
+    top: 0%;
+    border-bottom: 2px solid #dbd7d2;
+  }
+}
+@keyframes header {
+  from {
+    top: -20%;
+    border-bottom: 2px solid #dbd7d2;
+  }
+  to {
+    top: 0%;
+    border-bottom: 2px solid #dbd7d2;
+  }
+}
+
+/*
+This allows us to specify height of child elements in the body tag in
+terms of percentage.
+*/
+html, body {
+  scroll-behavior: smooth;
+  height: 100%;
+  width: 100%;
+}
+
+/*
+Allows us to set width of chlidren of the body to the full width of the browser,
+also we set our fonts here for convenience.
+*/
+body {
+  margin: 0px 0px 0px 0px;
+  font-family: 'Open Sans', "Lucida Console", monospace, "Calibri", Arial, Helvetica, Verdana;
+  overflow-x: hidden;
+}
+
+#navbar {
+  /* No extra margin or padding, all in our li and a elements */
+  margin: 0;
+  padding: 0;
+  /* Remove bullets before */
+  list-style-type: none;
+  background-color: #F1F0EA;
+  color: #353535;
+  /* Keep it fixed at the top as we scroll down */
+  position: fixed;
+  /* Attached to the roof, and width is that of the browser */
+  top: 0%;
+  width: 100%;
+  /* Takes precedence over the image elements that have positive z indexes */
+  z-index: 2;
+  /* Our css animation that slides down the header when the page loads. */
+  -webkit-animation: header 0.4s both linear;
+          animation: header 0.4s both linear;
+}
+
+#navbar li {
+  float: right;
+  /* Allows us to have centered li elements in the navbar*/
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /* Make up for the underline */
+  padding: 2px 0px 2px 0px;
+}
+
+#navbar li a {
+  color: #353535;
+  padding: 6px 4px;
+  font-size: 1.3em;
+  display: block;
+  /* Remove underline */
+  text-decoration: none;
+  border-radius: 0.25em;
+  /*
+  Allows for a color change that fades from one to the other, when
+  hovering over and off the a tags.
+   */
+  position: relative;
+  -webkit-transition: background-color 0.3s 0.15s linear;
+  -o-transition: background-color 0.3s 0.15s linear;
+  transition: background-color 0.3s 0.15s linear;
+}
+
+/* F1F0EA  F2F3F4 f5f5f5 FFFFF5 Stored some color codes of interest.*/
+
+#navbar li a:hover {
+  font-weight: bold;
+  background-color: #dbd7d2;
+}
+
+/* What is responsible for our underline. */
+#navbar li a:after {
+  content: '';
+  display: block;
+  background: #353535 0 0;
+  width: 0%;
+  left: 50%;
+  height: 0.18em;
+  border-radius: 2em;
+  position: absolute;
+  bottom: 0px;
+  -webkit-transition: 0.3s linear;
+  -o-transition: 0.3s linear;
+  transition: 0.3s linear;
+}
+
+/*
+This was originally done using the underlinee animation at the start. However,
+I found a solution using transitions, that allow the underline to slide back
+off. The code is found here: https://codepen.io/jstn/pen/zuDst
+ */
+#navbar li a:hover:after {
+  background-color: #353535;
+  width: 100%;
+  left: 0;
+}
+
+/*
+We have to maunally state the properties again, as this class is toggled on
+and off. When this happens, if not everything is re-declared, some strange
+things happen to the navbar.
+ */
+.navbar {
+  display: block;
+  background: transparent;
+  color: #F1F0EA;
+  border-bottom: none;
+  margin: 0;
+  padding: 0 0 1px 0;
+  list-style-type: none;
+  position: fixed;
+  top: 0%;
+  width: 100%;
+  z-index: 2;
+  -webkit-animation: fullname 1s both linear;
+          animation: fullname 1s both linear;
+}
+
+.navbar li {
+  float: right;
+  /* Allows us to have vertically centered li elements in the navbar*/
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /* Make up for the underline */
+  padding: 3px 0px 3px 0px;
+}
+
+.navbar li:first-child {
+  /* Have it in line with the bar on the bottom. */
+  margin-right: 2%;
+}
+
+/*
+  The bar on the bottom.
+ */
+.navbar::after {
+  content: '';
+  display: block;
+  margin: auto;
+  width: 96%;
+  height: 0.2em;
+  border-radius: 0.2em;
+  background-color: #F1F0EA;
+  position: relative;
+  top: 2.5em;
+}
+
+/*
+ The links at the top have different padding.
+ */
+.navbar li a {
+  color: inherit;
+  padding: 7px 10px;
+  font-size: 1.3em;
+  display: block;
+  position: relative;
+  /* Remove underline */
+  text-decoration: none;
+  border-radius: 0.25em;
+  /*
+  Allows for a color change that fades from one to the other, when
+  hovering over and off the a tags.
+   */
+  -webkit-transition: background-color 0.3s 0.15s linear;
+  -o-transition: background-color 0.3s 0.15s linear;
+  transition: background-color 0.3s 0.15s linear;
+}
+
+.navbar li a:hover {
+  font-weight: bold;
+}
+
+/*
+The underline on the hover is styled here.
+ */
+.navbar li a:after {
+  content: '';
+  background: #F1F0EA 0 0;
+  display: block;
+  width: 0%;
+  left: 50%;
+  height: 0.1em;
+  border-radius: 2em;
+  position: absolute;
+  bottom: 2px;
+  -webkit-transition: 0.3s linear;
+  -o-transition: 0.3s linear;
+  transition: 0.3s linear;
+}
+
+.navbar li a:hover::after {
+  width: 90%;
+  left: 5%;
+}
+
+
+/* Code for our Image and the name hovering over it.*/
+#Header {
+  margin-top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  background-image: url("Background Charcoal.png");
+  background-size: cover;
+  margin-bottom: 0;
+  -webkit-animation: fullname 1s 0.5s linear both;
+          animation: fullname 1s 0.5s linear both;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+/*
+This layer provides for a darkening of the home page when the user hovers over
+it.
+ */
+#translucent_layer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: rgba(0,0,0,0.025);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  -webkit-transition: 0.75s;
+  -o-transition: 0.75s;
+  transition: 0.75s;
+}
+
+/*
+Give a darkening effect when the user hovers over the front page.
+ */
+div #translucent_layer:hover {
+  background-color: rgba(0,0,0,0.5);
+}
+
+h1 {
+  font-size: 7vw;
+  color: #F1F0EA;
+  z-index: 2;
+  display: block;
+}
+
+/*
+The container responsible for holding our icons.
+ */
+.icon {
+  z-index: 2;
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+/*
+The customized styling of our icons.
+ */
+.icon > i {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  color: #F1F0EA;
+  font-size: 3em;
+  margin: 0 5%;
+}
+
+/*
+The customized styling of the a tags, to ensure that the color does not
+change upon visit.
+ */
+.icon a, .icon a:visited {
+  color: #F1F0EA;
+  text-decoration: none;
+  -webkit-transition: color 0.5s linear;
+  -o-transition: color 0.5s linear;
+  transition: color 0.5s linear;
+  display: block;
+}
+
+/*
+This is the text bubble that shows when you hover over the Icons.
+Each icon's text-content and ensuing size is customized below this rule.
+ */
+.icon a::after, .icon a:visited::after {
+  content: 'My Resume';
+  font-family: "Calibri", Arial, Verdana, Helvetica;
+  text-align: center;
+  vertical-align: middle;
+  font-style: normal;
+  font-size: 0vw;
+  background-color: #F1F0EA;
+  color: #353535;
+  padding: 0;
+  border-radius: 0.2em;
+  width: 0%;
+  height: 0%;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transform: scale(0) translateY(10%);
+      -ms-transform: scale(0) translateY(10%);
+          transform: scale(0) translateY(10%);
+  -webkit-transition: 0.5s linear;
+  -o-transition: 0.5s linear;
+  transition: 0.5s linear;
+}
+
+/*
+The after properties that make for the speech bubble sliding out below the
+icon.
+ */
+.icon a:hover::after {
+  width: 5em;
+  padding: 5%;
+  height: 1.2em;
+  font-size: 0.4em;
+  top: 95%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: block;
+  -webkit-transform: scale(1) translateX(-50%) translateY(10%);
+      -ms-transform: scale(1) translateX(-50%) translateY(10%);
+          transform: scale(1) translateX(-50%) translateY(10%);
+}
+
+/*
+Customize the linkedin icon.
+ */
+#linkedin::after {
+  content: 'My Linkedin';
+}
+
+#linkedin:hover::after {
+  width: 5.2em;
+  padding: 5%;
+  height: 1.3em;
+}
+
+/*
+Customize the github icon.
+ */
+#github::after {
+  content: 'My Github';
+}
+
+#github:hover::after {
+  width: 4.8em;
+  height: 1.4em;
+}
+
+/*
+Customize the email icon.
+ */
+#email::after {
+  content: 'My email: saileshsikdar1@gmail.com'
+}
+
+#email:hover::after {
+  width: 12em;
+  height: 2.8em;
+  top: 90%;
+}
+
+/*
+The icon for my old website.
+ */
+#Old_Website::after {
+  content: 'My old website';
+  width: 7em;
+  height: 1.2em;
+}

@@ -1,0 +1,305 @@
+/* Autoprefixer to add vendor prefixes: https://autoprefixer.github.io/ */
+/*
+For animations to support various browsers, you need vendor prefixes, hence
+the "copies" for the animations.
+*/
+@-webkit-keyframes middle_pop_up{
+  0% {
+    display: -webkit-box;
+    display: flex;
+    visibility: visible;
+    width: 0%;
+    -webkit-transform: scale(0) translateY(-50%);
+            transform: scale(0) translateY(-50%);
+  }
+  100% {
+    display: -webkit-box;
+    display: flex;
+    visibility: visible;
+    width: min(70vw,70vh);
+    overflow: initial;
+    -webkit-transform: scale(1) translateY(-50%);
+            transform: scale(1) translateY(-50%);
+  }
+}
+@keyframes middle_pop_up{
+  0% {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    visibility: visible;
+    width: 0%;
+    -webkit-transform: scale(0) translateY(-50%);
+            transform: scale(0) translateY(-50%);
+  }
+  100% {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    visibility: visible;
+    width: min(70vw,70vh);
+    overflow: initial;
+    -webkit-transform: scale(1) translateY(-50%);
+            transform: scale(1) translateY(-50%);
+  }
+}
+
+@-webkit-keyframes middle_pop_down{
+  0% {
+    display: block;
+    visibility: visible;
+    overflow: initial;
+    width: min(70vw,70vh);
+    -webkit-transform: scale(1) translateY(-50%);
+            transform: scale(1) translateY(-50%);
+  }
+  99% {
+    display: block;
+    visibility: visible;
+    width: 0%;
+    -webkit-transform: scale(0) translateY(-50%);
+            transform: scale(0) translateY(-50%);
+  }
+  100% {
+    display: none;
+    -webkit-transform: scale(0) translateY(-50%);
+            transform: scale(0) translateY(-50%);
+  }
+}
+
+@keyframes middle_pop_down{
+  0% {
+    display: block;
+    visibility: visible;
+    overflow: initial;
+    width: min(70vw,70vh);
+    -webkit-transform: scale(1) translateY(-50%);
+            transform: scale(1) translateY(-50%);
+  }
+  99% {
+    display: block;
+    visibility: visible;
+    width: 0%;
+    -webkit-transform: scale(0) translateY(-50%);
+            transform: scale(0) translateY(-50%);
+  }
+  100% {
+    display: none;
+    -webkit-transform: scale(0) translateY(-50%);
+            transform: scale(0) translateY(-50%);
+  }
+}
+
+#Modal {
+  width: 100%;
+  height: 100%;
+  z-index: 4;
+  position: fixed;
+  visibility: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: rgba(0,0,0,0.5);
+}
+
+#info_panel_wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-animation: none;
+          animation: none;
+}
+
+.panel_pop_up {
+  position: absolute;
+  z-index: 5;
+  background-color: white;
+  font-family: Calibri;
+  padding-top: 0.3%;
+  padding-left: 1%;
+  padding-right: 1%;
+  -webkit-animation: middle_pop_up 0.3s 0.6s both linear;
+          animation: middle_pop_up 0.3s 0.6s both linear;
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+  overflow-y: auto;
+  overflow-x: auto;
+  border-radius: 1%;
+}
+
+.panel_pop_up h2 {
+  width: 90%;
+  display: block;
+  text-align: center;
+  position: relative;
+  left: 6.5%;
+  margin-top: 1%;
+  margin-bottom: 1%;
+  font-size: 3em;
+}
+
+.panel_pop_up h4 {
+  display: block;
+  font-weight: normal;
+  margin-top: 0;
+  margin-right: 1.5%;
+  margin-bottom: 0px;
+  float: right;
+  padding: 0.5% 0 0 0.5%;
+  height: 0.5%;
+  font-size: 2.5em;
+  width: 2%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transform: rotate(315deg);
+      -ms-transform: rotate(315deg);
+          transform: rotate(315deg);
+}
+
+.panel_pop_up h4:hover {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.para_wrapper {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+  display: block;
+  float: left;
+}
+
+.panel_pop_up p {
+  display: block;
+  float: left;
+  margin-left: 2%;
+  margin-right: 2%;
+  padding: 0;
+}
+
+.panel_pop_up button {
+  display: inline-block;
+  margin-bottom: 2%;
+  margin-top: 0%;
+  width: 30%;
+  max-width: 120px;
+  color: #353535;
+  border: 2px solid #353535;
+  border-radius: 7%;
+  font-size: 1em;
+  padding-left: 0%;
+  padding-right: 0%;
+  background-color: white;
+  -webkit-transition: background-color 0.2s 0.2s linear,
+              color 0.2s 0.2s linear,
+              border 0.2s 0.2s linear;
+  -o-transition: background-color 0.2s 0.2s linear,
+              color 0.2s 0.2s linear,
+              border 0.2s 0.2s linear;
+  transition: background-color 0.2s 0.2s linear,
+              color 0.2s 0.2s linear,
+              border 0.2s 0.2s linear;
+}
+
+#panel_3_pop_up button:first-of-type {
+  display: inline-block;
+  margin-right: 2%;
+}
+
+.panel_pop_up button:hover {
+  cursor: pointer;
+  background-color: #353535;
+  color: white;
+  font-size: 1em;
+}
+
+.panel_pop_up a {
+  text-decoration: none;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 6%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-decoration: none;
+  color: #353535;
+  -webkit-transition: 0.5s linear;
+  -o-transition: 0.5s linear;
+  transition: 0.5s linear;
+}
+
+.panel_pop_up a:hover {
+  display: inline-block;
+  margin: 0;
+  text-decoration: none;
+  color: white;
+}
+
+.panel_pop_up a:visited {
+  display: inline-block;
+  margin: 0;
+  text-decoration: none;
+  color: #353535;
+}
+
+.panel_pop_up a:visited:hover {
+  display: inline-block;
+  margin: 0;
+  text-decoration: none;
+  color: white;
+}
+
+.panel_pop_up img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 1%;
+  border: 1px solid #353535;
+}
+
+#panel_2_pop_up {
+  max-width: 900px;
+}
+
+#panel_2_pop_up h2{
+  font-size: 2.5em;
+}
+#panel_1_pop_up, #panel_3_pop_up {
+  max-width: 724px;
+  padding-left: 1%;
+  padding-right: 1%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#panel_1_pop_up img {
+  margin-left: auto;
+  margin-right: auto;
+  width: min(60vw,60vh);
+  height: min(60vw,60vh);
+}
+
+#panel_2_pop_up img {
+  width: 95%;
+  height: 82%;
+}
+
+#panel_3_pop_up img {
+  width: 90%;
+  height: 78%;
+}
