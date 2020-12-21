@@ -17,8 +17,6 @@ function attach_class() {
   button = document.querySelector("#headingOne button");
 }
 
-google.charts.load('current', {packages: ['corechart']}).then(drawChart).then(attach_class);
-
 function drawChart () {
   // console.log("drew chart");
   var data = new google.visualization.DataTable();
@@ -263,3 +261,6 @@ try {
 } catch(error) {
   console.log(error);
 }
+
+google.charts.load('current', {packages: ['corechart']}).then(drawChart).then(attach_class);
+window.addEventListener("resize", drawChart);
