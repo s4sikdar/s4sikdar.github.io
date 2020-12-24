@@ -184,8 +184,6 @@ html, body {
   transition: background-color 0.3s 0.15s linear;
 }
 
-/* F1F0EA  F2F3F4 f5f5f5 FFFFF5 Stored some color codes of interest.*/
-
 #navbar li a:hover {
   font-weight: bold;
   background-color: #dbd7d2;
@@ -248,9 +246,7 @@ things happen to the navbar.
   margin-right: 2%;
 }
 
-/*
-  The bar on the bottom.
- */
+/*  The bar on the bottom. */
 .navigation::after {
   content: '';
   display: block;
@@ -263,9 +259,7 @@ things happen to the navbar.
   top: 3em;
 }
 
-/*
- The links at the top have different padding.
- */
+/* The links at the top have different padding. */
 .navigation li a {
   color: inherit;
   padding: 7px 10px;
@@ -287,9 +281,7 @@ things happen to the navbar.
   font-weight: bold;
 }
 
-/*
-The underline on the hover is styled here.
- */
+/* The underline on the hover is styled here. */
 .navigation li a:after {
   content: '';
   background: #F1F0EA;
