@@ -540,7 +540,7 @@ The underline on the hover is styled here.
 
 #fourth_page i:first-of-type {
   margin-right: 15%;
-  transform: translateY(-5%);
+/*   transform: translateY(-5%); */
 }
 
 #mobile_linkedin {
