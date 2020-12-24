@@ -1,3 +1,4 @@
+/* The fade in animation we want. */
 @-webkit-keyframes fullname {
   from{
     opacity: 0;
@@ -15,6 +16,7 @@
   }
 }
 
+/* The animation to slide the header down into view. */
 @-webkit-keyframes header {
   from {
     top: -20%;
@@ -37,6 +39,7 @@
   }
 }
 
+/* The animations to slide things from the right and the left in our timeline. */
 @keyframes slide_right {
   0% {
     transform: translateX(20%);
@@ -63,6 +66,7 @@
 html, body {
   width: 100%;
   height: 100%;
+  /*  Allows for smooth-scrolling  */
   scroll-behavior: smooth;
 }
 
@@ -71,6 +75,7 @@ html, body {
   height: 100%;
 }
 
+/* Charcoal background on main page */
 #container_fluid {
   background-image: url("Background Charcoal.png");
 }
@@ -80,6 +85,7 @@ html, body {
   height: 100%;
 }
 
+/* main heading */
 .align-self-center h1 {
   color: #F1F0EA;
   font-size: 9vw;
@@ -90,6 +96,7 @@ html, body {
   transform: translateY(20%);
 }
 
+/* The icons that are links. */
 .align-self-center i {
   line-height: normal;
   color: #F1F0EA;
@@ -99,6 +106,7 @@ html, body {
   transform: translateY(25%);
 }
 
+/* Some specific editing we do to the resume and gmail icons to not look out of place */
 .align-self-center #Resume {
   font-size: 3.5vw;
 }
@@ -115,6 +123,7 @@ html, body {
   margin-left: 2%;
 }
 
+/* Underline effect when selecting an element in our mobile navbar */
 .navbar-nav a::after {
   content: '';
   position: absolute;
@@ -204,7 +213,6 @@ I found a solution using transitions, that allow the underline to slide back
 off. The code is found here: https://codepen.io/jstn/pen/zuDst
  */
 #navbar li a:hover:after {
-  /* background-color: #353535; */
   width: 100%;
   left: 0;
 }
@@ -310,24 +318,26 @@ The underline on the hover is styled here.
   width: 60%;
 }
 
-/* https://stackoverflow.com/questions/45142164/google-charts-how-to-increase-width-of-tooltip */
-
+/* Manually edited the tooltip on the charts, found here:
+https://stackoverflow.com/questions/45142164/google-charts-how-to-increase-width-of-tooltip */
 .google-visualization-tooltip-item {
   white-space: normal;
   max-width: 400px;
 }
 
+/* Set background color of second secttion */
 #collapse_menu {
   background-color: #F1F0EA;
 }
 
+/* The accordion */
 #accordion {
   width: 80%;
   padding-top: 1%;
   padding-bottom: 4%;
   background-color: #F1F0EA;
 }
-
+/* The '+' or '-' button on the accordion. */
 #accordion button {
   color: #353535;
   font-size: 1.5em;
@@ -339,6 +349,7 @@ The underline on the hover is styled here.
   text-decoration: none;
 }
 
+/* The collapsing elements in the accordion */
 .card {
   background-color: #F1F0EA;
 }
@@ -356,6 +367,7 @@ The underline on the hover is styled here.
   background-color: #F1F0EA;
 }
 
+/* The border that shows when a collapsable item collapses toggled on and off with these 2 classes*/
 .border_on {
   border-bottom-width: 4px;
 }
@@ -368,6 +380,7 @@ The underline on the hover is styled here.
   font-size: 2.2em;
 }
 
+/* The headers inside the accordion. */
 .section_header {
   font-size: 4em;
   font-weight: bold;
@@ -385,21 +398,23 @@ The underline on the hover is styled here.
   margin-bottom: 0;
 }
 
+/* The list of skills with stars next to them. */
 #small_screen {
   color: #353535;
 }
 
+/* The skill listed on the left */
 #small_screen h5 {
   font-size: 4vw;
   font-weight: normal;
 }
-
+/* The star on the right */
 #small_screen span {
   width: auto;
   float: right;
   font-size: 5vw;
 }
-
+/* The half star we designed. */
 .half-star {
   background: linear-gradient(to right, black 50%, #A9A9A9 50%);
   background-clip: text;
@@ -408,15 +423,15 @@ The underline on the hover is styled here.
   -webkit-text-fill-color: transparent;
 
 }
-
+/* The gray-star, symbolizing empty stars. */
 .gray {
   color: 	#A9A9A9;
 }
-
+/* The first element in the timeline section has id timeline, we give it this margin to avoid having it touch the bottom-border. */
 #timeline {
   margin-top: 3%;
 }
-
+/* The dots on the timeline */
 .right::before {
   content: '';
   position: absolute;
@@ -428,16 +443,16 @@ The underline on the hover is styled here.
   display: block;
   background-color: #353535;
 }
-
+/* The line on the timeline. */
 .right {
   border-left: 4px solid #353535;
   padding-left: 20px;
 }
-
+/* The text is transparent until brought in. */
 .opaque {
   opacity: 0;
 }
-
+/* Classes to slide the elements in from the right and left. */
 .slide_in {
   animation: slide_right 0.5s ease-out;
 }
@@ -445,7 +460,7 @@ The underline on the hover is styled here.
 .slide_left {
   animation: left_slide 0.5s ease-out;
 }
-
+/* Styling the text sections in the timeline, here and in the following. */
 .left h6, .left p {
   margin-left: 3%;
 }
@@ -453,7 +468,7 @@ The underline on the hover is styled here.
 .left h6, .right h6 {
   font-weight: bold;
 }
-
+/* The text size in the timeline sections. */
 #collapseTHREE {
   font-size: 1.2em;
 }
@@ -461,7 +476,7 @@ The underline on the hover is styled here.
 #collapseTHREE h6 {
   font-size: 1em;
 }
-
+/* Styling the tooltip here and in the next rule. */
 .tippy-box {
   background-color: #F1F0EA;
   color: #353535;
@@ -470,7 +485,7 @@ The underline on the hover is styled here.
 .tippy-box > .tippy-arrow::before {
   color: #F1f0EA;
 }
-
+/* Sometimes we will have text we emphasize by putting them in span tags and styling them, with this: the TL;DR text for example. */
 .link {
   background-color: #dbd7d2;
   border-radius: 0.25em;
@@ -480,17 +495,17 @@ The underline on the hover is styled here.
 .luc_console {
   font-family: "Lucida Console", monospace, Calibri, Arial, Verdana, Helvetica;
 }
-
+/* The projects section. */
 #third_page {
   background-color: #353535;
   color: #F1F0EA;
 }
-
+/* Styling the sections where we talk about the projects */
 .projects {
   width: 85%;
   height: auto;
 }
-
+/* The lines separating different projects, styled here. Done with this because we can give it a border radius, making it look less sharp. */
 .projects::before, .last_project::after {
   content: '';
   width: 100%;
@@ -507,7 +522,7 @@ The underline on the hover is styled here.
 #database_icon {
   max-width: 90%;
 }
-
+/* The code for the buttons here. */
 .button, .button:visited {
   border-radius: 0.4em;
   background-color: #353535;
@@ -518,13 +533,13 @@ The underline on the hover is styled here.
   padding: 4px 8px;
   text-decoration: none;
 }
-
+/* Reverse color, and it transitions to this. */
 .button:hover, .button:visited:hover {
   color: #353535;
   background-color: #F1F0EA;
   text-decoration: none;
 }
-
+/* Styling the text in the projects section. */
 .projects p {
   font-size: 1.15em;
 }
@@ -532,15 +547,15 @@ The underline on the hover is styled here.
 .projects strong {
   font-size: 1.2em;
 }
-
+/* The contact section only accessed by mobile devices. */
 #fourth_page {
   background-color: #F1F0EA;
   color: #353535;
 }
-
+/* This is done to get the items to line up. */
 #fourth_page i:first-of-type {
   margin-right: 15%;
-/*   transform: translateY(-5%); */
+  transform: translateY(-1%);
 }
 
 #mobile_linkedin {
