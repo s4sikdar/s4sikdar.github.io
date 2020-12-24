@@ -835,7 +835,7 @@ https://stackoverflow.com/questions/45142164/google-charts-how-to-increase-width
     top: -5px;
   }
   
-  #accordion button, #accordion button:hover, #accordion button:active, #accordion button:visited {
+  #accordion button, #accordion button:visited {
     transform: translateY(20%);
   }
 }
