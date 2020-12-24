@@ -185,11 +185,19 @@ for (var i = 0; i < collapsing_buttons.length; i++) {
     if (this.parentNode.parentNode.getAttribute("class") == "card-header border_off") {
       this.parentNode.parentNode.setAttribute("class", "card-header border_on");
       this.textContent = '-';
-      this.style.transform = "scale(1.3) translateX(-25%)";
+      if (window.innerWidth <= 420) {
+        this.style.transform = "scale(1.3) translateX(-25%) translateY(20%)";
+      } else {
+        this.style.transform = "scale(1.3) translateX(-25%)";
+      }
     } else {
       this.parentNode.parentNode.setAttribute("class", "card-header border_off");
       this.textContent = '+';
-      this.style.transform = "scale(1.0)";
+      if (window.innerWidth <= 420) {
+        this.style.transform = "scale(1.0) translateY(20%)";
+      } else {
+        this.style.transform = "scale(1.0)";
+      }
 
       try {
         // Create a dummy intersection observer and Mutation Observer to test the
@@ -357,14 +365,6 @@ function mutation_callback(mutations_list, observer) {
   }
 }
 
-// else {
-//  // Some bugs stem in terms of what gets slid in first the next time around
-//  // if we don't unobserve when this section slides back up.
-//  for (var index = 0; index < animate_divs.length; index++) {
-//    timeline_observer.unobserve(animate_divs[index]);
-//  }
-// }
-
 var mutation_observers = [];
 var observer_options = {
   attributeFilter: ["class"]
@@ -406,12 +406,3 @@ window.addEventListener("resize", function() {
     console.log(error);
   }
 });
-
-// var obj_literal = {
-//   total: 1,
-//   scope: this,
-//   scope_elem: this.document
-// };
-//
-// console.log(obj_literal.scope);
-// console.log(obj_literal.scope_elem);
