@@ -649,7 +649,7 @@ https://stackoverflow.com/questions/45142164/google-charts-how-to-increase-width
   }
 
   #database {
-    content: url('Database Icon.png')
+    content: url('./new_website_sprites/Database Icon.png')
   }
 }
 
