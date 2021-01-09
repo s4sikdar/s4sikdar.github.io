@@ -964,6 +964,11 @@ const load_images = url_array => {
 		.then(values => {
 			[Walking_dino_pt_1, Walking_dino_pt_2, Jumping_Dino,
 			 Medium_Cactus, Large_Cactus, Cloud_image]  = values;
+			/*
+			All clouds have the same image, and thus it is best to keep the image in the
+			prototype. This may cause errors in the Cloud.js file, so I'm doing this here.
+			*/
+			Cloud.prototype.img = new Image();
 			Cloud.prototype.img.src = "./Images/Moving_cloud.png";
 			Canvas_layers.dino_walking_pt_1_context.drawImage(Walking_dino_pt_1, 100,
 	 																										 ((Canvas_layers.jumping_layer.height) -
