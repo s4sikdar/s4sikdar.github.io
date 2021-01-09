@@ -29,10 +29,4 @@ Cloud.prototype.move = function() {
 	this.x_val = Math.round((Canvas.width) * (1 - Progress_ratio));
 }
 
-/*
-All clouds have the same image, and thus it is best to keep the image in the
-prototype.
-*/
-Cloud.prototype.img = new Image();
-
 export { Cloud };
