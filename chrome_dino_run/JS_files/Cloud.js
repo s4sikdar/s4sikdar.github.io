@@ -34,6 +34,5 @@ All clouds have the same image, and thus it is best to keep the image in the
 prototype.
 */
 Cloud.prototype.img = new Image();
-Cloud.prototype.img.src = "/Dinosaur_game_es6/Images/Moving_cloud.png";
 
 export { Cloud };
