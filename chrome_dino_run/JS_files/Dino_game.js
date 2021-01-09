@@ -963,7 +963,8 @@ const load_images = url_array => {
 	Promise.all(Img_arr)
 		.then(values => {
 			[Walking_dino_pt_1, Walking_dino_pt_2, Jumping_Dino,
-			 Medium_Cactus, Large_Cactus, Cloud_image]  = values
+			 Medium_Cactus, Large_Cactus, Cloud_image]  = values;
+			Cloud.prototype.img.src = "./Images/Moving_cloud.png";
 			Canvas_layers.dino_walking_pt_1_context.drawImage(Walking_dino_pt_1, 100,
 	 																										 ((Canvas_layers.jumping_layer.height) -
 																											  (Walking_dino_pt_1.height) - 150),
