@@ -589,8 +589,8 @@ https://stackoverflow.com/questions/45142164/google-charts-how-to-increase-width
 
 @media (max-width: 576px) {
   .align-self-center h1 {
-    content: "Sailesh\n Sikdar";
-    width: 80%;
+/*     content: "Sailesh\n Sikdar"; */
+/*     width: 80%; */
     font-size: 30vw;
     text-align: center;
     margin-left: 5%;
@@ -838,6 +838,11 @@ https://stackoverflow.com/questions/45142164/google-charts-how-to-increase-width
   #accordion button, #accordion button:visited {
     transform: translateY(20%);
   }
+  
+  .align-self-center h1::after {
+    width: 80%;
+    margin-left: 10%;
+  }
 }
 
 @media (max-width: 320px) {
@@ -898,5 +903,10 @@ https://stackoverflow.com/questions/45142164/google-charts-how-to-increase-width
     height: 10px;
     left: -3%;
     top: -5px;
+  }
+  
+  .align-self-center h1::after {
+    width: 85%;
+    margin-left: 5%;
   }
 }
