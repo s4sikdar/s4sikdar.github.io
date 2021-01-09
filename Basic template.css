@@ -77,7 +77,7 @@ html, body {
 
 /* Charcoal background on main page */
 #container_fluid {
-  background-image: url("Background Charcoal.png");
+  background-image: url("./new_website_sprites/Background Charcoal.png");
 }
 
 .justify-content-center {
@@ -589,7 +589,7 @@ https://stackoverflow.com/questions/45142164/google-charts-how-to-increase-width
 
 @media (max-width: 576px) {
   .align-self-center h1 {
-    content: "Sailesh\n Sikdar"
+    content: "Sailesh\n Sikdar";
     width: 80%;
     font-size: 30vw;
     text-align: center;
@@ -825,7 +825,7 @@ https://stackoverflow.com/questions/45142164/google-charts-how-to-increase-width
   }
 
   #dino {
-    content: url('Mobile Dino Sprite.png');
+    content: url('./new_website_sprites/Mobile Dino Sprite.png');
   }
 
   .right::before {
