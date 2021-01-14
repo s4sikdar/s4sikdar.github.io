@@ -22,6 +22,9 @@
     <li> The Intersection Observer API was used to change the styling of the header. Classes were toggled based on whether the page was scrolled to the top or not. This is because scroll event listeners are inefficient, as they will be called whenever the user scrolls, taxing the browser quite a lot (due to excess traffic on the event queue). Also, the Intersection Observer was used to detect when the text sections in the last section of the accordion were visible on screen. They are transparent by default, and if the section is visible on screen, then a class is added for them to slide in. Monitoring these changes were also done using Intersection Observer, as it was the only method that worked.</li>
     <li> Bootstrap was used to make the site responsive across phones and tablets. The mobile alternative for the Pie Chart was a star rating out of 5 for each of my skills, which was implemented partly using Bootstrap. The accordion used was a Bootstrap component. I also used a lot of Bootstrap's classes on margins, display styles, etc. to leverage the framework as much as possible (less custom CSS).</li>
     <li> The JavaScript code for the website was all in ES5 to support older browsers, as I do not yet have working knowledge of NPM or Webpack.</li>
+    <li>
+     The website has a reverse color theme throughout. To keep with this, I used Inkscape to both create one of the image sprites, as well as edit image sprites found on Google Images to fit the website's color theme better.
+    </li>
   </ul>
 </p>
 <h2 align = "center">Inspiration</h2>
