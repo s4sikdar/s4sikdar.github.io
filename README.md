@@ -10,7 +10,7 @@
     <li>Firefox</li>
     <li>Google Chrome</li>
     <li>Tablets</li>
-    <li>The Google Chart feature <strong>DOES NOT</strong> work on Laptops with HiDPI screen.</li>
+    <li>The Pie Chart feature <strong>DOES NOT</strong> work on Laptops with HiDPI screen.</li>
   </ul>
 </p>
 <h2 align = "center">Design</h2>
