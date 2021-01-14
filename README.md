@@ -2,7 +2,7 @@
   Portfolio Website
 </h1>
 <p>
-  This repositiory has my portfolio website, which can be found <a href = "https://s4sikdar.github.io/" target="_blank">here</a>. It also hosts my remake of the Chrome Dinosaur Game, found <a href = "https://s4sikdar.github.io/chrome_dino_run/Dino_game.html" target="_blank">here</a>. Platforms supported (that I know of) are:
+  This repositiory has my portfolio website, which can be found <a href = "https://s4sikdar.github.io/" target="_blank">here</a> (press <code>ctrl</code> and click to open links in a new tab). It also hosts my remake of the Chrome Dinosaur Game, found <a href = "https://s4sikdar.github.io/chrome_dino_run/Dino_game.html" target="_blank">here</a>. Platforms supported (that I know of) are:
   <ul>
     <li>Mobile Phones</li>
     <li>Internet Explorer (only I.E. 11). The accordion in the About section does not have text blocks slide in for the "The Saga So Far" section. This is as I have yet to find a polyfill for Mutation Observer, that can be implemented via CDN. The text blocks appear as does any other text section.</li>
@@ -15,7 +15,7 @@
 </p>
 <h2 align = "center">Design</h2>
 <p>
-  The website was made with HTML, CSS, JavaScript, Bootstrap, the Intersection Observer API, the Mutation Observer API, and the Google Charts API. Details follow for specific technologies:
+  The website was made with HTML5, CSS3, JavaScript, Bootstrap, the Intersection Observer API, the Mutation Observer API, and the Google Charts API. Details follow for specific technologies:
   <ul>
     <li> The Google Charts API was used to create the Pie Chart visual, representing my skillset, and the proportion of each skillset.</li>
     <li> The Mutation Observer API was used to monitor changes in the classes of the Bootstrap Accordion. Accordingly, the <code>textContent</code> property of the button changed the text content from a "+" to a "-". The Mutation Observer API is built for monitoring changes in DOM elements, which you can then use to have actions run when changes occur. Documentation on the Mutation Observer can be found <a href = "https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver" target="_blank">here</a>.</li>
