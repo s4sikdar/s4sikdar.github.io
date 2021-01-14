@@ -2,6 +2,7 @@
 <p>
   This is my replica of T-Rex Run. I created a colored variant of the original. The game can be found <a href = "https://s4sikdar.github.io/chrome_dino_run/Dino_game.html" target = "_blank">here</a>. It was created with the canvas element, and coded manuually (i.e. without a game engine). 
 </p>
+<img src = "Dinosaur Game Image.png" align = "center">
   <h2 align = "center">Design</h2>
   <ul>
       <li>
