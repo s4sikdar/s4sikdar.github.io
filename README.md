@@ -24,6 +24,16 @@
     <li> The JavaScript code for the website was all in ES5 to support older browsers, as I do not yet have working knowledge of NPM or Webpack.</li>
   </ul>
 </p>
+<h2 align = "center">Inspiration</h2>
+<p>
+  Inspiration for various components was drawn from the following sites:
+  <ul>
+    <li><a href = "http://www.pascalvangemert.nl/">Pascal Van Germert</a></li>
+    <li><a href = "http://www.garysheng.com/">Gary Sheng</a></li>
+    <li><a href = "https://sjt00.github.io/#">Saad Taj</a></li>
+    <li><a href = "http://findmatthew.com/">Matthew Williams</a></li>
+  </ul>
+</p>
 <p> 
   If you are here, you are most likely a hiring manager or a recruiter. Thank you for your time. 
 </p>
