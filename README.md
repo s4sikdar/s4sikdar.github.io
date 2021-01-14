@@ -13,7 +13,6 @@
     <li>The Google Chart feature <strong>DOES NOT</strong> work on Laptops with HiDPI screen.</li>
   </ul>
 </p>
-<br>
 <h2 align = "center">Design</h2>
 <p>
   The website was made with HTML, CSS, JavaScript, Bootstrap, the Intersection Observer API, the Mutation Observer API, and the Google Charts API. Details follow for specific technologies:
