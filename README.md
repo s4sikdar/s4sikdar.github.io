@@ -1,7 +1,6 @@
 <h1 align = "center">
   Portfolio Website
 </h1>
-<hr>
 <p>
   This repositiory has my portfolio website, which can be found <a href = "https://s4sikdar.github.io/">here</a>. It also hosts my remake of the Chrome Dinosaur Game, found <a href = "https://s4sikdar.github.io/chrome_dino_run/Dino_game.html">here</a>. Platforms supported (that I know of) are:
   <ul>
@@ -16,7 +15,6 @@
 </p>
 <br>
 <h2 align = "center">Design</h2>
-<hr>
 <p>
   The website was made with HTML, CSS, JavaScript, Bootstrap, the Intersection Observer API, the Mutation Observer API, and the Google Charts API. Details follow for specific technologies:
   <ul>
