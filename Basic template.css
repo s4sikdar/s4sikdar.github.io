@@ -1,0 +1,1031 @@
+/* Note: cards are sections of the accordion in the website, when mentioned in any
+comment.*/
+
+/* The fade in animation we want. */
+@-webkit-keyframes fullname {
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+@keyframes fullname {
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+
+/* The animation to slide the header down into view. */
+@-webkit-keyframes header {
+  from {
+    top: -20%;
+    border-bottom: 2px solid brown;
+  }
+  to {
+    top: 0%;
+    border-bottom: 2px solid brown;
+  }
+}
+
+@keyframes header {
+  from {
+    top: -20%;
+    border-bottom: 2px solid #dbd7d2;
+  }
+  to {
+    top: 0%;
+    border-bottom: 2px solid #dbd7d2;
+  }
+}
+
+/* The animations to slide things from the right and the left in our timeline. */
+@keyframes slide_right {
+  0% {
+    transform: translateX(20%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes left_slide {
+  0% {
+    transform: translateX(-20%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+
+html, body {
+  /* Allows us to set width in percentage. */
+  width: 100%;
+  height: 100%;
+  /*  Allows for smooth-scrolling  */
+  scroll-behavior: smooth;
+}
+
+.container-fluid {
+  width: 100%;
+  height: 100%;
+}
+
+/* Charcoal background on main page */
+#container_fluid {
+  background-image: url("Background Charcoal.png");
+}
+
+.justify-content-center {
+  width: 100%;
+  height: 100%;
+}
+
+/* main heading */
+.align-self-center h1 {
+  color: #F1F0EA;
+  font-size: 9vw;
+  font-family: "Lucida Console", monospace, Calibri, Arial, Verdana;
+  line-height: normal;
+  -webkit-transform: translateY(20%);
+  -ms-transform: translateY(20%);
+  transform: translateY(20%);
+}
+
+/* The icons that are links. */
+.align-self-center i {
+  line-height: normal;
+  color: #F1F0EA;
+  font-size: 4vw;
+  -webkit-transform: translateY(25%);
+  -ms-transform: translateY(25%);
+  transform: translateY(25%);
+}
+
+/* Some specific editing we do to the resume and gmail icons to not look out of place */
+.align-self-center #Resume {
+  font-size: 3.5vw;
+}
+
+.align-self-center #Gmail {
+  font-size: 5vw;
+  -webkit-transform: translateY(0%);
+  -ms-transform: translateY(0%);
+  transform: translateY(0%);
+}
+
+/*
+Style the links in the mobile navbar to allow for the underline, and
+nice spacing(ish).
+*/
+.navbar-nav a {
+  position: relative;
+  margin-left: 2%;
+}
+
+/* Underline effect when selecting an element in our mobile navbar */
+.navbar-nav a::after {
+  content: '';
+  position: absolute;
+  display: block;
+  height: 2px;
+  border-radius: 0.5em;
+  background-color: #353535;
+  width: 0;
+  left: 50%;
+  bottom: 2%;
+  transition: 0.5s linear;
+}
+
+/* The properties that change, and give us our underline animation on hovering. */
+.navbar-nav a:hover::after {
+  width: 99%;
+  left: -0.5%;
+}
+
+
+/* The styling of the navbar that we see when not scrolled to the very top. */
+#navbar {
+  /* No extra margin or padding, all in our li and a elements */
+  padding: 0;
+  /* Remove bullets before */
+  list-style-type: none;
+  background-color: #F1F0EA;
+  color: #353535;
+  /* Keep it fixed at the top as we scroll down */
+  position: fixed;
+  /* Attached to the roof, and width is that of the browser */
+  top: 0%;
+  width: 100%;
+  /* Takes precedence over the image elements that have positive z indexes */
+  z-index: 2;
+  /* Our css animation that slides down the header when the page loads. */
+  -webkit-animation: header 0.4s both linear;
+          animation: header 0.4s both linear;
+}
+
+#navbar li {
+  float: right;
+  padding: 2px 0px;
+}
+
+#navbar li a {
+  color: #353535;
+  padding: 6px 4px;
+  font-size: 1.3em;
+  /* Remove underline */
+  text-decoration: none;
+  border-radius: 0.25em;
+  /*
+  Allows for a color change that fades from one to the other, when
+  hovering over and off the a tags.
+   */
+  position: relative;
+  -webkit-transition: background-color 0.3s 0.15s linear;
+  -o-transition: background-color 0.3s 0.15s linear;
+  transition: background-color 0.3s 0.15s linear;
+}
+
+/* Background changes colour and the text becomes bold on hover. */
+#navbar li a:hover {
+  font-weight: bold;
+  background-color: #dbd7d2;
+}
+
+/* What is responsible for our underline for this header. */
+#navbar li a:after {
+  content: '';
+  display: block;
+  background: #353535;
+  width: 0%;
+  left: 50%;
+  height: 0.18em;
+  border-radius: 2em;
+  position: absolute;
+  bottom: 0px;
+  -webkit-transition: 0.3s linear;
+  -o-transition: 0.3s linear;
+  transition: 0.3s linear;
+}
+
+/*
+This was originally done using the underline animation at the start. However,
+I found a solution using transitions, that allow the underline to slide back
+off. The code is found here: https://codepen.io/jstn/pen/zuDst
+ */
+#navbar li a:hover:after {
+  width: 100%;
+  left: 0;
+}
+
+/*
+We have to maunally state the properties again, as this class is toggled on
+and off. When this happens, if not everything is re-declared, some strange
+things happen to the navbar.
+*/
+.navigation {
+  display: block;
+  background: transparent;
+  color: #F1F0EA;
+  border-bottom: none;
+  padding: 0 0 1px 0;
+  list-style-type: none;
+  position: fixed;
+  top: 0%;
+  width: 100%;
+  z-index: 2;
+  -webkit-animation: fullname 1s both linear;
+          animation: fullname 1s both linear;
+}
+
+.navigation li {
+  float: right;
+  /* Make up for the underline */
+  padding: 3px 0px;
+}
+
+.navigation li:first-child {
+  /* Have it in line with the bar on the bottom. */
+  margin-right: 2%;
+}
+
+/*  The bar on the bottom. */
+.navigation::after {
+  content: '';
+  display: block;
+  margin: auto;
+  width: 96%;
+  height: 0.2em;
+  border-radius: 0.2em;
+  background-color: #F1F0EA;
+  position: relative;
+  top: 3em;
+}
+
+/* The links at the top have different padding. */
+.navigation li a {
+  color: inherit;
+  padding: 7px 10px;
+  font-size: 1.3em;
+  position: relative;
+  /* Remove underline */
+  text-decoration: none;
+  border-radius: 0.25em;
+  /*
+  Allows for a color change that fades from one to the other, when
+  hovering over and off the a tags.
+   */
+  -webkit-transition: background-color 0.3s 0.15s linear;
+  -o-transition: background-color 0.3s 0.15s linear;
+  transition: background-color 0.3s 0.15s linear;
+}
+
+.navigation li a:hover {
+  font-weight: bold;
+}
+
+/* The underline on the hover is styled here. */
+.navigation li a:after {
+  content: '';
+  background: #F1F0EA;
+  display: block;
+  width: 0%;
+  left: 50%;
+  height: 0.1em;
+  border-radius: 2em;
+  position: absolute;
+  bottom: 3px;
+  -webkit-transition: 0.3s linear;
+  -o-transition: 0.3s linear;
+  transition: 0.3s linear;
+}
+
+.navigation li a:hover::after {
+  width: 90%;
+  left: 5%;
+}
+
+/* The last position */
+#last_child::after {
+  bottom: 4%;
+}
+
+/* The container with the icons in the main page should be 0.6 * browser width */
+.row.justify-content-around.d-none.d-sm-flex {
+  width: 60%;
+}
+
+/* Manually edited the tooltip on the charts, found here:
+https://stackoverflow.com/questions/45142164/google-charts-how-to-increase-width-of-tooltip */
+.google-visualization-tooltip-item {
+  white-space: normal;
+  max-width: 400px;
+}
+
+/* Set background color of second secttion */
+#collapse_menu {
+  background-color: #F1F0EA;
+}
+
+/* The accordion */
+#accordion {
+  width: 80%;
+  padding-top: 1%;
+  padding-bottom: 4%;
+  background-color: #F1F0EA;
+}
+
+/* The '+' or '-' button on the accordion. */
+#accordion button {
+  color: #353535;
+  font-size: 1.5em;
+  line-height: 0.5;
+  text-decoration: none;
+}
+
+/* No text decoration on the accordion button */
+#accordion button:hover, #accordion button:active, #accordion button:visited {
+  text-decoration: none;
+}
+
+/* The collapsing elements in the accordion */
+.card {
+  background-color: #F1F0EA;
+}
+
+/* The black lines at the top and bottom of each accordion menu element */
+.card::before, .last_card::after {
+  content: '';
+  width: 100%;
+  border-radius: 0.5em;
+  height: 5px;
+  background-color: #353535;
+  opacity: 0.9;
+}
+
+/* Each accordion menu element should have a background color of #F1F0EA */
+.card-header {
+  background-color: #F1F0EA;
+}
+
+/* The border that shows when a collapsable item collapses toggled on and off with these 2 classes*/
+.border_on {
+  border-bottom-width: 4px;
+}
+
+.border_off {
+  border-bottom-width: 0;
+}
+
+.mb-0 {
+  font-size: 2.2em;
+}
+
+/* The headers inside the accordion. */
+.section_header {
+  font-size: 4em;
+  font-weight: bold;
+  font-family: "Lucida Console", monospace, Arial, Calibri, Verdana, Helvetica;
+  padding-top: 1.5%;
+  padding-bottom: 0;
+}
+
+/* The text above the Pie Chart telling you to click on a slice for the info bubble. */
+.card-body h5 {
+  font-size: 1.8vw;
+}
+
+/*
+Style the paragraphs inside the accordion, or the paragraph in the bottom Contact section.
+*/
+.card-body p, p.card-body {
+  font-size: 1.2em;
+  margin-bottom: 0;
+}
+
+/* The list of skills with stars next to them. */
+#small_screen {
+  color: #353535;
+}
+
+/* The skill listed on the left */
+#small_screen h5 {
+  font-size: 4vw;
+  font-weight: normal;
+}
+
+/* The star on the right */
+#small_screen span {
+  width: auto;
+  float: right;
+  font-size: 5vw;
+}
+
+/* The half star we designed. */
+.half-star {
+  background: linear-gradient(to right, black 50%, #A9A9A9 50%);
+  background-clip: text;
+  color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* The gray-star, symbolizing empty stars. */
+.gray {
+  color: 	#A9A9A9;
+}
+
+/*
+The first element in the timeline section has id timeline, we give it this margin
+to avoid having it touch the bottom-border of the card header
+*/
+#timeline {
+  margin-top: 3%;
+}
+
+/* The dots on the timeline */
+.right::before {
+  content: '';
+  position: absolute;
+  left: -9px;
+  top: -6px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  display: block;
+  background-color: #353535;
+}
+
+/* The line on the timeline. */
+.right {
+  border-left: 4px solid #353535;
+  padding-left: 20px;
+}
+
+/* The text is transparent until brought in. */
+.opaque {
+  opacity: 0;
+}
+
+/* Classes to slide the elements in from the right and left. */
+.slide_in {
+  animation: slide_right 0.5s ease-out;
+}
+
+.slide_left {
+  animation: left_slide 0.5s ease-out;
+}
+
+/* Styling the text sections in the timeline, here and in the following. */
+.left h6, .left p {
+  margin-left: 3%;
+}
+
+.left h6, .right h6 {
+  font-weight: bold;
+}
+
+/* The text size in the timeline sections. */
+#collapseTHREE {
+  font-size: 1.2em;
+}
+
+#collapseTHREE h6 {
+  font-size: 1em;
+}
+
+/* Styling the tooltips on the icons in the main page here and in the next rule. */
+.tippy-box {
+  background-color: #F1F0EA;
+  color: #353535;
+}
+
+.tippy-box > .tippy-arrow::before {
+  color: #F1f0EA;
+}
+
+/*
+Sometimes we will have text we emphasize by putting them in span tags and styling
+them, with this: the TL;DR text for example.
+*/
+.link {
+  background-color: #dbd7d2;
+  border-radius: 0.25em;
+  padding: 2px 4px;
+}
+
+/* Class that goes on various header tags in the site */
+.luc_console {
+  font-family: "Lucida Console", monospace, Calibri, Arial, Verdana, Helvetica;
+}
+
+/* The projects section. */
+#third_page {
+  background-color: #353535;
+  color: #F1F0EA;
+}
+
+/* Styling the sections where we talk about the projects */
+.projects {
+  width: 85%;
+  height: auto;
+}
+
+/*
+The lines separating different projects, styled here. Done with this because we
+can give it a border radius, making it look less sharp.
+*/
+.projects::before, .last_project::after {
+  content: '';
+  width: 100%;
+  border-radius: 0.5em;
+  height: 2px;
+  background-color: #F1F0EA;
+  opacity: 0.65;
+}
+
+/* Class that goes on certain image tags in the Projects section. */
+.dino {
+  max-width: 100%;
+}
+
+/* The database icon image is very large, so decrease its max-width. */
+#database_icon {
+  max-width: 90%;
+}
+
+/* The code for the buttons in the projects section */
+.button, .button:visited {
+  border-radius: 0.4em;
+  background-color: #353535;
+  border: 2px solid #F1F0EA;
+  color: #F1F0EA;
+  transition: 0.25s linear;
+  font-size: 1.25em;
+  padding: 4px 8px;
+  text-decoration: none;
+}
+
+/* Reverse color, and it transitions to this. */
+.button:hover, .button:visited:hover {
+  color: #353535;
+  background-color: #F1F0EA;
+  text-decoration: none;
+}
+
+/* Styling the text in the projects section. */
+.projects p {
+  font-size: 1.15em;
+}
+
+.projects strong {
+  font-size: 1.2em;
+}
+
+/* The contact section only accessed by mobile devices. */
+#fourth_page {
+  background-color: #F1F0EA;
+  color: #353535;
+}
+
+/* This is done to get the icons in the contact section to line up. */
+#fourth_page i:first-of-type {
+  margin-right: 15%;
+  transform: translateY(-1%);
+}
+
+/* The mobile linkedin icon in the contact section */
+#mobile_linkedin {
+  font-size: 20vw;
+  color: #353535;
+}
+
+/* Our media queries. Structured this way due to some bugs that we see otherwise. */
+@media (max-width: 420px) {
+  /* The text sections on the right in the timeline. */
+  .right {
+    border-width: 3px;
+    margin-left: 3%;
+  }
+
+  /* Change the font of the text inside the accordion and at the bottom. */
+  .card-body p, p.card-body {
+    font-size: 4vw;
+  }
+
+  /* Change the text size in the last accordion section. */
+  #collapseTHREE {
+    font-size: 4vw;
+  }
+}
+
+@media (max-width: 320px) {
+  /* Set the padding on the card headers and the body of each card in the accordion. */
+  .card-header {
+    padding: 12px 15px;
+  }
+
+  .card-body {
+    padding: 15px;
+  }
+
+  /* The skills section is different in its padding. */
+  #skills_section {
+    padding: 10px 15px;
+  }
+
+  /* The width of the line in the timeline section - make it thinner now. */
+  .right {
+    border-width: 3px;
+  }
+}
+
+@media (max-width: 576px) {
+  /* Change the main header in the main page. */
+  .align-self-center h1 {
+    font-size: 30vw;
+    text-align: center;
+    margin-left: 5%;
+    -webkit-transform: translateY(1%);
+    -ms-transform: translateY(1%);
+    transform: translateY(1%);
+  }
+
+  /* Put a line below the main header. */
+  .align-self-center h1::after {
+    width: 20em;
+    height: 4px;
+    content: '';
+    background-color: #F1F0EA;
+    margin-left: 10%;
+    margin-right: auto;
+    border-radius: 1px;
+    position: absolute;
+    bottom: -8%;
+    left: 0%;
+  }
+
+  /* Change the styling of the whole accordion section. */
+  #accordion {
+    width: 85%;
+    padding-bottom: 8%;
+  }
+
+  .mb-0 {
+    font-size: 6vw;
+  }
+
+  /* Change the padding of the skills section (the third part of the accordion). */
+  #skills_section {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  /* Set the width of each project inside the projects information section. */
+  .projects {
+    width: 95%;
+  }
+
+}
+
+@media (max-width: 1200px) {
+  .row.w-100 {
+    margin-left: 5%;
+    padding-right: 7%;
+  }
+}
+
+@media (max-width: 992px) {
+  /*
+  This navbar class is not shown when the browser is less than 992px wide,
+  so don't bother with displaying it at all.
+   */
+  .navigator {
+    display: none;
+  }
+
+  /* Switch up the image */
+  #tic_tac_toe {
+    width: 45%;
+  }
+
+  /* Change the database image to one that fits better on screen.  */
+  #database {
+    content: url('Database Icon.png')
+  }
+}
+
+@media (max-width: 768px) {
+  /* The container that holds all icons will get wider. */
+  .row.justify-content-around.d-none.d-sm-flex.mx-auto {
+    width: 80%;
+  }
+
+  /* Change the size and position of the icons inside */
+  .row.justify-content-around.d-none.d-sm-flex.mx-auto i {
+    font-size: 1.7em;
+    -webkit-transform: translateY(40%);
+    -ms-transform: translateY(40%);
+    transform: translateY(40%);
+  }
+
+  /* Custom adjustments to the Resume and Gmail icons. */
+  .row.justify-content-around.d-none.d-sm-flex.mx-auto #Resume {
+    font-size: 1.6em;
+  }
+
+  .row.justify-content-around.d-none.d-sm-flex.mx-auto #Gmail {
+    font-size: 2.2em;
+    -webkit-transform: translateY(0%);
+    -ms-transform: translateY(0%);
+    transform: translateY(0%);
+  }
+
+  /* Change the header styling in the main page */
+  .align-self-center h1 {
+    font-size: 18vw;
+    -webkit-transform: translateY(5%);
+    -ms-transform: translateY(5%);
+    transform: translateY(5%);
+  }
+
+  /* Change the styling of the line below it. */
+  .align-self-center h1::after {
+    width: 70%;
+    height: 4px;
+    content: '';
+    background-color: #F1F0EA;
+    margin-left: 15%;
+    margin-right: auto;
+    border-radius: 1px;
+    position: absolute;
+    bottom: -8%;
+    left: 0%;
+  }
+
+  /* The h1 tags at the top of each section. */
+  .section_header {
+    padding-top: 3%;
+  }
+
+  /* the first text block inside the "The Saga So Far" */
+  #timeline {
+    margin-top: 20px;
+  }
+
+  /* Each project section in the project information section is a little wider. */
+  .projects {
+    width: 90%;
+  }
+
+  /* change the max-width of some of the images */
+  #tic_tac_toe {
+    max-width: 65%;
+  }
+
+  #database_icon {
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 650px) {
+  /* the database icon image needs more custom styling because of its size */
+  #database_icon {
+    max-width: 60%;
+  }
+}
+
+@media (max-width: 576px) {
+  /* resize the text inside each paragraph inside a card section in the accordion. */
+  .card-body p, p.card-body {
+    font-size: 4vw;
+  }
+
+  /* resize the text inside the last paragraph of the accordion. */
+  #collapseTHREE {
+    font-size: 4vw;
+  }
+
+  /* Resize different headings and text sections inside the projects information section */
+  .projects h1 {
+    font-size: 8vw;
+  }
+
+  .projects p {
+    font-size: 3.5vw;
+  }
+
+  .projects strong {
+    font-size: 3.8vw;
+  }
+
+  /* Resize the text inside the buttons in the projects information section, change padding */
+  .button {
+    font-size: 3.5vw;
+    padding: 3px 6px;
+  }
+
+  /* Change the sizing of the tic-tac-toe image and the database image */
+  #tic_tac_toe {
+    width: 80%;
+  }
+
+  #database_icon {
+    max-width: 70%;
+  }
+
+  /* Change the size and spacing of the section headers at the start of each section. */
+  .section_header {
+    font-size: 12vw;
+    padding-top: 4%;
+    padding-bottom: 1%;
+  }
+
+  /* Change the sizing of all image sprites. */
+  .dino {
+    width: 95%
+  }
+}
+
+@media (max-width: 500px) {
+  #database_icon {
+    max-width: 75%;
+  }
+}
+
+@media (max-width: 420px) {
+  /* Change the size and padding of the text inside the skills section, and the stars. */
+  #small_screen h5 {
+    font-size: 4.5vw;
+    padding: 3px 0px;
+  }
+
+  #small_screen span {
+    font-size: 5.5vw;
+    padding: 2px 0px;
+  }
+
+  /* Change the thickness of the lines separating different cards in the accordion. */
+  .card::before, .last_card::after {
+    height: 3px;
+  }
+
+  /* Resize the text inside each card body (the content area) */
+  .card-body p, p.card-body {
+    font-size: 4.5vw;
+  }
+  /* Same as above */
+  #collapseTHREE {
+    font-size: 4.5vw;
+  }
+
+  /* Resize the headers and text sections inside the projects information section. */
+  .projects h1 {
+    font-size: 9vw;
+  }
+  .projects p {
+    font-size: 4.5vw;
+  }
+
+  .projects strong {
+    font-size: 4.7vw;
+  }
+
+  /*
+  Change the sizing of text inside the buttons in the projects information section,
+  as well as the padding.
+  */
+  .button {
+    font-size: 4.5vw;
+    padding: 3px 6px;
+  }
+
+  /*
+  Resize certain images in the projects info session, set the width of the
+  remaining to auto.
+  */
+  #tic_tac_toe {
+    width: 85%;
+  }
+
+  #database_icon {
+    max-width: 95%;
+  }
+
+  .dino {
+    width: auto;
+  }
+
+  /* Change the image sprite to something that suits smaller devices better. */
+  #dino {
+    content: url('Mobile Dino Sprite.png');
+  }
+
+  /*
+  Change the dot that goes with the line, where when multiple are added, we
+  have a circular dot.
+  */
+  .right::before {
+    width: 10px;
+    height: 10px;
+    left: -2.5%;
+    top: -5px;
+  }
+
+  /*
+  There is an odd bug with the appearance of the plus and minus signs of the
+  button. The placement is off, and this tries to fix it.
+  */
+  #accordion button, #accordion button:visited {
+    transform: translateY(20%);
+  }
+
+  /* The line below the name. */
+  .align-self-center h1::after {
+    width: 80%;
+    margin-left: 10%;
+  }
+}
+
+@media (max-width: 320px) {
+  /* More resizing of text inside card bodies of the accordion */
+  .card-body p, p.card-body {
+    font-size: 5vw;
+  }
+
+  #collapseTHREE {
+    font-size: 5vw;
+  }
+
+  /* Text resizing inside the projects info section. */
+  .projects h1 {
+    font-size: 10vw;
+  }
+
+  .projects p {
+    font-size: 5vw;
+  }
+
+  .projects strong {
+    font-size: 5.2vw;
+  }
+
+  /* Button resizing inside the projects info section, and change of padding. */
+  .button {
+    font-size: 5vw;
+    padding: 3px 6px;
+  }
+
+  /* Resize the tic-tac-toe image sprite. */
+  #tic_tac_toe {
+    width: 90%;
+  }
+
+  /* Change the font-size in the contact section. */
+  #fourth_page {
+    font-size: 6vw;
+  }
+
+  /* Change width of the container of the two icons in the contact section. */
+  #moblile_contact_menu {
+    width: 100%;
+  }
+
+  /* #moblile_contact_menu img {
+    width: 90px;
+    height: 60px;
+  } */
+
+  /* Resize the text and the padding for the text and stars in the skills section. */
+  #small_screen h5 {
+    font-size: 5vw;
+    padding: 2px 0px;
+  }
+
+  #small_screen span {
+    font-size: 6vw;
+    padding: 1px 0px;
+  }
+
+  /* Resize the dot for each text section in the "The Saga So Far" section of the accordion. */
+  .right::before {
+    width: 10px;
+    height: 10px;
+    left: -3%;
+    top: -5px;
+  }
+
+  /* The line below the main header in the main page. */
+  .align-self-center h1::after {
+    width: 85%;
+    margin-left: 5%;
+  }
+}
