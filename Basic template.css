@@ -81,7 +81,7 @@ html, body {
 
 /* Charcoal background on main page */
 #container_fluid {
-  background-image: url("Background Charcoal.png");
+  background-image: url("./new_website_sprites/Background Charcoal.png");
 }
 
 .justify-content-center {
@@ -719,7 +719,7 @@ can give it a border radius, making it look less sharp.
 
   /* Change the database image to one that fits better on screen.  */
   #database {
-    content: url('Database Icon.png')
+    content: url('./new_website_sprites/Database Icon.png')
   }
 }
 
@@ -926,7 +926,7 @@ can give it a border radius, making it look less sharp.
 
   /* Change the image sprite to something that suits smaller devices better. */
   #dino {
-    content: url('Mobile Dino Sprite.png');
+    content: url('./new_website_sprites/Mobile Dino Sprite.png');
   }
 
   /*
