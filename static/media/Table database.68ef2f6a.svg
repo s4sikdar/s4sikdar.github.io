@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="187.97mm" height="86.081mm" version="1.1" viewBox="0 0 187.97 86.081" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+ <defs>
+  <mask id="mask-powermask-path-effect2835" maskUnits="userSpaceOnUse">
+   <path id="mask-powermask-path-effect2835_box" d="m0.32292 28.104h21.579v9.9375h-21.579z" fill="#fff"/>
+   <text transform="scale(1.0139 .98633)" x="2.9347267" y="35.05072" fill="#353535" font-family="sans-serif" font-size="4.1804px" stroke-width=".25963" style="line-height:1.25" xml:space="preserve"><tspan x="2.9347267" y="35.05072" fill="#353535" font-size="4.1804px" stroke-width=".25963">3</tspan></text>
+  </mask>
+  <mask id="mask-powermask-path-effect3021" maskUnits="userSpaceOnUse">
+   <path id="mask-powermask-path-effect3021_box" d="m21.225 9.5833h41.688v9.9375h-41.688z" fill="#fff"/>
+   <text transform="scale(1.0164 .98389)" x="23.54278" y="16.340866" fill="#353535" font-family="sans-serif" font-size="4.1644px" stroke-width=".26027" style="line-height:1.25" xml:space="preserve"><tspan x="23.54278" y="16.340866" fill="#353535" font-size="4.1644px" stroke-width=".26027">Milwaukee Bucks</tspan></text>
+  </mask>
+  <mask id="mask-powermask-path-effect3053" maskUnits="userSpaceOnUse">
+   <path id="mask-powermask-path-effect3053_box" d="m21.225 28.104h41.688v9.9375h-41.688z" fill="#fff"/>
+   <text transform="scale(1.0139 .98633)" x="23.60331" y="35.07782" fill="#353535" font-family="sans-serif" font-size="4.1541px" stroke-width=".25963" style="line-height:1.25" xml:space="preserve"><tspan x="23.60331" y="35.07782" fill="#353535" font-size="4.1541px" stroke-width=".25963">New York Knicks</tspan></text>
+  </mask>
+  <mask id="mask-powermask-path-effect3037" maskUnits="userSpaceOnUse">
+   <path id="mask-powermask-path-effect3037_box" d="m21.225 18.844h41.688v9.9375h-41.688z" fill="#fff"/>
+   <text transform="scale(1.0164 .98389)" x="23.542768" y="25.297459" fill="#353535" font-family="sans-serif" font-size="4.1644px" stroke-width=".26027" style="line-height:1.25" xml:space="preserve"><tspan x="23.542768" y="25.297459" fill="#353535" font-size="4.1644px" stroke-width=".26027">Toronto Raptors</tspan></text>
+  </mask>
+  <mask id="mask-powermask-path-effect3085" maskUnits="userSpaceOnUse">
+   <path id="mask-powermask-path-effect3085_box" d="m21.225 46.625h41.688v9.9375h-41.688z" fill="#fff"/>
+   <text transform="scale(1.0139 .98633)" x="23.60331" y="53.855289" fill="#353535" font-family="sans-serif" font-size="4.1541px" stroke-width=".25963" style="line-height:1.25" xml:space="preserve"><tspan x="23.60331" y="53.855289" fill="#353535" font-size="4.1541px" stroke-width=".25963">Indiana Pacers</tspan></text>
+  </mask>
+  <mask id="mask-powermask-path-effect3069" maskUnits="userSpaceOnUse">
+   <path id="mask-powermask-path-effect3069_box" d="m21.225 37.365h41.688v9.9375h-41.688z" fill="#fff"/>
+   <text transform="scale(1.0139 .98633)" x="23.60331" y="44.466553" fill="#353535" font-family="sans-serif" font-size="4.1541px" stroke-width=".25963" style="line-height:1.25" xml:space="preserve"><tspan x="23.60331" y="44.466553" fill="#353535" font-size="4.1541px" stroke-width=".25963">Boston Celtics</tspan></text>
+  </mask>
+  <mask id="mask-powermask-path-effect3001" maskUnits="userSpaceOnUse">
+   <path id="mask-powermask-path-effect3001_box" d="m21.225 0.32292h41.688v9.9375h-41.688z" fill="#fff"/>
+   <text transform="scale(1.0139 .98633)" x="23.60331" y="7.6504359" fill="#353535" font-family="sans-serif" font-size="6.4206px" stroke-width=".25963" style="line-height:1.25" xml:space="preserve"><tspan x="23.60331" y="7.6504359" fill="#353535" font-size="6.4206px" stroke-width=".25963">Team</tspan></text>
+  </mask>
+  <mask id="mask-powermask-path-effect3104" maskUnits="userSpaceOnUse">
+   <path id="mask-powermask-path-effect3104_box" d="m62.235 9.5833h21.579v9.9375h-21.579z" fill="#fff"/>
+   <text transform="scale(1.0139 .98633)" x="64.185028" y="16.270355" fill="#353535" font-family="sans-serif" font-size="4.1804px" stroke-width=".25963" style="line-height:1.25" xml:space="preserve"><tspan x="64.185028" y="16.270355" fill="#353535" font-size="4.1804px" stroke-width=".25963">65</tspan></text>
+  </mask>
+  <mask id="mask-powermask-path-effect3117" maskUnits="userSpaceOnUse">
+   <path id="mask-powermask-path-effect3117_box" d="m62.235 0.32292h21.579v9.9375h-21.579z" fill="#fff"/>
+   <text transform="scale(1.0139 .98633)" x="64.053223" y="7.6723814" fill="#353535" font-family="sans-serif" font-size="6.4206px" stroke-width=".25963" style="line-height:1.25" xml:space="preserve"><tspan x="64.053223" y="7.6723814" fill="#353535" font-size="6.4206px" stroke-width=".25963">Wins</tspan></text>
+  </mask>
+  <mask id="mask-powermask-path-effect3140" maskUnits="userSpaceOnUse">
+   <path id="mask-powermask-path-effect3140_box" d="m62.235 18.844h21.579v9.9375h-21.579z" fill="#fff"/>
+   <text transform="scale(1.0139 .98633)" x="64.185028" y="25.661135" fill="#353535" font-family="sans-serif" font-size="4.1804px" stroke-width=".25963" style="line-height:1.25" xml:space="preserve"><tspan x="64.185028" y="25.661135" fill="#353535" font-size="4.1804px" stroke-width=".25963">60</tspan></text>
+  </mask>
+  <mask id="mask-powermask-path-effect3185" maskUnits="userSpaceOnUse">
+   <path id="mask-powermask-path-effect3185_box" d="m62.235 37.365h21.579v9.9375h-21.579z" fill="#fff"/>
+   <text transform="scale(1.0139 .98633)" x="64.185028" y="44.43861" fill="#353535" font-family="sans-serif" font-size="4.1804px" stroke-width=".25963" style="line-height:1.25" xml:space="preserve"><tspan x="64.185028" y="44.43861" fill="#353535" font-size="4.1804px" stroke-width=".25963">50</tspan></text>
+  </mask>
+  <mask id="mask-powermask-path-effect3160" maskUnits="userSpaceOnUse">
+   <path id="mask-powermask-path-effect3160_box" d="m62.235 28.104h21.579v9.9375h-21.579z" fill="#fff"/>
+   <text transform="scale(1.0139 .98633)" x="64.185028" y="35.050892" fill="#353535" font-family="sans-serif" font-size="4.1804px" stroke-width=".25963" style="line-height:1.25" xml:space="preserve"><tspan x="64.185028" y="35.050892" fill="#353535" font-size="4.1804px" stroke-width=".25963">53</tspan></text>
+  </mask>
+  <mask id="mask-powermask-path-effect3230" maskUnits="userSpaceOnUse">
+   <path id="mask-powermask-path-effect3230_box" d="m83.138 0.32292h27.135v9.9375h-27.135z" fill="#fff"/>
+   <text transform="scale(1.0139 .98633)" x="84.531563" y="7.6504369" fill="#353535" font-family="sans-serif" font-size="6.4206px" stroke-width=".25963" style="line-height:1.25" xml:space="preserve"><tspan x="84.531563" y="7.6504369" fill="#353535" font-size="6.4206px" stroke-width=".25963">Losses</tspan></text>
+  </mask>
+  <mask id="mask-powermask-path-effect3210" maskUnits="userSpaceOnUse">
+   <path id="mask-powermask-path-effect3210_box" d="m62.235 46.625h21.579v9.9375h-21.579z" fill="#fff"/>
+   <text transform="scale(1.0139 .98633)" x="64.185028" y="53.683849" fill="#353535" font-family="sans-serif" font-size="4.1804px" stroke-width=".25963" style="line-height:1.25" xml:space="preserve"><tspan x="64.185028" y="53.683849" fill="#353535" font-size="4.1804px" stroke-width=".25963">47</tspan></text>
+  </mask>
+  <mask id="mask-powermask-path-effect3262" maskUnits="userSpaceOnUse">
+   <path id="mask-powermask-path-effect3262_box" d="m83.137 18.844h27.135v9.9375h-27.135z" fill="#fff"/>
+   <text transform="scale(1.0139 .98633)" x="84.801437" y="25.693792" fill="#353535" font-family="sans-serif" font-size="4.1804px" stroke-width=".25963" style="line-height:1.25" xml:space="preserve"><tspan x="84.801437" y="25.693792" fill="#353535" font-size="4.1804px" stroke-width=".25963">22</tspan></text>
+  </mask>
+  <mask id="mask-powermask-path-effect3246" maskUnits="userSpaceOnUse">
+   <path id="mask-powermask-path-effect3246_box" d="m83.137 9.5833h27.135v9.9375h-27.135z" fill="#fff"/>
+   <text transform="scale(1.0139 .98633)" x="84.80143" y="16.278521" fill="#353535" font-family="sans-serif" font-size="4.1804px" stroke-width=".25963" style="line-height:1.25" xml:space="preserve"><tspan x="84.80143" y="16.278521" fill="#353535" font-size="4.1804px" stroke-width=".25963">17</tspan></text>
+  </mask>
+  <mask id="mask-powermask-path-effect3294" maskUnits="userSpaceOnUse">
+   <path id="mask-powermask-path-effect3294_box" d="m83.137 37.365h27.135v9.9375h-27.135z" fill="#fff"/>
+   <text transform="scale(1.0139 .98633)" x="84.801437" y="44.439625" fill="#353535" font-family="sans-serif" font-size="4.1804px" stroke-width=".25963" style="line-height:1.25" xml:space="preserve"><tspan x="84.801437" y="44.439625" fill="#353535" font-size="4.1804px" stroke-width=".25963">32</tspan></text>
+  </mask>
+  <mask id="mask-powermask-path-effect3278" maskUnits="userSpaceOnUse">
+   <path id="mask-powermask-path-effect3278_box" d="m83.137 28.104h27.135v9.9375h-27.135z" fill="#fff"/>
+   <text transform="scale(1.0139 .98633)" x="84.801437" y="35.052933" fill="#353535" font-family="sans-serif" font-size="4.1804px" stroke-width=".25963" style="line-height:1.25" xml:space="preserve"><tspan x="84.801437" y="35.052933" fill="#353535" font-size="4.1804px" stroke-width=".25963">29</tspan></text>
+  </mask>
+  <mask id="mask-powermask-path-effect3339" maskUnits="userSpaceOnUse">
+   <path id="mask-powermask-path-effect3339_box" d="m109.6 0.32292h34.279v9.9375h-34.279z" fill="#fff"/>
+   <text transform="scale(1.0139 .98633)" x="110.79841" y="7.7554607" fill="#353535" font-family="sans-serif" font-size="6.4206px" stroke-width=".25963" style="line-height:1.25" xml:space="preserve"><tspan x="110.79841" y="7.7554607" fill="#353535" font-size="6.4206px" stroke-width=".25963">Coach Id</tspan></text>
+  </mask>
+  <mask id="mask3308" maskUnits="userSpaceOnUse">
+   <path id="mask-powermask-path-effect3314_box" d="m83.138 46.625h27.135v9.9375h-27.135z" fill="#fff"/>
+   <text transform="scale(1.0139 .98633)" x="84.801437" y="53.828362" fill="#353535" font-family="sans-serif" font-size="4.1804px" stroke-width=".25963" style="line-height:1.25" xml:space="preserve"><tspan x="84.801437" y="53.828362" fill="#353535" font-size="4.1804px" stroke-width=".25963">35</tspan></text>
+  </mask>
+  <mask id="mask-powermask-path-effect2688" maskUnits="userSpaceOnUse">
+   <path id="mask-powermask-path-effect2688_box" d="m0.32292 0.32292h21.579v9.9375h-21.579z" fill="#fff"/>
+   <text transform="scale(1.0139 .98633)" x="2.6355267" y="7.7554598" fill="#353535" font-family="sans-serif" font-size="6.4206px" stroke-width=".25963" style="line-height:1.25" xml:space="preserve"><tspan x="2.6355267" y="7.7554598" fill="#353535" font-size="6.4206px" stroke-width=".25963">Rank</tspan></text>
+  </mask>
+  <mask id="mask-powermask-path-effect2776" maskUnits="userSpaceOnUse">
+   <path id="mask-powermask-path-effect2776_box" d="m0.32292 18.844h21.579v9.9375h-21.579z" fill="#fff"/>
+   <text transform="scale(1.0139 .98633)" x="3.1187105" y="25.69379" fill="#353535" font-family="sans-serif" font-size="4.1804px" stroke-width=".25963" style="line-height:1.25" xml:space="preserve"><tspan x="3.1187105" y="25.69379" fill="#353535" font-size="4.1804px" stroke-width=".25963">2</tspan></text>
+  </mask>
+  <mask id="mask-powermask-path-effect2726" maskUnits="userSpaceOnUse">
+   <path id="mask-powermask-path-effect2726_box" d="m0.37016 9.7251h21.579v9.9375h-21.579z" fill="#fff"/>
+   <text transform="scale(1.0139 .98633)" x="3.1653109" y="16.422224" fill="#353535" font-family="sans-serif" font-size="4.1804px" stroke-width=".25963" style="line-height:1.25" xml:space="preserve"><tspan x="3.1653109" y="16.422224" fill="#353535" font-size="4.1804px" stroke-width=".25963">1</tspan></text>
+  </mask>
+  <mask id="mask-powermask-path-effect2985" maskUnits="userSpaceOnUse">
+   <path id="mask-powermask-path-effect2985_box" d="m0.32292 46.625h21.579v9.9375h-21.579z" fill="#fff"/>
+   <text transform="scale(1.0139 .98633)" x="2.8939023" y="53.796726" fill="#353535" font-family="sans-serif" font-size="4.1804px" stroke-width=".25963" style="line-height:1.25" xml:space="preserve"><tspan x="2.8939023" y="53.796726" fill="#353535" font-size="4.1804px" stroke-width=".25963">5</tspan></text>
+  </mask>
+  <mask id="mask-powermask-path-effect2902" maskUnits="userSpaceOnUse">
+   <path id="mask-powermask-path-effect2902_box" d="m0.32292 37.138h21.579v9.9375h-21.579z" fill="#fff"/>
+   <text transform="scale(1.0139 .98633)" x="3.1187122" y="44.209698" fill="#353535" font-family="sans-serif" font-size="4.1804px" stroke-width=".25963" style="line-height:1.25" xml:space="preserve"><tspan x="3.1187122" y="44.209698" fill="#353535" font-size="4.1804px" stroke-width=".25963">4</tspan></text>
+  </mask>
+  <mask id="mask-powermask-path-effect3371" maskUnits="userSpaceOnUse">
+   <path id="mask-powermask-path-effect3371_box" d="m109.6 18.844h34.279v9.9375h-34.279z" fill="#fff"/>
+   <text transform="scale(1.0139 .98633)" x="110.89815" y="25.667257" fill="#353535" font-family="sans-serif" font-size="4.1804px" stroke-width=".25963" style="line-height:1.25" xml:space="preserve"><tspan x="110.89815" y="25.667257" fill="#353535" font-size="4.1804px" stroke-width=".25963">17</tspan></text>
+  </mask>
+  <mask id="mask-powermask-path-effect3355" maskUnits="userSpaceOnUse">
+   <path id="mask-powermask-path-effect3355_box" d="m109.6 9.5833h34.279v9.9375h-34.279z" fill="#fff"/>
+   <text transform="scale(1.0139 .98633)" x="110.89815" y="16.272396" fill="#353535" font-family="sans-serif" font-size="4.1804px" stroke-width=".25963" style="line-height:1.25" xml:space="preserve"><tspan x="110.89815" y="16.272396" fill="#353535" font-size="4.1804px" stroke-width=".25963">10</tspan></text>
+  </mask>
+  <mask id="mask-powermask-path-effect3403" maskUnits="userSpaceOnUse">
+   <path id="mask-powermask-path-effect3403_box" d="m109.6 37.365h34.279v9.9375h-34.279z" fill="#fff"/>
+   <text transform="scale(1.0139 .98633)" x="110.89815" y="44.436565" fill="#353535" font-family="sans-serif" font-size="4.1804px" stroke-width=".25963" style="line-height:1.25" xml:space="preserve"><tspan x="110.89815" y="44.436565" fill="#353535" font-size="4.1804px" stroke-width=".25963">16</tspan></text>
+  </mask>
+  <mask id="mask-powermask-path-effect3387" maskUnits="userSpaceOnUse">
+   <path id="mask-powermask-path-effect3387_box" d="m109.6 28.104h34.279v9.9375h-34.279z" fill="#fff"/>
+   <text transform="scale(1.0139 .98633)" x="110.89815" y="35.055996" fill="#353535" font-family="sans-serif" font-size="4.1804px" stroke-width=".25963" style="line-height:1.25" xml:space="preserve"><tspan x="110.89815" y="35.055996" fill="#353535" font-size="4.1804px" stroke-width=".25963">14</tspan></text>
+  </mask>
+  <mask id="mask-powermask-path-effect3419" maskUnits="userSpaceOnUse">
+   <path id="mask-powermask-path-effect3419_box" d="m109.6 46.625h34.279v9.9375h-34.279z" fill="#fff"/>
+   <text transform="scale(1.0139 .98633)" x="110.89815" y="53.829384" fill="#353535" font-family="sans-serif" font-size="4.1804px" stroke-width=".25963" style="line-height:1.25" xml:space="preserve"><tspan x="110.89815" y="53.829384" fill="#353535" font-size="4.1804px" stroke-width=".25963">19</tspan></text>
+  </mask>
+  <mask id="mask-powermask-path-effect3583" maskUnits="userSpaceOnUse">
+   <path id="mask-powermask-path-effect3583_box" d="m0.32292 55.885h21.579v11.26h-21.579z" fill="#fff"/>
+   <g transform="matrix(1.2686 0 0 1.2081 -3.8151 -24.614)" style="">
+    <path d="m12.295 68.887a0.52507 0.521 0 0 1-0.52358 0.521 0.52507 0.521 0 0 1-0.52655-0.51805 0.52507 0.521 0 0 1 0.5206-0.52393 0.52507 0.521 0 0 1 0.5295 0.51508" fill="#353535" stroke-width="0"/>
+    <path d="m12.295 71.258a0.52507 0.521 0 0 1-0.52358 0.521 0.52507 0.521 0 0 1-0.52655-0.51805 0.52507 0.521 0 0 1 0.5206-0.52393 0.52507 0.521 0 0 1 0.5295 0.51508" fill="#353535" stroke-width="0"/>
+    <path d="m12.29 73.696a0.52507 0.521 0 0 1-0.52358 0.521 0.52507 0.521 0 0 1-0.52655-0.51805 0.52507 0.521 0 0 1 0.5206-0.52393 0.52507 0.521 0 0 1 0.5295 0.51508" fill="#353535" stroke-width="0"/>
+   </g>
+  </mask>
+  <mask id="mask-powermask-path-effect3602" maskUnits="userSpaceOnUse">
+   <path id="mask-powermask-path-effect3602_box" d="m21.225 55.885h41.688v11.26h-41.688z" fill="#fff"/>
+   <g transform="matrix(1.2976 0 0 1.2324 26.799 -26.341)" style="">
+    <path d="m12.295 68.887a0.52507 0.521 0 0 1-0.52358 0.521 0.52507 0.521 0 0 1-0.52655-0.51805 0.52507 0.521 0 0 1 0.5206-0.52393 0.52507 0.521 0 0 1 0.5295 0.51508" fill="#353535" stroke-width="0"/>
+    <path d="m12.295 71.258a0.52507 0.521 0 0 1-0.52358 0.521 0.52507 0.521 0 0 1-0.52655-0.51805 0.52507 0.521 0 0 1 0.5206-0.52393 0.52507 0.521 0 0 1 0.5295 0.51508" fill="#353535" stroke-width="0"/>
+    <path d="m12.29 73.696a0.52507 0.521 0 0 1-0.52358 0.521 0.52507 0.521 0 0 1-0.52655-0.51805 0.52507 0.521 0 0 1 0.5206-0.52393 0.52507 0.521 0 0 1 0.5295 0.51508" fill="#353535" stroke-width="0"/>
+   </g>
+  </mask>
+  <mask id="mask-powermask-path-effect3662" maskUnits="userSpaceOnUse">
+   <path id="mask-powermask-path-effect3662_box" d="m62.235 55.885h21.579v11.26h-21.579z" fill="#fff"/>
+   <g transform="matrix(1.3741 0 0 1.305 56.855 -31.523)" style="">
+    <path d="m12.295 68.887a0.52507 0.521 0 0 1-0.52358 0.521 0.52507 0.521 0 0 1-0.52655-0.51805 0.52507 0.521 0 0 1 0.5206-0.52393 0.52507 0.521 0 0 1 0.5295 0.51508" fill="#353535" stroke-width="0"/>
+    <path d="m12.295 71.258a0.52507 0.521 0 0 1-0.52358 0.521 0.52507 0.521 0 0 1-0.52655-0.51805 0.52507 0.521 0 0 1 0.5206-0.52393 0.52507 0.521 0 0 1 0.5295 0.51508" fill="#353535" stroke-width="0"/>
+    <path d="m12.29 73.696a0.52507 0.521 0 0 1-0.52358 0.521 0.52507 0.521 0 0 1-0.52655-0.51805 0.52507 0.521 0 0 1 0.5206-0.52393 0.52507 0.521 0 0 1 0.5295 0.51508" fill="#353535" stroke-width="0"/>
+   </g>
+  </mask>
+  <mask id="mask-powermask-path-effect3704" maskUnits="userSpaceOnUse">
+   <path id="mask-powermask-path-effect3704_box" d="m83.137 55.885h27.135v11.26h-27.135z" fill="#fff"/>
+   <g transform="matrix(1.4337 0 0 1.3616 79.835 -35.553)" style="">
+    <path d="m12.295 68.887a0.52507 0.521 0 0 1-0.52358 0.521 0.52507 0.521 0 0 1-0.52655-0.51805 0.52507 0.521 0 0 1 0.5206-0.52393 0.52507 0.521 0 0 1 0.5295 0.51508" fill="#353535" stroke-width="0"/>
+    <path d="m12.295 71.258a0.52507 0.521 0 0 1-0.52358 0.521 0.52507 0.521 0 0 1-0.52655-0.51805 0.52507 0.521 0 0 1 0.5206-0.52393 0.52507 0.521 0 0 1 0.5295 0.51508" fill="#353535" stroke-width="0"/>
+    <path d="m12.29 73.696a0.52507 0.521 0 0 1-0.52358 0.521 0.52507 0.521 0 0 1-0.52655-0.51805 0.52507 0.521 0 0 1 0.5206-0.52393 0.52507 0.521 0 0 1 0.5295 0.51508" fill="#353535" stroke-width="0"/>
+   </g>
+  </mask>
+  <mask id="mask-powermask-path-effect3723" maskUnits="userSpaceOnUse">
+   <path id="mask-powermask-path-effect3723_box" d="m109.6 55.885h34.279v11.26h-34.279z" fill="#fff"/>
+   <g transform="matrix(1.4337 0 0 1.3616 109.87 -35.553)" style="">
+    <path d="m12.295 68.887a0.52507 0.521 0 0 1-0.52358 0.521 0.52507 0.521 0 0 1-0.52655-0.51805 0.52507 0.521 0 0 1 0.5206-0.52393 0.52507 0.521 0 0 1 0.5295 0.51508" fill="#353535" stroke-width="0"/>
+    <path d="m12.295 71.258a0.52507 0.521 0 0 1-0.52358 0.521 0.52507 0.521 0 0 1-0.52655-0.51805 0.52507 0.521 0 0 1 0.5206-0.52393 0.52507 0.521 0 0 1 0.5295 0.51508" fill="#353535" stroke-width="0"/>
+    <path d="m12.29 73.696a0.52507 0.521 0 0 1-0.52358 0.521 0.52507 0.521 0 0 1-0.52655-0.51805 0.52507 0.521 0 0 1 0.5206-0.52393 0.52507 0.521 0 0 1 0.5295 0.51508" fill="#353535" stroke-width="0"/>
+   </g>
+  </mask>
+ </defs>
+ <metadata>
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title/>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <g transform="matrix(1.3279 0 0 1.3279 -1.7568 -1.7568)">
+  <g fill="#f1f0ea" stroke-width="0">
+   <path x="1.3229187" y="29.104" width="19.579166" height="7.9374995" ry="0" d="m1.3229 29.104h19.579v7.9375h-19.579z" mask="url(#mask-powermask-path-effect2835)"/>
+   <path x="22.225" y="10.583334" width="39.6875" height="7.937499" ry="0" d="m22.225 10.583h39.688v7.9375h-39.688z" mask="url(#mask-powermask-path-effect3021)"/>
+   <path x="22.225" y="29.104168" width="39.6875" height="7.937499" ry="0" d="m22.225 29.104h39.688v7.9375h-39.688z" mask="url(#mask-powermask-path-effect3053)"/>
+   <path x="22.225" y="19.84375" width="39.6875" height="7.937499" ry="0" d="m22.225 19.844h39.688v7.9375h-39.688z" mask="url(#mask-powermask-path-effect3037)"/>
+   <path x="22.225" y="47.625" width="39.6875" height="7.937499" ry="0" d="m22.225 47.625h39.688v7.9375h-39.688z" mask="url(#mask-powermask-path-effect3085)"/>
+   <path x="22.225" y="38.364582" width="39.6875" height="7.937499" ry="0" d="m22.225 38.365h39.688v7.9375h-39.688z" mask="url(#mask-powermask-path-effect3069)"/>
+   <path x="22.225" y="1.3229172" width="39.6875" height="7.937499" ry="0" d="m22.225 1.3229h39.688v7.9375h-39.688z" mask="url(#mask-powermask-path-effect3001)"/>
+   <path x="63.235416" y="10.583334" width="19.579166" height="7.9374995" ry="0" d="m63.235 10.583h19.579v7.9375h-19.579z" mask="url(#mask-powermask-path-effect3104)"/>
+   <path x="63.235416" y="1.3229173" width="19.579166" height="7.9374995" ry="0" d="m63.235 1.3229h19.579v7.9375h-19.579z" mask="url(#mask-powermask-path-effect3117)"/>
+   <path x="63.235416" y="19.843752" width="19.579166" height="7.9374995" ry="0" d="m63.235 19.844h19.579v7.9375h-19.579z" mask="url(#mask-powermask-path-effect3140)"/>
+   <path x="63.235416" y="38.364586" width="19.579166" height="7.9374995" ry="0" d="m63.235 38.365h19.579v7.9375h-19.579z" mask="url(#mask-powermask-path-effect3185)"/>
+   <path x="63.235416" y="29.104168" width="19.579166" height="7.9374995" ry="0" d="m63.235 29.104h19.579v7.9375h-19.579z" mask="url(#mask-powermask-path-effect3160)"/>
+   <path x="84.137505" y="1.3229182" width="25.135416" height="7.937499" ry="0" d="m84.138 1.3229h25.135v7.9375h-25.135z" mask="url(#mask-powermask-path-effect3230)"/>
+   <path x="63.235416" y="47.625" width="19.579166" height="7.9374995" ry="0" d="m63.235 47.625h19.579v7.9375h-19.579z" mask="url(#mask-powermask-path-effect3210)"/>
+   <path x="84.137497" y="19.84375" width="25.135416" height="7.9374995" ry="0" d="m84.137 19.844h25.135v7.9375h-25.135z" mask="url(#mask-powermask-path-effect3262)"/>
+   <path x="84.137497" y="10.583334" width="25.135416" height="7.9374995" ry="0" d="m84.137 10.583h25.135v7.9375h-25.135z" mask="url(#mask-powermask-path-effect3246)"/>
+   <path x="84.137497" y="38.364582" width="25.135416" height="7.9374995" ry="0" d="m84.137 38.365h25.135v7.9375h-25.135z" mask="url(#mask-powermask-path-effect3294)"/>
+   <path x="84.137497" y="29.104168" width="25.135416" height="7.9374995" ry="0" d="m84.137 29.104h25.135v7.9375h-25.135z" mask="url(#mask-powermask-path-effect3278)"/>
+   <path x="110.59583" y="1.3229182" width="32.279167" height="7.937499" ry="0" d="m110.6 1.3229h32.279v7.9375h-32.279z" mask="url(#mask-powermask-path-effect3339)"/>
+   <path x="84.137505" y="47.625" width="25.135416" height="7.9374995" ry="0" d="m84.138 47.625h25.135v7.9375h-25.135z" mask="url(#mask3308)"/>
+  </g>
+  <path x="1.3229187" y="1.3229171" width="19.579166" height="7.9374995" ry="0" d="m1.3229 1.3229h19.579v7.9375h-19.579z" fill="#f1f0ea" mask="url(#mask-powermask-path-effect2688)" stroke-width="0"/>
+  <path x="1.3229182" y="19.843748" width="19.579166" height="7.9374995" ry="0" d="m1.3229 19.844h19.579v7.9375h-19.579z" fill="#f1f0ea" mask="url(#mask-powermask-path-effect2776)" stroke-width="0"/>
+  <g fill="#f1f0ea" stroke-width="0">
+   <path x="1.3701643" y="10.725074" width="19.579166" height="7.9374995" ry="0" d="m1.3702 10.725h19.579v7.9375h-19.579z" mask="url(#mask-powermask-path-effect2726)"/>
+   <path x="1.3229182" y="47.625" width="19.579166" height="7.9374995" ry="0" d="m1.3229 47.625h19.579v7.9375h-19.579z" mask="url(#mask-powermask-path-effect2985)"/>
+   <path x="1.3229203" y="38.137798" width="19.579166" height="7.9374995" ry="0" d="m1.3229 38.138h19.579v7.9375h-19.579z" mask="url(#mask-powermask-path-effect2902)"/>
+   <path x="110.59583" y="19.84375" width="32.279167" height="7.9374995" ry="0" d="m110.6 19.844h32.279v7.9375h-32.279z" mask="url(#mask-powermask-path-effect3371)"/>
+   <path x="110.59583" y="10.583333" width="32.279167" height="7.9374995" ry="0" d="m110.6 10.583h32.279v7.9375h-32.279z" mask="url(#mask-powermask-path-effect3355)"/>
+   <path x="110.59583" y="38.364586" width="32.279167" height="7.9374995" ry="0" d="m110.6 38.365h32.279v7.9375h-32.279z" mask="url(#mask-powermask-path-effect3403)"/>
+   <path x="110.59583" y="29.104168" width="32.279167" height="7.9374995" ry="0" d="m110.6 29.104h32.279v7.9375h-32.279z" mask="url(#mask-powermask-path-effect3387)"/>
+   <path x="110.59583" y="47.625" width="32.279167" height="7.9374995" ry="0" d="m110.6 47.625h32.279v7.9375h-32.279z" mask="url(#mask-powermask-path-effect3419)"/>
+   <path x="1.3229182" y="56.885418" width="19.579166" height="9.260416" d="m1.3229 56.885h19.579v9.2604h-19.579z" mask="url(#mask-powermask-path-effect3583)"/>
+   <path x="22.225" y="56.885418" width="39.6875" height="9.260416" d="m22.225 56.885h39.688v9.2604h-39.688z" mask="url(#mask-powermask-path-effect3602)"/>
+   <path x="63.235416" y="56.885418" width="19.579166" height="9.260416" d="m63.235 56.885h19.579v9.2604h-19.579z" mask="url(#mask-powermask-path-effect3662)"/>
+   <path x="84.137497" y="56.885418" width="25.135416" height="9.260417" d="m84.137 56.885h25.135v9.2604h-25.135z" mask="url(#mask-powermask-path-effect3704)"/>
+   <path x="110.59583" y="56.885414" width="32.279167" height="9.260416" d="m110.6 56.885h32.279v9.2604h-32.279z" mask="url(#mask-powermask-path-effect3723)"/>
+  </g>
+ </g>
+</svg>
