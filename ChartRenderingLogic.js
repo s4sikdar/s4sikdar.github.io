@@ -57,39 +57,36 @@ function drawChart() {
             'HTML, CSS, JavaScript', 3,
             'With the advice of a friend, I started to learn the basics ' +
             'of web development around mid April. I\'d say I\'ve gotten ' +
-            'to be passable in HTML and CSS at the least, and I\'ve covered ' +
-            'JavaScript up till ES6. I\'ve gone on to learn REACTjs over ' +
-            'the last couple of months.'
+            'to be passable in it, and have gone on to learn REACTjs over ' +
+            'the past winter.'
             ],
             [
             'REACTjs', 0.75,
             'I\'ve been learning the basics of REACTjs over the last couple ' +
             'of months, starting around the end of December/start of January. ' +
             'I\'m familiar with the basics of components, and I understand a little ' +
-            'about state and the component lifecycle as well. I recreated this site ' +
-            'in REACTjs and I could get used to it.' 
+            'about state and the component lifecycle as well (not much though). ' +
+            'I recreated this site in REACTjs mainly as an exercise.' 
             ],
-            ['Flask', 0.25,
-            'In anticipation of my internship, I learned a little about how Flask works. ' +
-            'I learned a little about how URL routing works in Flask, a little about how ' +
-            'Jinja templates work, but that\'s about it. I would not say I have working ' +
-            'knowledge of it, but am familiar with some basics of it.'
+            ['Django', 1,
+            'One of the applications that I\'ve been working on at my internship is a Django ' +
+            'applicaton, which I\'ve done some work on. I\'ve done a little of a lot of things ' +
+            'in Django - from templating, to model querying, to view handling functions.'
             ],
             [
             'Bootstrap', 1,
-            'I learned this last fall at the advice of a friend ' +
-            'who I go to for advice on my projects. He gave ' +
-            'me the advice of learning and using Bootstrap, ' +
-            'and its classes and accordion components ' +
-            'make my life easier. I recently used it to ' +
-            'develop the front-end of a project at work.'
+            'A friend gave me the advice of learning and using Bootstrap last fall, ' +
+            'and its classes and accordion components have made this project (and web development)' +
+            'a lot easier.'
             ],
             [
             'SQL/SQLite3', 0.75,
-            'I took a Relational Databases course in school - Google \"CS338\". ' +
+            'I took a Relational Databases course in school - Google "CS 338 UWaterloo". ' +
             'I learned the basics of SQL queries using the SQLite3 DBMS. I covered ' +
-            'some basics on normal forms, relational models, the E.R. model, but this ' +
-            'was back in the spring term of 2020. I used it to add to my Tic-Tac-Toe project.'
+            'some basics on normal forms, relational models, and the E.R. model - but ' +
+            'this was back in the summer of 2020. I\'ve since used it for one of my projects. ' +
+            'I\'ve also been using the MySQL command line a little at work, mainly doing ' +
+            'basic C.R.U.D. statements to check that my server-side code works correctly.'
             ],
             [
             'Git/GitHub', 0.5,
@@ -126,12 +123,12 @@ function drawChart() {
             {color: '#ffe4c4'},
             {color: '#e9d4b7'},
             {color: '#dfc197'},
-            {color: '#d8b27e'},
+            // {color: '#d8b27e'},
             {color: '#d0a465'},
-            {color: '#c69146'},
-            // {color: '#c2893a'},
-            {color: '#a97833'}
-            // {color: '#835d27'}
+            // {color: '#c69146'},
+            {color: '#c2893a'},
+            {color: '#a97833'},
+            {color: '#835d27'},
             // {color: '#443014'}
             // {color: '#96856f'}
             ],
