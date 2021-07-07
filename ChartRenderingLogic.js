@@ -70,8 +70,8 @@ function drawChart() {
             ],
             ['Django', 1,
             'One of the applications that I\'ve been working on at my internship is a Django ' +
-            'applicaton, which I\'ve done some work on. I\'ve done a little of a lot of things ' +
-            'in Django - from templating, to model querying, to view handling functions.'
+            'applicaton. I\'ve done a little of a lot of things in Django - from templating, ' +
+            'to model querying, to view handling functions.'
             ],
             [
             'Bootstrap', 1,
