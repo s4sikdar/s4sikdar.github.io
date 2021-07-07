@@ -115,14 +115,10 @@ function drawChart() {
       'JavaScript up till ES6. I\'m on my way to learning React JS over the winter break.'
     ],
     [
-      'jQuery', 0.25,
-      'When I created my first website, I dabbled in jQuery a little. ' +
-      'I could brush up on it if need be, but it\'s not high on my priority list. ' +
-      'I\'ve been mainly focusing on making sure I have the prerequisites for React JS.'
-    ],
-    ['Flask', 0.75,
-     'Over the holidays I picked up the the Python framework Flask. I am familiar with ' +
-     'some basic routing, can do a little with Jinja Templates but that\'s about it for now.'
+      'Django', 1,
+      'One of the applications that I\'ve been working on at my internship is a Django application. ' +
+      'I\'ve done a little of a lot of things in Django - from templating, to model querying, ' +
+      'to view handling functions.'
     ],
     [
       'Bootstrap', 1,
@@ -138,10 +134,11 @@ function drawChart() {
       'was back in the spring term of 2020.'
     ],
     [
-      'Git', 0.5,
+      'Git/GitHub', 0.5,
       'I learned Git at the advice of a friend, starting out by tracking ' +
       'my projects with it to save myself from having 10 copies of ' +
-      'the same code in different file directories.'
+      'the same code in different file directories. I use Git and GitHub ' +
+      'extensively at work.'
     ]
   ]);
 
@@ -172,12 +169,7 @@ function drawChart() {
       {color: '#dfc197'},
       {color: '#d8b27e'},
       {color: '#d0a465'},
-      {color: '#c69146'},
-      // {color: '#c2893a'},
-      {color: '#a97833'}
-      // {color: '#835d27'}
-      // {color: '#443014'}
-      // {color: '#96856f'}
+      {color: '#c69146'}
     ],
     // activated on click of the slice, and is html (can be styled with css)
     tooltip: {
