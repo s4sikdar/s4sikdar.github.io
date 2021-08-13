@@ -5,8 +5,8 @@
   This repositiory has the production build of my portfolio website, which can be found <a href = "https://s4sikdar.github.io/" target="_blank">here</a> 
   (press <code>ctrl</code> and click to open links in a new tab). The original code for it can be found 
   <a href = "https://github.com/s4sikdar/react-website" target = "_blank">here</a>. This repository also hosts my remake of the Chrome Dinosaur Game, found 
-  <a href = "https://s4sikdar.github.io/new_old_website/chrome_dino_run/Dino_game.html" target="_blank">here</a>. Platforms supported (based on <code>npx browserslist</code>) 
-  are:
+  <a href = "https://s4sikdar.github.io/new_old_website/chrome_dino_run/Dino_game.html" target="_blank">here</a>. Platforms supported for the portfolio site 
+  (based on <code>npx browserslist</code>) are:
   <ul>
     <li>and_chr 90</li>
     <li>and_ff 87</li>
