@@ -94,6 +94,11 @@ function drawChart() {
             'my projects with it to save myself from having 10 copies of ' +
             'the same code in different file directories. I use Git and GitHub ' +
             'extensively at work.'
+            ],
+            [
+            'C', 2,
+            'I took CS 136 - Elementary Algorithm Design and Data Abstraction in C - ' +
+            'at school this past fall term. I got a decent mark in it (77).'
             ]
       ]);
       
@@ -129,6 +134,7 @@ function drawChart() {
             {color: '#c2893a'},
             {color: '#a97833'},
             {color: '#835d27'},
+            {color: '#6F4E37'}
             // {color: '#443014'}
             // {color: '#96856f'}
             ],
